@@ -1,0 +1,155 @@
+/*================================
+GLOBAL STYLES
+==================================*/
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+
+}
+
+/*================================
+TOP NAV BAR
+==================================*/
+
+#top {
+	background: #d7c462;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+	height: 10vh;
+	top: 0;
+	right: 10%;
+	left: 10%;
+	bottom: 0;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#top h1 {
+	margin: 0;
+	font-family: 'Berkshire Swash', cursive;
+	font-weight: 350;
+	color: black;
+}
+
+#top nav ul li{
+	display: inline-block;
+}
+
+#top nav ul li a {
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-size: 0.75em;
+	transition: 0.2s all;
+	margin-left: 1em;
+	color: black;
+}
+
+#top nav ul li a:hover {
+	color: white;
+}
+
+#top .search a {
+	text-decoration: none;
+	margin-top: 1em;
+}
+
+#top .search a i {
+	margin-left: 1em;
+}
+
+/*================================
+HEADER PART
+==================================*/
+
+header {
+	margin: 0;
+	height: 80vh;
+	display: flex;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("photo2.jpeg") center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/*================================
+PRODUCTS PART
+==================================*/
+
+#products {
+	padding: 4em 6em;
+}
+
+#products article {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+#products article .product{
+	outline: 1px solid #ddd;
+}
+
+#products article .product img {
+	object-fit: cover;
+	width: 60vh;
+	height: 60vh;
+	margin-top: 1em;
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+.description,
+h3,
+p {
+	text-align: left;
+	margin-left: 1em;
+}
+
+.price {
+	font-style: italic;
+	letter-spacing: 2px;
+	font-size: 0.85em;
+	text-align: right;
+	margin-right: 2em;
+}
+
+/*================================
+FOOTER PART
+==================================*/
+
+footer {
+	background: black;
+	padding: 1em 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+footer .column {
+	flex: 1;
+	
+}
+
+footer .column ul {
+	flex: 1;
+	
+}
+
+footer .column ul li {
+	list-style-type: none;
+	margin-bottom: 0.5em;
+	font-size: 1em;
+
+}
+
+footer .column ul li a {
+	color: limegreen;
+	text-decoration: none;
+}
