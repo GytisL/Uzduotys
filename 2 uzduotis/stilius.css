@@ -1,0 +1,359 @@
+/*================================
+GLOBAL STYLES
+==================================*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/*================================
+TOP NAV BAR
+==================================*/
+
+#top {
+	background: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10vh;
+	padding: 0 3em;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#top a {
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.75em;
+	color: cornflowerblue;
+	transition: 0.2s all;
+}
+
+#top a:hover { /*uzvedant pele pasikeicia elementas su :hover*/
+	color: limegreen;
+}
+
+#top h1 {
+	margin: 0;
+}
+
+#top h1 a { 
+	color: black;
+}
+
+#top li {
+	display: inline-block;
+	margin-left: 1.5em;
+}
+
+/*================================
+HEADER PART
+==================================*/
+
+header {
+	margin-top: 10vh;
+	height: 60vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("winter.jpeg") top center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#idinfo {
+	max-width: 50%;
+	color: white;
+}
+
+#idinfo h1 {
+	font-size: 5em;
+	margin: 0;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+#idinfo p {
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+#idinfo a {
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: limegreen;
+	background-color: transparent;
+	border: 1px solid limegreen;
+	padding: 0.5em 3em;
+	display: inline-block;
+	border-radius: 5px;
+	font-size: 0.95em;
+	transition: 0.3s all;
+}
+
+#idinfo a:hover {
+	color: white;
+	background: limegreen;
+}
+
+/*================================
+ABOUT SECTION
+==================================*/
+
+#about {
+	padding: 2em 3em;
+}
+
+#about h2 {
+	text-align: center;
+	font-weight: 500;
+	text-transformation: uppercase;
+	letter-spacing: 4 px;
+}
+
+#about #cause {
+	display: flex;
+	text-align: center;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin: 2em 0;
+}
+
+#about #cause > div {
+	margin: 2em;
+}
+
+#about #cause i {
+	font-size: 5em;
+}
+
+#about #cause h3 {
+	margin-top: 2em;
+}
+
+/*================================
+QUOTE SECTION
+==================================*/
+
+#quote {
+	background-color: dodgerblue;
+	padding: 5em;
+}
+
+#quote p {
+	color: white;
+	font-weight: 300;
+	font-size: 1.5 em;
+	text-align: center;
+	font-style: italic;
+}
+
+/*================================
+REVIEWS SECTION
+==================================*/
+
+#reviews {
+	padding: 2em 3em;
+	background-color: #f8f8f8;
+}
+
+#reviews h2 {
+	text-align: center;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 1.8em;
+}
+
+.reviewheader {
+	background: white;
+	margin: 5em auto;
+	display: flex;
+	width: 50%;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.reviewheader img {
+	margin-right: 2em;
+	width: 300px;
+	height: auto;
+	object-fit: cover;
+}
+
+.description {
+	padding: 2em;
+}
+
+.author {
+	font-style: italic;
+	letter-spacing: 2px;
+	font-size: 0.85em;
+	text-align: right;
+}
+
+/*================================
+NEWS SECTION
+==================================*/
+
+#news {
+	padding: 2em 3em;
+	background-color: cornflowerblue;
+}
+
+#news h2 {
+	letter-spacing: 5px;
+	color: white;
+	font-size: 2em;
+	font-style: italic;
+	margin-left: 1em;
+	margin-bottom: 0.5em;
+}
+
+#pagenews {
+	display: flex;
+	justify-content: space-between;
+}
+
+#pagenews article {
+	background-color: rgba(255, 255, 255, 0.2);
+	margin: 2em;
+	box-sizing: border-box;
+}
+
+#pagenews article img{
+	width: 100%;
+	height: 15vh;
+	object-fit: cover;
+}
+
+.description2 {
+	padding: 1em 2em 2.5em;
+}
+
+.description2 h3 {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 0;
+}
+
+.description2 a {
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	background-color: grey;
+	color: white;
+	padding: 0.5em 2em;
+	transition: 0.3s all;
+}
+
+.description2 a:hover {
+	background-color: limegreen;
+}
+
+/*================================
+CALL-TO-ACTION SECTION
+==================================*/
+
+#call-to-action {
+	background-color: #26455F;
+	padding: 1em 5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+}
+
+#call-to-action p {
+	color: #f8f8f8;
+	flex: 1;
+}
+
+#call-to-action a {
+	display: inline-block;
+	text-decoration: none;
+	margin-left: 2em;
+	color: white;
+	border: 1px solid white;
+	padding: 0.25em 1.5em;
+	font-size: 0.9em;
+	transition: 0.3s all;
+	width: 200px;
+	text-align: center;
+}
+
+#call-to-action a:hover {
+	background: white;
+	color: black;
+}
+
+/*================================
+FOOTER SECTION
+==================================*/
+
+footer {
+	background: black;
+	padding: 3em 4em;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	color: white;
+}
+
+.column1,
+.column2,
+.column3 {
+	flex: 1;
+}
+
+h3 {
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font-size: 0.85em;
+	margin-top: 0;
+}
+
+.column1,
+.column2,
+.column3,
+a {
+	color: limegreen;
+	text-decoration: none;
+}
+
+.column p {
+	margin-top: 0;
+}
+
+.column1,
+.column2,
+ul {
+	padding: 0;
+}
+
+.column1,
+.column2,
+li {
+	list-style-type: none;
+	margin-bottom: 0.5em;
+	font-size: 0.75em;
+}
+
+.column1,
+.column2,
+footer  i {
+	margin-right: 1em;
+}
