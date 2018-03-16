@@ -1,0 +1,340 @@
+/*================================
+GLOBAL STYLES
+==================================*/
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Amaranth', sans-serif;
+	font-weight: 250;
+}
+
+/*================================
+CONTAINER NAV BAR
+==================================*/
+
+/* .container {
+	max-width: 1140px; /*padaro container'ío ploti ne didesni nei 1140px
+    margin: 1em auto;
+}
+
+
+*/
+
+/*================================
+TOP NAV BAR
+==================================*/
+#top {
+	background: black;
+	display: flex;
+	align-items: center;
+	color: white;
+	left: 0;
+	top: 0;
+	right: 0;
+	padding: 0 4.5em;
+	justify-content: space-between;
+}
+
+#top .contacts ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+#top p a {
+	text-decoration: none;
+	color: #ff9900;
+}
+
+#top p {
+	margin-right: 6em;
+}
+
+#top .contacts ul {
+	margin-left: 1.5em;
+}
+
+#top .contacts ul li {
+	display: inline-block;
+	margin-left: 0.5em;
+}
+
+/*idedami vertikalus bruksniai | tarp zodziu. :not(:first-child) reiskia,
+kad neuzdedamas | pacioj pradzioj*/
+#top .contacts ul li:not(:first-child){
+  border-left: 1px solid white;
+  line-height: 1em;
+  padding-left: 0.8em;
+}
+
+/*================================
+HEADER PART
+==================================*/
+header {
+	background-size: cover;
+	background-color: skyblue;
+}
+
+#info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 1.5em;
+}
+
+#info h2 {
+	color: white;
+	margin: auto 1em;
+	justify-content: left;
+	margin-left: 5em;
+}
+
+#info a {
+	color: white;
+	text-decoration: none;
+	list-style: none;
+	letter-spacing: 2px;
+	justify-content: right;
+}
+
+#info ul li {
+	display: inline-block;
+	margin-left: 1em;
+}
+
+#info ul {
+	margin-right: 8.9em;
+}
+
+/*================================
+NEWS SECTION
+==================================*/
+#news {
+	margin-left: 1em;
+	margin-right: 0;
+	padding: 0 8em;
+}
+#news h1 {
+	font-family: 'Abril Fatface', cursive;
+	background-color: #00308f;
+	margin-right: 28em;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#trip {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+/*
+@media screen and (max-width: 1000px){
+	#trip {
+		flex-direction: column;
+	}
+	#trip article {
+		vvjgjbhmn;
+	}
+	#news #trip article .description {
+		fguu;
+	}
+}
+
+*/
+
+#trip article {
+	object-fit: cover;
+	justify-content: baseline;
+	flex: 1;
+}
+
+#trip article img {
+	object-fit: cover;
+	height: 40vh;
+	width: 80vh;
+	flex: 1;
+}
+
+#news #trip article .description {
+	padding: 0 2em 1em 0;
+	margin-left: 0;
+}
+
+/*================================
+NEWS2 SECTION
+==================================*/
+#news2 {
+	object-fit: cover;
+  	justify-content: flex-start;
+  	margin: 0 3em;
+}
+
+#news2 .business2 {
+	align-items: flex-start;
+	display: flex;
+	flex: 1;
+	padding: 0 5em;
+	flex-wrap: wrap;
+}
+
+#news2 .business2 article {
+	display: inline-block;
+	flex: 1;
+}
+
+#news2 .business2 article img {
+	height: 40vh;
+	width: 50vh;
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+#news2 .business2 article .description2 {
+	text-align: left;
+	padding: 0 1em 1em 0;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+/*================================
+NEWS3 SECTION
+==================================*/
+#news3 {
+	margin-left: 1em;
+	margin-right: 0;
+	padding: 0 8em;
+}
+
+#news3 h1 {
+	font-family: 'Abril Fatface', cursive;
+	background-color: #00308f;
+	margin-right: 28em;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#trip3 {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+#trip3 article {
+	object-fit: cover;
+	justify-content: baseline;
+	flex: 1;
+}
+
+#trip3 article img {
+	align-self: auto;
+	object-fit: cover;
+	height: 40vh;
+	width: 80vh;
+	flex: 1;
+}
+
+#news3 #trip3 article .description3 {
+	padding: 0 2em 1em 0;
+	margin-left: 0;
+}
+
+/*================================
+NEWS4 SECTION
+==================================*/
+#news4 {
+	object-fit: cover;
+  	justify-content: flex-start;
+  	margin: 0 3em;
+}
+
+#news4 .business4 {
+	align-items: flex-start;
+	display: flex;
+	flex: 1;
+	padding: 0 5em;
+	flex-wrap: wrap;
+}
+
+#news4 .business4 article {
+	display: inline-block;
+	flex: 1;
+}
+
+#news4 .business4 article img {
+	height: 40vh;
+	width: 50vh;
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+#news4 .business4 article .description4 {
+	text-align: left;
+	padding: 0 1em 1em 0;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+/*================================
+FOOTER SECTION
+==================================*/
+footer {
+	background: black;
+	color: white;
+}
+
+footer .text {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+footer .text .column1 {
+	flex: 1;
+}
+
+footer .text .column1 ul {
+	margin: 3em 0;
+}
+
+footer .text .column1 ul li {
+	list-style-type: none;
+	margin-bottom: 0.5em;
+	font-size: 1em;
+	text-align: center;
+}
+
+footer .text .column1 ul li a {
+	color: white;
+	text-decoration: none;
+	margin-left: 0.5em;
+}
+
+footer .text .column2 {
+	flex: 1;
+}
+
+footer .text .column2 ul {
+	margin: 3em 0;
+}
+
+footer .text .column2 ul li {
+	list-style-type: none;
+	margin-bottom: 0.5em;
+	font-size: 1em;
+}
+
+footer .text .column2 ul li p {
+	text-align: center;
+}
+
+footer .text .column2 ul li a {
+	color: #f96161;
+	text-decoration: none;
+	margin-right: 0;
+}
