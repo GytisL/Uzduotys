@@ -129,11 +129,9 @@ NAVLIST PART
 	margin: 0em auto;
 }
 
-
 /*================================
 ADVERTISEMENT PART
 ==================================*/
-
 #advertisement .image {
 	padding: 1em 1em;
 	display: flex;
@@ -149,7 +147,6 @@ ADVERTISEMENT PART
 /*================================
 CONTAINER PART
 ==================================*/
-
 .container .info {
 	display: flex;
 	justify-content: space-between;
@@ -199,7 +196,6 @@ CONTAINER PART
 /*================================
 NEWSDESK PART
 ==================================*/
-
 .container .newsDesk {
 	display: flex;
 	justify-content: space-between;
