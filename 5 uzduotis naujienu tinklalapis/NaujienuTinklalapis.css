@@ -9,7 +9,7 @@ body {
 
 body {
 	font-family: 'Amiri', serif;
-	font-weight: 200;
+	font-weight: 250;
 }
 
 /*================================
@@ -93,10 +93,10 @@ header {
 
 header .mainheader img {
 	object-fit: cover;
-	display: flex;
-	margin: 3.5em auto 0.5em;
-	height: 150px;
-    width: 300px;
+    display: flex;
+    margin: 3.5em auto 0.5em;
+    height: 100px;
+    width: 200px;
 }
 
 /*================================
@@ -146,10 +146,87 @@ ADVERTISEMENT PART
 
 /*================================
 CONTAINER PART
+TOPNEWS PART
+==================================*/
+.container {
+	max-width: 1140px;
+}
+
+.container .topNews {
+	display: flex;
+	justify-content: space-between;
+}
+
+.container .topNews #topColumn {
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 0.5em 0.5em;
+	flex: 1;
+}
+
+.container .topNews #topColumn .popularNews {
+	padding: 0;
+}
+
+.container .topNews #topColumn .popularNews h4 {
+	background-color: #999999;
+}
+
+.container .topNews #topColumn .popularNews .mostPopular {
+	display: flex;
+	flex-direction: row;
+	padding: 0.5em 0;
+}
+
+.container .topNews #thirdColumn .popularNews .mostPopular img {
+	width: 100%;
+	height: 100%;
+}
+
+.container .topNews #topColumn .popularNews .mostPopular .read {
+	text-align: left;
+	flex-direction: column;
+	background-color: #999999;
+}
+
+/*================================
+TITLE1 PART
+==================================*/
+#title1 nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	padding: 1em 0 0;
+	letter-spacing: 2px;
+}
+
+#title1 nav ul li {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	padding: 0 0.5em;
+}
+
+#title1 nav ul li a {
+	color: #111111;
+}
+
+#title1 nav ul li a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid currentColor;
+	margin: 0em auto;
+}
+
+/*================================
+CONTAINER PART
+INFO PART
 ==================================*/
 .container .info {
 	display: flex;
 	justify-content: space-between;
+	padding: 0.5em 0;
 }
 
 .container .info > * {
@@ -163,7 +240,7 @@ CONTAINER PART
 }
 
 .container .info #column .article {
-	background-color: #333333;
+	background-color: #999999;
 	margin: 1em 0.5em;
 }
 
@@ -194,6 +271,37 @@ CONTAINER PART
 }
 
 /*================================
+TITLE2 PART
+==================================*/
+#title2 nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	padding: 1em 0 0;
+	letter-spacing: 2px;
+}
+
+#title2 nav ul li {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	padding: 0 0.5em;
+}
+
+#title2 nav ul li a {
+	color: #111111;
+}
+
+#title2 nav ul li a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid currentColor;
+	margin: 0em auto;
+}
+
+/*================================
+CONTAINER PART
 NEWSDESK PART
 ==================================*/
 .container .newsDesk {
@@ -212,7 +320,7 @@ NEWSDESK PART
 }
 
 .container .newsDesk #secondColumn .news .videoSection {
-	background-color: #333333;
+	background-color: #999999;
 }
 
 .container .newsDesk #secondColumn .news .row {
@@ -225,8 +333,8 @@ NEWSDESK PART
 	flex-basis: 48.7%;
 }
 
-.container .newsDesk #secondColumn .news .row .country{
-	background-color: #333333;
+.container .newsDesk #secondColumn .news .row .country {
+	background-color: #999999;
 }
 
 .container .newsDesk #thirdColumn {
@@ -235,11 +343,152 @@ NEWSDESK PART
 }
 
 .container .newsDesk #thirdColumn .news {
-	background-color: #333333;
+	background-color: #999999;
 }
 
+.container .newsDesk #thirdColumn .news .mustRead {
+	display: flex;
+	flex-direction: row-reverse;
+	padding: 0.5em 1em;
+}
 
+.container .newsDesk #thirdColumn .news .mustRead img {
+	width: 37%;
+    height: 30%;
+}
 
+.container .newsDesk #thirdColumn .news .mustRead .read {
+	text-align: left;
+	flex-direction: column;
+}
 
+/*================================
+TITLE3 PART
+==================================*/
+#title3 nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	padding: 1em 0 0;
+	letter-spacing: 2px;
+}
 
+#title3 nav ul li {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	padding: 0 0.5em;
+}
 
+#title3 nav ul li a {
+	color: #111111;
+}
+
+#title3 nav ul li a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid currentColor;
+	margin: 0em auto;
+}
+
+/*================================
+CONTAINER PART
+HIGHLIGHTS PART
+==================================*/
+.container .highlights {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5em 0;
+}
+
+.container .highlights > * {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.container .highlights #columnContainer {
+	flex-basis: 25%;
+}
+
+.container .highlights #columnContainer .dailyArticle {
+	background-color: #999999;
+	margin: 0.5em 0.5em;
+	text-align: center;
+}
+
+.container .highlights #columnContainer .commentsColumn,
+.dailycommentColumn,
+.technologyColumn,
+.newsdeskColumn {
+	text-align: left;
+	margin-left: 0.5em;
+}
+
+/*================================
+BOTTOM ADVERTISEMENT PART
+==================================*/
+#bottomAdvertisement .image {
+	padding: 1em 1em;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+#bottomAdvertisement .image img {
+	padding-left: 2.5em;
+}
+
+/*================================
+FOOTER SECTION
+==================================*/
+footer #about {
+	background: black;
+	padding: 3em 4em;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	color: white;
+}
+
+footer #about .column {
+	flex: 1;
+}
+
+footer #about ul li a {
+	color: white;
+}
+
+footer #about ul li a:hover {
+	color: limegreen;
+	text-decoration: none;
+}
+
+footer #about .column,
+footer #about .column ul {
+	padding: 0;
+}
+
+footer #about .column,
+footer #about .column ul li {
+	list-style-type: none;
+	margin-bottom: 0.5em;
+	font-size: 1em;
+}
+
+footer #about .column,
+footer #about .column ul li i {
+	margin-right: 1em;
+}
+
+footer #rights {
+	background: #232b2b;
+	text-align: center;
+}
+
+footer #rights p {
+	color: white;
+	padding: 1em 4em;
+	margin: 0;
+}
