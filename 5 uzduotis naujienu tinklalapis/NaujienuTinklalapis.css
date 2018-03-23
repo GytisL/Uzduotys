@@ -25,11 +25,14 @@ TOP NAV BAR
 	top: 0;
 	right: 0;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	opacity: 0.6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
 #top .navbar {
 	width: 100%;
-	padding: auto 0;
+	padding: 0.5em 0;
+	
 }
 
 #top .navbar > * {
@@ -50,6 +53,7 @@ TOP NAV BAR
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	font-weight: bold;
 }
 
 #top .navbar .topics ul li {
@@ -68,6 +72,7 @@ TOP NAV BAR
 #top .navbar .about ul li a {
 	text-align: center;
 	margin: 0 0.5em;
+	font-weight: bold;
 }
 
 #top .navbar .login {
@@ -80,6 +85,7 @@ TOP NAV BAR
 
 #top .navbar .login ul li a{
 	margin-left: 1em;
+	font-weight: bold;
 }
 
 /*================================
@@ -629,15 +635,9 @@ BOTTOM ADVERTISEMENT PART
 /*================================
 FOOTER SECTION
 ==================================*/
-footer #about {
-	background: black;
-	padding: 3em 4em;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	color: white;
-}
 
+
+/*
 footer #about .column {
 	flex: 1;
 }
@@ -667,9 +667,14 @@ footer #about .column,
 footer #about .column ul li i {
 	margin-right: 1em;
 }
-
+*/
+/*
 footer #rights {
-	background: #232b2b;
+	background: #b5bdc8; /* Old browsers */
+	background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 36%, #28343b 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
 	text-align: center;
 }
 
@@ -677,4 +682,57 @@ footer #rights p {
 	color: white;
 	padding: 1em 4em;
 	margin: 0;
+}*/
+
+
+/*================================
+FOOTER PART
+ABOUT PART
+==================================*/
+footer {
+	
+}
+
+footer .about  {
+	
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+footer .about > * {
+	display: inline-block;
+	flex-basis: 20%;
+}
+
+footer .about #footerColumn {
+	
+	background: #b5bdc8; /* Old browsers */
+	background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 36%, #28343b 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
+	margin: 0;
+	padding: 0;
+}
+
+footer .about #footerColumn .dailyArticle {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	margin: 0.5em 0.5em;
+	text-align: left;
+	background: white;
+}
+
+footer .about #footerColumn .dailyArticle ul li {
+	list-style-type: none;
+}
+
+footer .about #footerColumn .dailyArticle ul li a {
+	text-decoration: none;
+	color: #65737e;
+}
+
+footer .about #footerColumn .dailyArticle ul li a:hover {
+	color: limegreen;
 }
