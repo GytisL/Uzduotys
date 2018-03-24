@@ -11,7 +11,6 @@ body {
 	font-family: 'Amiri', serif;
 	font-weight: 300;
 }
-
 /*================================
 TOP NAV BAR
 ==================================*/
@@ -32,7 +31,6 @@ TOP NAV BAR
 #top .navbar {
 	width: 100%;
 	padding: 0.5em 0;
-	
 }
 
 #top .navbar > * {
@@ -87,7 +85,6 @@ TOP NAV BAR
 	margin-left: 1em;
 	font-weight: bold;
 }
-
 /*================================
 HEADER PART
 ==================================*/
@@ -104,7 +101,6 @@ header .mainheader img {
     height: 100px;
     width: 200px;
 }
-
 /*================================
 NAVLIST PART
 ==================================*/
@@ -139,7 +135,6 @@ NAVLIST PART
 	border-bottom: 1px solid currentColor;
 	margin: 0em auto;
 }
-
 /*================================
 ADVERTISEMENT PART
 ==================================*/
@@ -154,7 +149,6 @@ ADVERTISEMENT PART
 #advertisement .image img {
 	padding-left: 2.5em;
 }
-
 /*================================
 CONTAINER PART
 TOPNEWS PART
@@ -232,6 +226,11 @@ TOPNEWS PART
 	color: #65737e;
 }
 
+.container .topNews #topColumn .popularNews .mostPopular .read h6 a,
+.container .topNews #topColumn .popularNews .mostPopular2 .read h6 a {
+	font-family: 'Chelsea Market', cursive;
+}
+
 .container .topNews #topColumn .popularNews .mostPopular2 {
 	display: flex;
 	flex-direction: row-reverse;
@@ -257,7 +256,6 @@ TOPNEWS PART
 	border-radius: 5px;
 	padding: 1em;
 }
-
 /*================================
 TOPTITLE PART
 ==================================*/
@@ -299,7 +297,6 @@ TOPTITLE PART
 	border-bottom: 1px solid currentColor;
 	margin: 0em auto;
 }
-
 /*================================
 CONTAINER PART
 INFO PART
@@ -350,9 +347,10 @@ INFO PART
 	color: #65737e;
 }
 
-.container .info #column .article .Section h6 a{
+.container .info #column .article .Section h6 a {
 	color: #65737e;
 	text-decoration: none;
+	font-family: 'Chelsea Market', cursive;
 }
 
 .container .info #column .article .Section {
@@ -365,7 +363,6 @@ INFO PART
 	width: 90%;
 	height: 90%;
 }
-
 /*================================
 CONTAINER PART
 RELEVANTNEWS PART
@@ -421,6 +418,9 @@ RELEVANTNEWS PART
 	color: #65737e;
 }
 
+.container .relevantNews #relevantColumn .theNews .theMost .reading h6 a {
+	font-family: 'Chelsea Market', cursive;
+}
 /*================================
 CONTAINER PART
 NEWSDESK PART
@@ -553,7 +553,6 @@ NEWSDESK PART
 	text-decoration: none;
 	color: #65737e;
 }
-
 /*================================
 CONTAINER PART
 HIGHLIGHTS PART
@@ -611,12 +610,15 @@ HIGHLIGHTS PART
 	color: #65737e;
 }
 
+.container .highlights #columnContainer .dailyArticle .commentsColumn h5 a {
+	font-family: 'Chelsea Market', cursive;
+}
+
 .container .highlights #columnContainer .dailyArticle .commentsColumn p,
 .container .highlights #columnContainer .dailyArticle .commentsColumn h5 {
 	text-align: left;
 	padding-left: 0.5em;
 }
-
 /*================================
 BOTTOM ADVERTISEMENT PART
 ==================================*/
@@ -631,7 +633,6 @@ BOTTOM ADVERTISEMENT PART
 #bottomAdvertisement .image img {
 	padding-left: 2.5em;
 }
-
 /*================================
 FOOTER PART
 ABOUT PART
@@ -662,7 +663,6 @@ footer .about #footerColumn .dailyArticle {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 	border-radius: 5px;
 	margin: 0;
-	text-align: left;
 	background: white;
 	padding: 0;
 }
@@ -671,7 +671,6 @@ footer .about #footerColumn .dailyArticle .image {
 	padding: 1em 1em;
 	margin: 0;
 	text-align: center;
-	flex-wrap: wrap;
 }
 
 footer .about #footerColumn .dailyArticle .image p {
@@ -680,7 +679,6 @@ footer .about #footerColumn .dailyArticle .image p {
 
 footer .about #footerColumn .dailyArticle .image li {
 	display: inline-block;
-	justify-content: space-between;
 	margin: 0;
 	padding: 0.3em 0.2em 0;
 }
@@ -694,22 +692,33 @@ footer .about #footerColumn .dailyArticle ul li {
 	padding: 0.2em 1em 0.1em;
 }
 
-footer .about #footerColumn .dailyArticle img {
-	width: 50%;
-	margin: 1em 4.5em;
+footer .about #footerColumn .dailyArticle ul .icon {
+	text-align: center;
+	list-style-type: none;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
 }
 
-footer .about #footerColumn .dailyArticle ul li h2 {
+footer .about #footerColumn .dailyArticle ul .icon img {
+	width: 60%;
+	padding: 0;
+	margin-top: 1em;
+}
+
+footer .about #footerColumn .dailyArticle ul li h3 {
 	font-family: 'Princess Sofia', cursive;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	padding: 0.15em 0.2em;
 }
 
-footer .about #footerColumn .dailyArticle h3 {
+footer .about #footerColumn .dailyArticle h4 {
 	font-family: 'Fredericka the Great', cursive;
 	padding: 0;
 	margin: 0;
 }
 
-footer .about #footerColumn .dailyArticle h4 {
+footer .about #footerColumn .dailyArticle h5 {
 	font-family: 'Fredericka the Great', cursive;
 	padding: 0 1em;
 	margin: 0;
