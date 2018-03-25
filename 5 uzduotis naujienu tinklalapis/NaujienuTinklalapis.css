@@ -149,6 +149,7 @@ ADVERTISEMENT PART
 #advertisement .image img {
 	padding-left: 2.5em;
 }
+
 /*================================
 CONTAINER PART
 TOPNEWS PART
@@ -158,8 +159,15 @@ TOPNEWS PART
 }
 
 .container .topNews {
-	display: flex;
-	justify-content: space-between;
+	margin: auto;
+	padding: auto;
+}
+
+@media screen and (min-width: 900px) { /*for screens that are 900px or larger*/
+		.container .topNews {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .container .topNews #topColumn {
@@ -302,9 +310,14 @@ CONTAINER PART
 INFO PART
 ==================================*/
 .container .info {
-	display: flex;
-	justify-content: space-between;
 	padding: 0.1em 0;
+}
+
+@media screen and (min-width: 900px) {
+	.container .info {
+		display: flex;
+	justify-content: space-between;
+	}
 }
 
 .container .info > * {
@@ -426,9 +439,14 @@ CONTAINER PART
 NEWSDESK PART
 ==================================*/
 .container .newsDesk {
-	display: flex;
-	justify-content: space-between;
 	padding: 0.55em 0;
+}
+
+@media screen and (min-width: 900px) {
+	.container .newsDesk {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .container .newsDesk > * {
@@ -558,9 +576,14 @@ CONTAINER PART
 HIGHLIGHTS PART
 ==================================*/
 .container .highlights {
-	display: flex;
-	justify-content: space-between;
 	padding: 0.5em 0 0;
+}
+
+@media screen and (min-width: 900px) {
+	.container .highlights {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .container .highlights > * {
@@ -637,7 +660,7 @@ BOTTOM ADVERTISEMENT PART
 FOOTER PART
 ABOUT PART
 ==================================*/
-footer .about  {
+footer .about {
 	display: flex;
 	justify-content: space-between;
 	box-sizing: border-box;
