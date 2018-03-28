@@ -15,8 +15,12 @@ body {
 TOP NAV BAR
 ==================================*/
 #top {
-	background: #fff5ee;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+	background: #fff5ee;
 	align-items: center;
 	position: fixed;
 	width: 100%;
@@ -95,8 +99,12 @@ header {
 }
 
 header .mainheader img {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
 	object-fit: cover;
-    display: flex;
     margin: 3.5em auto 0.5em;
     height: 100px;
     width: 200px;
@@ -105,6 +113,10 @@ header .mainheader img {
 NAVLIST PART
 ==================================*/
 #navlist nav {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -139,15 +151,33 @@ NAVLIST PART
 ADVERTISEMENT PART
 ==================================*/
 #advertisement .image {
-	padding: 1em 1em;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+	padding: 1em 1em;
 	justify-content: center;
-	width: 100%;
-	height: 100%;
+	width: calc(100%);
+	height: calc(100%);
 }
 
 #advertisement .image img {
-	padding-left: 2.5em;
+	margin: 0 1em;
+}
+
+@media screen and (max-width: 1000px) {
+	#advertisement .image img {
+		width: calc(100%);
+		height: calc(100%);
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#advertisement .image img {
+		width: calc(100%);
+		height: calc(100%);
+	}
 }
 
 /*================================
@@ -163,16 +193,19 @@ TOPNEWS PART
 	padding: auto;
 }
 
-@media screen and (min-width: 900px) { /*for screens that are 900px or larger*/
-		.container .topNews {
+@media screen and (min-width: 900px) {
+	.container .topNews {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
 		display: flex;
 		justify-content: space-between;
-	}
+	}	
 }
 
 .container .topNews #topColumn {
-	flex-direction: row;
-	flex-wrap: wrap;
+	-webkit-flex-flow: row wrap;
 	padding: 0 0.5em 0.5em;
 	flex: 1;
 }
@@ -198,6 +231,10 @@ TOPNEWS PART
 }
 
 .container .topNews #topColumn .popularNews .mostPopular {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: row;
 	padding: 0.5em 0;
@@ -239,7 +276,16 @@ TOPNEWS PART
 	font-family: 'Chelsea Market', cursive;
 }
 
+.container .topNews #topColumn .popularNews .mostPopular .read a:hover,
+.container .topNews #topColumn .popularNews .mostPopular2 .read a:hover {
+	color: #111111;
+}
+
 .container .topNews #topColumn .popularNews .mostPopular2 {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: row-reverse;
 	padding: 0.5em 0;
@@ -272,6 +318,10 @@ TOPTITLE PART
 }
 
 #topTitle nav {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -310,19 +360,17 @@ CONTAINER PART
 INFO PART
 ==================================*/
 .container .info {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
 	padding: 0.1em 0;
 }
 
-@media screen and (min-width: 900px) {
-	.container .info {
-		display: flex;
-	justify-content: space-between;
-	}
-}
-
 .container .info > * {
-	flex-direction: row;
-	flex-wrap: wrap;
+	-webkit-flex-flow: row wrap;
 }
 
 .container .info #column {
@@ -352,6 +400,12 @@ INFO PART
 	font-family: 'Fredericka the Great', cursive;
 }
 
+.container .info #column .article .Section h2,
+.container .info #column .article .Section p {
+	margin: 0 1em;
+	text-align: center;
+}
+
 .container .info #column .article .Section h2 a,
 .container .info #column .article .Section p a {
 	text-decoration: none;
@@ -371,23 +425,65 @@ INFO PART
 	text-align: center;
 }
 
+.container .info #column .article .Section a:hover {
+	color: #111111;
+}
+
 .container .info #column .article .Section img {
 	padding-bottom: 1em;
 	width: 90%;
 	height: 90%;
+}
+
+@media screen and (max-width: 1007px) {
+	.container .info {
+		-webkit-flex-flow: row wrap;
+	}
+	.container .info #column {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.container .info {
+		-webkit-flex-flow: column wrap;
+		justify-content: space-around;
+	}
+	.container .info #column{
+		width: calc(100%);
+	}
+}
+
+@media screen and (max-width: 1007px) {
+	.container .info #column .article h4 {
+		text-align: left;
+		margin: 0 6.3em;
+		width: calc(100% / 2);
+	}
+	.container .info #column .article .paint {
+		background-color: white;
+	}
+	.container .info #column .article .Section img {
+		padding-bottom: 1em;
+		width: 90%;
+		height: 50%;
+	}
 }
 /*================================
 CONTAINER PART
 RELEVANTNEWS PART
 ==================================*/
 .container .relevantNews {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	justify-content: space-between;
 }
 
 .container .relevantNews #relevantColumn {
-	flex-direction: row;
-	flex-wrap: wrap;
+	-webkit-flex-flow: row wrap;
 	padding: 0 0.5em 0.2em;
 }
 
@@ -431,6 +527,10 @@ RELEVANTNEWS PART
 	color: #65737e;
 }
 
+.container .relevantNews #relevantColumn .theNews .theMost .reading a:hover {
+	color: #111111;
+}
+
 .container .relevantNews #relevantColumn .theNews .theMost .reading h6 a {
 	font-family: 'Chelsea Market', cursive;
 }
@@ -439,19 +539,27 @@ CONTAINER PART
 NEWSDESK PART
 ==================================*/
 .container .newsDesk {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
 	padding: 0.55em 0;
-}
-
-@media screen and (min-width: 900px) {
-	.container .newsDesk {
-		display: flex;
-		justify-content: space-between;
-	}
+	flex-wrap: wrap;
 }
 
 .container .newsDesk > * {
 	flex-direction: row;
 	flex-wrap: wrap;
+}
+
+/*Responsive*/
+@media screen and (max-width: 900px) {
+	.container .newsDesk {
+		justify-content: space-around;
+		flex-direction: column;
+	}
 }
 
 .container .newsDesk #secondColumn {
@@ -470,7 +578,6 @@ NEWSDESK PART
 }
 
 .container .newsDesk #secondColumn .news .row {
-	width: 100%;
 	justify-content: space-between;
 	margin: 1em 0;
 }
@@ -503,10 +610,27 @@ NEWSDESK PART
 	margin: auto 0;
 }
 
+@media screen and (max-width: 700px) {
+	.container .newsDesk #secondColumn .news .row > * {
+		flex-basis: 100%;
+	}
+
+	.container .newsDesk #secondColumn .news .row .country {
+		padding: 0;
+		margin: 0.2em 0 1em;
+	}
+}
+
 .container .newsDesk #secondColumn .news .row .country a, 
 .container .newsDesk #secondColumn .news .videoSection a {
 	text-decoration: none;
 	color: #65737e;
+}
+
+.container .newsDesk #secondColumn .news .row .country a:hover, 
+.container .newsDesk #secondColumn .news .videoSection a:hover,
+.container .newsDesk #thirdColumn .news .mustRead .read a:hover {
+	color: #111111;
 }
 
 .container .newsDesk #secondColumn .news .row .country h4,
@@ -551,6 +675,10 @@ NEWSDESK PART
 }
 
 .container .newsDesk #thirdColumn .news .mustRead {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: row-reverse;
 	padding: 0.5em 1em 2em;
@@ -571,6 +699,7 @@ NEWSDESK PART
 	text-decoration: none;
 	color: #65737e;
 }
+
 /*================================
 CONTAINER PART
 HIGHLIGHTS PART
@@ -581,14 +710,17 @@ HIGHLIGHTS PART
 
 @media screen and (min-width: 900px) {
 	.container .highlights {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
 		display: flex;
 		justify-content: space-between;
 	}
 }
 
 .container .highlights > * {
-	flex-direction: row;
-	flex-wrap: wrap;
+	-webkit-flex-flow: row wrap;
 }
 
 .container .highlights #columnContainer {
@@ -637,6 +769,10 @@ HIGHLIGHTS PART
 	font-family: 'Chelsea Market', cursive;
 }
 
+.container .highlights #columnContainer .dailyArticle .commentsColumn a:hover {
+	color: #111111;
+}
+
 .container .highlights #columnContainer .dailyArticle .commentsColumn p,
 .container .highlights #columnContainer .dailyArticle .commentsColumn h5 {
 	text-align: left;
@@ -646,15 +782,15 @@ HIGHLIGHTS PART
 BOTTOM ADVERTISEMENT PART
 ==================================*/
 #bottomAdvertisement .image {
-	padding: 0.5em 1em 1em 0;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+	padding: 0.5em 1em 1em 0;
 	justify-content: center;
-	width: 100%;
-	height: 100%;
-}
-
-#bottomAdvertisement .image img {
-	padding-left: 2.5em;
+	width: calc(100%);
+	height: calc(100%);
 }
 /*================================
 FOOTER PART
@@ -672,6 +808,19 @@ footer .about {
 	padding: 2em 0.5em;
 }
 
+@media screen and (max-width: 1000px) {
+	footer .about {
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		padding: 0;
+		margin: 0;
+	}
+	footer .about #footerColumn {
+		width: calc(100% / 3);
+		justify-content: space-between;
+	}
+}
+
 footer .about > * {
 	display: inline-block;
 	flex-basis: 20%;
@@ -679,7 +828,7 @@ footer .about > * {
 
 footer .about #footerColumn {
 	margin: 0;
-	padding: 1em 0.5em 0;
+	padding: 1em 0.4em 0;
 }
 
 footer .about #footerColumn .dailyArticle {
@@ -691,7 +840,7 @@ footer .about #footerColumn .dailyArticle {
 }
 
 footer .about #footerColumn .dailyArticle .image {
-	padding: 1em 1em;
+	padding: 0.5em 1em;
 	margin: 0;
 	text-align: center;
 }
