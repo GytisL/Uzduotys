@@ -8,11 +8,163 @@ body {
 }
 
 body {
+	/*prevention from user copying site content*/
+	user-select: none;
+
 	font-family: 'Amiri', serif;
+	-webkit-font-smoothing: antialiased;
 	font-weight: 300;
 }
 /*================================
-TOP NAV BAR
+LOGINCONTAINER BAR PART
+==================================*/
+/*#loginContainer {
+ position: relative;
+ width: 340px;
+ height: 280px;
+ top: 50%;
+ left: 50%;
+ margin-top: -140px;
+ margin-left: -170px;
+ background: #fff;
+ border-radius: 3px;
+ border: 1px solid #ccc;
+ box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+ -webkit-animation-name: bounceIn;
+ -webkit-animation-fill-mode: both;
+ -webkit-animation-duration: 1s;
+ -webkit-animation-iteration-count: 1;
+ -webkit-animation-timing-function: linear;
+ -moz-animation-name: bounceIn;
+ -moz-animation-fill-mode: both;
+ -moz-animation-duration: 1s;
+ -moz-animation-iteration-count: 1;
+ -moz-animation-timing-function: linear;
+ animation-name: bounceIn;
+ animation-fill-mode: both;
+ animation-duration: 1s;
+ animation-iteration-count: 1;
+ animation-timing-function: linear;
+}
+ 
+form {
+ top: 1em;
+ right: 1em;
+}
+ 
+label {
+ color: #555;
+ display: inline-block;
+ margin-left: 18px;
+ padding-top: 10px;
+ font-size: 14px;
+}
+ 
+p a {
+ font-size: 11px;
+ color: #aaa;
+ float: right;
+ margin-top: -13px;
+ margin-right: 20px;
+ -webkit-transition: all .4s ease;
+ -moz-transition: all .4s ease;
+ transition: all .4s ease;
+}
+ 
+p a:hover {
+ color: #555;
+}
+ 
+input {
+ font-family: "Helvetica Neue", Helvetica, sans-serif;
+ font-size: 12px;
+ outline: none;
+}
+ 
+input[type=text],
+input[type=password] {
+ color: #777;
+ padding-left: 10px;
+ margin: 10px;
+ margin-top: 12px;
+ margin-left: 18px;
+ width: 290px;
+ height: 35px;
+ border: 1px solid #c7d0d2;
+ border-radius: 2px;
+ box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
+ -webkit-transition: all .4s ease;
+ -moz-transition: all .4s ease;
+ transition: all .4s ease;
+}
+ 
+input[type=text]:hover,
+input[type=password]:hover {
+ border: 1px solid #b6bfc0;
+ box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
+}
+ 
+input[type=text]:focus,
+input[type=password]:focus {
+ border: 1px solid #a8c9e4;
+ box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
+}
+ 
+#lower {
+ background: #ecf2f5;
+ width: 100%;
+ height: 69px;
+ margin-top: 20px;
+ box-shadow: inset 0 1px 1px #fff;
+ border-top: 1px solid #ccc;
+ border-bottom-right-radius: 3px;
+ border-bottom-left-radius: 3px;
+}
+ 
+input[type=checkbox] {
+ margin-left: 20px;
+ margin-top: 30px;
+}
+ 
+.check {
+ margin-left: 3px;
+ font-size: 11px;
+ color: #444;
+ text-shadow: 0 1px 0 #fff;
+}
+ 
+input[type=submit] {
+ float: right;
+ margin-right: 20px;
+ margin-top: 20px;
+ width: 80px;
+ height: 30px;
+ font-size: 14px;
+ font-weight: bold;
+ color: #fff;
+ background-color: #acd6ef;
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+ background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+ background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+ border-radius: 30px;
+ border: 1px solid #66add6;
+ box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+ cursor: pointer;
+}
+ 
+input[type=submit]:hover {
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+ background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+ background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+ 
+input[type=submit]:active {
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
+ background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+ background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+}*/
+/*================================
+TOP NAV BAR PART
 ==================================*/
 #top {
 	display: -webkit-box;
@@ -85,10 +237,104 @@ TOP NAV BAR
 	padding-right: 3.5em;
 }
 
-#top .navbar .login ul li a{
+#top .navbar .login ul .active,
+#top .navbar .login ul li a {
 	margin-left: 1em;
 	font-weight: bold;
+	cursor: pointer;
 }
+
+/*SEARCH-BOX*/
+/*STYLE THE search-box AND SET ITS display: none, SO THAT BY USING JQUERY CAN MAKE IT TOGGLE(show, hide).*/
+#top .navbar .login .active .search-box {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed',GradientType=0); /* IE6-9 */;
+	position: absolute;
+	top: 50px;
+    right: 2.8%;
+    width: 340px;
+    height: 100px;
+    line-height: 30px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	border-top: 4px solid #999999;
+	border-radius: 5px;
+	display: none;
+}
+
+/*PSEUDO ELEMENT TO CREATE TRIANGLE*/
+#top .navbar .login .active .search-box:before {
+	content: "";
+	position: absolute;
+	top: -36px;
+    right: 5px;
+	border-top: 1em solid transparent;
+	border-right: 1em solid transparent;
+	border-bottom: 1em solid #999999; /*triangle properties*/
+	border-left: 1em solid transparent;
+}
+
+/*INPUT FIELD STYLE*/
+#top .navbar .login .active .search-box input[type="text"] {
+	width: 16em;
+	padding: 0;
+	margin: 0.5em 1em 0 1em;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	outline: none; /*prevents the outter line whenever user clicks*/
+}
+
+/*INPUT BUTTON STYLE*/
+#top .navbar .login .active .search-box input[type="button"] {
+	width: 4em;
+    padding: 0.1em 0.5em;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed',GradientType=0); /* IE6-9 */;
+	border: 1px solid #999999;
+	outline: none; /*prevents the outter line whenever user clicks*/
+	cursor: pointer;
+	color: #999999;
+	margin: 0.5em 1em;
+	border-radius: 5px;
+}
+
+/*@media screen and (max-width: 800px) {
+	#top .navbar{
+		margin: 0;
+		padding: 0;
+	}
+	#top .navbar .login ul {
+		width: 200px;
+	}
+	#top .navbar .login ul li {
+		margin: 0;
+	}
+	#top .navbar .about ul li,
+	#top .navbar .login ul li a {
+		display: none;
+	}
+	#top .navbar .login ul .active {
+		text-align: right;
+
+	}
+	#top .navbar .login ul .active .search-box {
+		width: 1em;
+		right: 1em;
+	}
+	#top .navbar .login ul .active .search-box input[type="text"]{
+		width: 1em;
+		margin: 1em 1em;
+	}
+	#top .navbar .login ul .active .search-box input[type="button"]{
+		width: 1em;
+		margin: 1em 1em;
+	}
+}*/
 /*================================
 HEADER PART
 ==================================*/
@@ -263,6 +509,7 @@ TOPNEWS PART
 .container .topNews #topColumn .popularNews .mostPopular .read h5,
 .container .topNews #topColumn .popularNews .mostPopular2 .read h5 {
 	font-family: 'Fredericka the Great', cursive;
+	-webkit-font-smoothing: antialiased;
 }
 
 .container .topNews #topColumn .popularNews .mostPopular .read a,
@@ -274,6 +521,7 @@ TOPNEWS PART
 .container .topNews #topColumn .popularNews .mostPopular .read h6 a,
 .container .topNews #topColumn .popularNews .mostPopular2 .read h6 a {
 	font-family: 'Chelsea Market', cursive;
+	-webkit-font-smoothing: antialiased;
 }
 
 .container .topNews #topColumn .popularNews .mostPopular .read a:hover,
@@ -346,6 +594,7 @@ TOPTITLE PART
 
 #topTitle nav ul li a {
 	font-family: 'Rufina', serif;
+	-webkit-font-smoothing: antialiased;
 	color: #111111;
 	letter-spacing: 7px;
 }
@@ -398,6 +647,7 @@ INFO PART
 	text-align: left;
 	margin: 0 2.5em;
 	font-family: 'Fredericka the Great', cursive;
+	-webkit-font-smoothing: antialiased;
 }
 
 .container .info #column .article .Section h2,
@@ -418,6 +668,7 @@ INFO PART
 	color: #65737e;
 	text-decoration: none;
 	font-family: 'Chelsea Market', cursive;
+	-webkit-font-smoothing: antialiased;
 }
 
 .container .info #column .article .Section {
@@ -520,6 +771,7 @@ RELEVANTNEWS PART
 
 .container .relevantNews #relevantColumn .theNews .theMost .reading h5 {
 	font-family: 'Fredericka the Great', cursive;
+	-webkit-font-smoothing: antialiased;
 }
 
 .container .relevantNews #relevantColumn .theNews .theMost .reading a {
@@ -533,6 +785,7 @@ RELEVANTNEWS PART
 
 .container .relevantNews #relevantColumn .theNews .theMost .reading h6 a {
 	font-family: 'Chelsea Market', cursive;
+	-webkit-font-smoothing: antialiased;
 }
 /*================================
 CONTAINER PART
@@ -592,6 +845,7 @@ NEWSDESK PART
 
 .container .newsDesk #secondColumn .news .videoSection h4 {
 	font-family: 'Fredericka the Great', cursive;
+	-webkit-font-smoothing: antialiased;
 	margin: 0.5em 0;
 }
 
@@ -636,6 +890,7 @@ NEWSDESK PART
 .container .newsDesk #secondColumn .news .row .country h4,
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;
+	-webkit-font-smoothing: antialiased;
 }
 
 .container .newsDesk #secondColumn .news .row .country h4, 
@@ -671,6 +926,7 @@ NEWSDESK PART
 
 .container .newsDesk #thirdColumn .news h4 {
 	font-family: 'Princess Sofia', cursive;
+	-webkit-font-smoothing: antialiased;
 	padding: 0.5em 0.5em 0.5em 0.7em;
 }
 
@@ -699,7 +955,6 @@ NEWSDESK PART
 	text-decoration: none;
 	color: #65737e;
 }
-
 /*================================
 CONTAINER PART
 HIGHLIGHTS PART
@@ -752,11 +1007,13 @@ HIGHLIGHTS PART
 
 .container .highlights #columnContainer .dailyArticle .commentsColumn h4 {
 	font-family: 'Fredericka the Great', cursive;
+	-webkit-font-smoothing: antialiased;
 	text-align: center;
 }
 
 .container .highlights #columnContainer .dailyArticle .commentsColumn h2 {
 	font-family: 'Chelsea Market', cursive;
+	-webkit-font-smoothing: antialiased;
 	text-align: center;
 }
 
@@ -767,6 +1024,7 @@ HIGHLIGHTS PART
 
 .container .highlights #columnContainer .dailyArticle .commentsColumn h5 a {
 	font-family: 'Chelsea Market', cursive;
+	-webkit-font-smoothing: antialiased;
 }
 
 .container .highlights #columnContainer .dailyArticle .commentsColumn a:hover {
@@ -880,18 +1138,21 @@ footer .about #footerColumn .dailyArticle ul .icon img {
 
 footer .about #footerColumn .dailyArticle ul li h3 {
 	font-family: 'Princess Sofia', cursive;
+	-webkit-font-smoothing: antialiased;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	padding: 0.15em 0.2em;
 }
 
 footer .about #footerColumn .dailyArticle h4 {
 	font-family: 'Fredericka the Great', cursive;
+	-webkit-font-smoothing: antialiased;
 	padding: 0;
 	margin: 0;
 }
 
 footer .about #footerColumn .dailyArticle h5 {
 	font-family: 'Fredericka the Great', cursive;
+	-webkit-font-smoothing: antialiased;
 	padding: 0 1em;
 	margin: 0;
 	text-align: center;
@@ -899,6 +1160,7 @@ footer .about #footerColumn .dailyArticle h5 {
 
 footer .about #footerColumn .dailyArticle ul li h6 {
 	font-family: 'Chelsea Market', cursive;
+	-webkit-font-smoothing: antialiased;
 	padding: 0.2em 0.3em;
 	margin: 0;
 }
