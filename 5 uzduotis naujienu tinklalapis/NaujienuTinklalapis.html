@@ -29,23 +29,10 @@
 
     <body>
 
-        <!-- Begin Page Content -->
-        <!--<div id="loginContainer">
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
-                <label for="password">Password:</label>
-                <p><a href="#">Forgot your password?</a></p>
-                <input type="password" id="password" name="password">
+        <!-- Begin Login bar -->
+        
+        <!-- End Login bar -->
 
-                <div id="lower">
-                    <input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
-                    <input type="submit" value="Login">
-                </div>
-             
-            </form>
-        </div>--> <!--/ container-->
-        <!-- End Page Content -->
 
     	<div id="top">
     		<div class="navbar">
@@ -65,12 +52,29 @@
 
 	    		<div class="login">
 	    			<ul>
-	    				<li><a href="#">Prisijungti</a></li>
+	    				<li class="logInbar"><p>Prisijungti</p>
+                            <div id="loginContainer">
+                                <form>
+                                    <label for="username">Vartotojo vardas:</label>
+                                    <input type="text" placeholder="Įveskite vartotojo vardą" id="username">
+                                    <label for="password">Slaptažodis:</label>
+                                    <p><a href="#">Pamiršai slaptažodį?</a></p>
+                                    <input type="password" placeholder="Įveskite slaptažodį" id="password" >
+
+                                    <div id="lower">
+                                        <input type="checkbox"><label class="check" for="checkbox">Prisiminti mane</label>
+                                        <input type="submit" value="Prisijungti">
+                                    </div>
+                                 
+                                </form>
+                            </div>
+                        </li>
+
                         <li class="active">
                             <i class="fas fa-search" aria-hidden="true"></i>
                             <div class="search-box">
-                                <input type="text">
-                                <input type="button" value="Paieška">
+                                <input type="text" id="username" name="username">
+                                <input type="button" value="Paieška" id="search" name="search">
                             </div>
                         </li>
 	    			</ul>
