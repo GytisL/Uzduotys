@@ -86,7 +86,7 @@ TOP NAV BAR PART
 #top .navbar .login {
 	text-align: right;
 }
-    
+
 #top .navbar .login ul {
 	padding-right: 3.5em;
 }
@@ -101,22 +101,21 @@ TOP NAV BAR PART
 	cursor: pointer;
 }
 
-/*LOGINCONTAINER PART*/
+/*LOGINCONTAINER PART (START)*/
 #top .navbar .login ul .logInbar{
 	text-align: left;
 }
 
 #top .navbar .login ul .logInbar #loginContainer {
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    color: #444;
-    -webkit-font-smoothing: antialiased;
-
-    display: none;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	display: none;
 	position: absolute;
 	width: 340px;
-	height: 280px;
-	top: 494%;
-    left: 88.2%;
+	height: 350px;
+	top: 491%;
+	left: 88.2%;
 	margin-top: -140px;
 	margin-left: -170px;
 	background: #fff;
@@ -139,22 +138,23 @@ TOP NAV BAR PART
 	animation-iteration-count: 1;
 	animation-timing-function: linear;
 }
- 
+
 #top .navbar .login ul .logInbar #loginContainer form {
 	margin: 0.5em auto;
 }
 
+/*TRIANGLE PROPERTIES*/
 #top .navbar .login ul .logInbar #loginContainer form:before {	
 	content: "";
 	position: absolute;
 	top: -33px;
-    right: 110px;
+	right: 110px;
 	border-top: 1em solid transparent;
 	border-right: 1em solid transparent;
-	border-bottom: 1em solid #999999; /*triangle properties*/
+	border-bottom: 1em solid #f5f7f8; /*triangle properties*/
 	border-left: 1em solid transparent;
 }
- 
+
 #top .navbar .login ul .logInbar #loginContainer form label {
 	color: #555;
 	display: inline-block;
@@ -163,27 +163,27 @@ TOP NAV BAR PART
 	font-size: 14px;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form p {
+#top .navbar .login ul .logInbar #loginContainer form h6 {
 	margin: 0;
 	padding: 0;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form p a {
+#top .navbar .login ul .logInbar #loginContainer form h6 a {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
-    color: #444;
-    -webkit-font-smoothing: antialiased;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
 	font-size: 11px;
 	letter-spacing: 1px;
 	color: #aaa;
 	float: right;
-	margin-top: -1.8em;
-    margin-right: 2.6em;
+	margin-top: -1.6em;
+	margin-right: 2.6em;
 	-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease;
 	transition: all .4s ease;
 }
  
-#top .navbar .login ul .logInbar #loginContainer form p a:hover {
+#top .navbar .login ul .logInbar #loginContainer form h6 a:hover {
 	color: #555;
 }
 
@@ -214,14 +214,16 @@ TOP NAV BAR PART
 	border: 1px solid #b6bfc0;
 	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
 }
- 
+
 #top .navbar .login ul .logInbar #loginContainer form input[type=text]:focus,
 #top .navbar .login ul .logInbar #loginContainer form input[type=password]:focus {
 	border: 1px solid #a8c9e4;
 	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
 }
- 
+
 #top .navbar .login ul .logInbar #loginContainer form #lower {
+	display: flex;
+	justify-content: space-around;
 	background: #ecf2f5;
 	width: 100%;
 	height: 69px;
@@ -231,23 +233,22 @@ TOP NAV BAR PART
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
 }
- 
+
 #top .navbar .login ul .logInbar #loginContainer form #lower input[type=checkbox] {
-	margin-left: 20px;
-	margin-top: 30px;
+	margin: 2.3em 0em 1em 1.9em;
+	padding: 1em 1em 1em 0;
 }
- 
+
 #top .navbar .login ul .logInbar #loginContainer form #lower .check {
-	margin-left: 3px;
+	margin: 2.4em 1.2em 1em 1em;
+	padding-right: 7em;
 	font-size: 11px;
 	color: #444;
 	text-shadow: 0 1px 0 #fff;
 }
- 
+
 #top .navbar .login ul .logInbar #loginContainer form #lower input[type=submit] {
-	float: right;
-	margin-right: 1.9em;
-    margin-top: 1.3em;
+	margin: 1.3em 1.9em 1em 1em;
 	width: 80px;
 	height: 30px;
 	font-size: 14px;
@@ -262,21 +263,41 @@ TOP NAV BAR PART
 	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
 	cursor: pointer;
 }
- 
+
+#top .navbar .login ul .logInbar #loginContainer form #lower input[type=submitfb] {
+	margin: 1.3em 1.9em 1em 1em;
+	width: 165px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #acd6ef; /*IE fallback*/
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	border-radius: 30px;
+	border: 1px solid #66add6;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+
+#top .navbar .login ul .logInbar #loginContainer form #lower input[type=submitfb]:hover,
 #top .navbar .login ul .logInbar #loginContainer form #lower input[type=submit]:hover {
- 	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
 	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 }
- 
+
+#top .navbar .login ul .logInbar #loginContainer form #lower input[type=submitfb]:active,
 #top .navbar .login ul .logInbar #loginContainer form #lower input[type=submit]:active {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
 	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
 	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
 }
+/*LOGINCONTAINER PART (END)*/
 
-/*SEARCH-BOX*/
-/*STYLING THE search-box AND SET ITS display: none, SO THAT BY USING JQUERY CAN MAKE IT TOGGLE(show, hide).*/
+/*SEARCH-BOX (START)*/
+/*STYLING THE search-box AND SET ITS display: none, TO USE JQUERY CAN MAKE IT TOGGLE(show, hide).*/
 #top .navbar .login .active .search-box {
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
@@ -284,11 +305,11 @@ TOP NAV BAR PART
 	background: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed',GradientType=0); /* IE6-9 */;
 	position: absolute;
-	top: 50px;
-    right: 2.8%;
-    width: 340px;
-    height: 100px;
-    line-height: 30px;
+	top: 57px;
+    right: 2.5%;
+	width: 340px;
+	height: 100px;
+	line-height: 30px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 	/*border-top: 4px solid #999999;*/
 	border-radius: 5px;
@@ -303,7 +324,7 @@ TOP NAV BAR PART
 	right: 5px;
 	border-top: 1em solid transparent;
 	border-right: 1em solid transparent;
-	border-bottom: 1em solid #999999; /*triangle properties*/
+	border-bottom: 1em solid #f5f7f8; /*triangle properties*/
 	border-left: 1em solid transparent;
 }
 
@@ -322,8 +343,11 @@ TOP NAV BAR PART
 
 /*INPUT BUTTON STYLE*/
 #top .navbar .login .active .search-box input[type="button"] {
-	margin-right: 1.4em;
-    margin-top: 0.8em;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	outline: none;
+	-webkit-font-smoothing: antialiased;
+	margin: 0.8em 1.4em 1em 1em;
+	padding: 0;
 	width: 80px;
 	height: 30px;
 	font-size: 14px;
@@ -344,45 +368,69 @@ TOP NAV BAR PART
 	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 }
- 
+
 #top .navbar .login .active .search-box input[type="button"]:active {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
 	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
 	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
 }
+/*SEARCH-BOX (END)*/
 
-/*@media screen and (max-width: 800px) {
-	#top .navbar{
-		margin: 0;
+/*TREE LINE MENU*/
+@media screen and (max-width: 1000px) {
+	#top {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		background: #fff5ee;
+		align-items: center;
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: 0;
+		right: 0;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+		opacity: 0.6;
+		filter: alpha(opacity=60); /* For IE8 and earlier */
+	}
+	#top .navbar {
+		width: 100%;
+		padding: 0.5em 0;
+	}
+	#top .navbar > * {
+		flex: 1;
+	}
+	#top .navbar ul {
 		padding: 0;
-	}
-	#top .navbar .login ul {
-		width: 200px;
-	}
-	#top .navbar .login ul li {
 		margin: 0;
 	}
-	#top .navbar .about ul li,
-	#top .navbar .login ul li a {
+	#top .navbar li {
+		display: inline-block;
+	}
+	#top .navbar ul li p,
+	#top .navbar ul li a {
+		color: #111111;
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: bold;
+	}
+	#top .navbar .topics ul li {
+		margin: 0 3em;
+	}
+	#top .navbar .about {
 		display: none;
 	}
-	#top .navbar .login ul .active {
-		text-align: right;
 
-	}
-	#top .navbar .login ul .active .search-box {
-		width: 1em;
-		right: 1em;
-	}
-	#top .navbar .login ul .active .search-box input[type="text"]{
-		width: 1em;
-		margin: 1em 1em;
-	}
-	#top .navbar .login ul .active .search-box input[type="button"]{
-		width: 1em;
-		margin: 1em 1em;
-	}
-}*/
+
+
+
+
+
+}
+
 /*================================
 HEADER PART
 ==================================*/
@@ -399,9 +447,9 @@ header .mainheader img {
 	display: -webkit-flex;
 	display: flex;
 	object-fit: cover;
-    margin: 3.5em auto 0.5em;
-    height: 100px;
-    width: 200px;
+	margin: 3.5em auto 0.5em;
+	height: 100px;
+	width: 200px;
 }
 /*================================
 NAVLIST PART
