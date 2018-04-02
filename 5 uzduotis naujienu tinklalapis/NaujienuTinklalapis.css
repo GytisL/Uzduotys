@@ -68,6 +68,11 @@ TOP NAV BAR PART
 	margin: 0 3em;
 }
 
+#top .navbar .hamburgerMenu input,
+#top .navbar .hamburgerMenu {
+	display: none;
+}
+
 #top .navbar .about {
 	flex: 2;
 	text-align: center;
@@ -100,6 +105,115 @@ TOP NAV BAR PART
 	font-weight: bold;
 	cursor: pointer;
 }
+/*TREE LINE MENU*/
+@media screen and (max-width: 1000px) {
+	#top {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		background: #fff5ee;
+		align-items: center;
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: 0;
+		right: 0;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+		opacity: 0.6;
+		filter: alpha(opacity=60); /* For IE8 and earlier */
+	}
+	#top .navbar {
+		width: 100%;
+		padding: 0;
+	}
+	
+	#top .navbar ul {
+		padding: 0;
+		margin: 0;
+	}
+	#top .navbar li {
+		display: inline-block;
+	}
+	#top .navbar ul li p,
+	#top .navbar ul li a {
+		color: #111111;
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: bold;
+	}
+	#top .navbar .topics ul li {
+		margin: 0 3em;
+	}
+	#top .navbar .topics,
+	#top .navbar .login,
+	#top .navbar .about {
+		display: none;
+	}
+	#top .navbar .hamburgerMenu {
+		display: inline-block;
+		line-height: 70px;
+		margin: 0;
+		padding: 0;
+	}
+	#top .navbar .hamburgerMenu .home {
+		display: inline-block;
+		margin: 0;
+		padding: 0 1em;
+		width: 50%;
+		flex: 1;
+		text-align: left;
+		font-size: 30px;
+	}
+	#top .navbar .hamburgerMenu .menuToggle li label,
+	#top .navbar .hamburgerMenu .home li {
+		cursor: pointer;
+	}
+	#top .navbar .hamburgerMenu .menuToggle {
+		display: inline-block;
+		margin: 0;
+		padding: 0 1em;
+		width: 45%;
+		text-align: right;
+		flex: 1;
+		font-size: 30px;
+	}
+
+	#top .navbar .hamburgerMenu #toggle:checked + .menu {
+		display: inline-block;
+	} /* + MEANING TURNS ON/OFF WHEN TOGGLED*/
+
+	#top .navbar .hamburgerMenu .menu {
+		font-size: 20px;
+		padding: 0 1em;
+		margin: 0;
+		text-align: center;
+		width: 100%;
+		font-size: fit-height;
+		display: none;
+	}
+	#top .navbar .hamburgerMenu .menu ul li {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border-bottom: 1px solid #eaeaeb;
+	}
+	#top .navbar .hamburgerMenu .menu ul li a {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+	#top .navbar .login {
+		display: none;
+	}
+	#navlist nav ul li a{
+		display: none;
+	}
+
+}
+
 
 /*LOGINCONTAINER PART (START)*/
 #top .navbar .login ul .logInbar{
@@ -376,60 +490,7 @@ TOP NAV BAR PART
 }
 /*SEARCH-BOX (END)*/
 
-/*TREE LINE MENU*/
-@media screen and (max-width: 1000px) {
-	#top {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		background: #fff5ee;
-		align-items: center;
-		position: fixed;
-		width: 100%;
-		left: 0;
-		top: 0;
-		right: 0;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-		opacity: 0.6;
-		filter: alpha(opacity=60); /* For IE8 and earlier */
-	}
-	#top .navbar {
-		width: 100%;
-		padding: 0.5em 0;
-	}
-	#top .navbar > * {
-		flex: 1;
-	}
-	#top .navbar ul {
-		padding: 0;
-		margin: 0;
-	}
-	#top .navbar li {
-		display: inline-block;
-	}
-	#top .navbar ul li p,
-	#top .navbar ul li a {
-		color: #111111;
-		text-decoration: none;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		font-weight: bold;
-	}
-	#top .navbar .topics ul li {
-		margin: 0 3em;
-	}
-	#top .navbar .about {
-		display: none;
-	}
 
-
-
-
-
-
-}
 
 /*================================
 HEADER PART
@@ -502,6 +563,7 @@ ADVERTISEMENT PART
 	justify-content: center;
 	width: calc(100%);
 	height: calc(100%);
+
 }
 
 #advertisement .image img {
@@ -1056,7 +1118,7 @@ CONTAINER PART
 HIGHLIGHTS PART
 ==================================*/
 .container .highlights {
-	padding: 0.5em 0 0;
+	padding: 0.5em 0 0.5em;
 }
 
 @media screen and (min-width: 900px) {
@@ -1141,10 +1203,11 @@ BOTTOM ADVERTISEMENT PART
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	padding: 0.5em 1em 1em 0;
+	padding: 1em 1em 1em 0;
 	justify-content: center;
 	width: calc(100%);
 	height: calc(100%);
+	border-top: 1px solid #eaeaeb;
 }
 /*================================
 FOOTER PART

@@ -2,7 +2,7 @@
 $(document).ready(function(){
 	$(".active").click(function(){
 		$(".search-box").toggle();
-		
+		event.preventDefault(); /*Prevents default behavior. Prevents from jumping to the top. */
 	});
 });
 /*SEARCH-BOX END*/
@@ -12,6 +12,7 @@ $(document).ready(function(){
 	$(".logInbar").click(function(){
 		$("#loginContainer").toggle();
 		$("input[type='text']").focus();
+		event.preventDefault();
 	});
 });
 
