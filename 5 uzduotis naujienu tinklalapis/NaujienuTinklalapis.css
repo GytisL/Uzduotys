@@ -39,7 +39,7 @@ TOP NAV BAR PART
 
 #top .navbar {
 	width: 100%;
-	padding: 0.5em 0;
+	padding: 0.2em 0;
 }
 
 #top .navbar > * {
@@ -66,6 +66,7 @@ TOP NAV BAR PART
 
 #top .navbar .topics ul li {
 	margin: 0 3em;
+	font-size: 20px;
 }
 
 #top .navbar .hamburgerMenu input,
@@ -105,7 +106,7 @@ TOP NAV BAR PART
 	font-weight: bold;
 	cursor: pointer;
 }
-/*TREE LINE MENU*/
+/*MENU RESPONSIVE*/
 @media screen and (max-width: 1000px) {
 	#top {
 		display: -webkit-box;
@@ -123,6 +124,7 @@ TOP NAV BAR PART
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 		opacity: 0.6;
 		filter: alpha(opacity=60); /* For IE8 and earlier */
+		z-index: 100;
 	}
 	#top .navbar {
 		width: 100%;
@@ -154,14 +156,14 @@ TOP NAV BAR PART
 	}
 	#top .navbar .hamburgerMenu {
 		display: inline-block;
-		line-height: 70px;
+		line-height: 30px;
 		margin: 0;
 		padding: 0;
 	}
 	#top .navbar .hamburgerMenu .home {
 		display: inline-block;
-		margin: 0;
-		padding: 0 1em;
+		margin: 0 0 0 0.5em;
+		padding: 0.2em 1em;
 		width: 50%;
 		flex: 1;
 		text-align: left;
@@ -186,19 +188,40 @@ TOP NAV BAR PART
 	} /* + MEANING TURNS ON/OFF WHEN TOGGLED*/
 
 	#top .navbar .hamburgerMenu .menu {
-		font-size: 20px;
-		padding: 0 1em;
-		margin: 0;
 		text-align: center;
-		width: 100%;
 		font-size: fit-height;
 		display: none;
+		position: absolute;
+		width: 300px;
+	    height: 427px;
+	    top: 118%;
+	    left: 55%;
+		margin-top: 0px;
+		margin-left: 0px;
+		background: #fff;
+		border-radius: 3px;
+		border: 1px solid #ccc;
+		/*overflow-y: scroll;*/
 	}
+
+	/*.hamburgerMenu TRIANGLE PROPERTIES*/
+	#top .navbar .hamburgerMenu .menu ul:before {
+		content: "";
+		position: absolute;
+		top: -33px;
+		right: 9px;
+		border-top: 1em solid transparent;
+		border-right: 1em solid transparent;
+		border-bottom: 1em solid #f5f7f8; /*triangle properties*/
+		border-left: 1em solid transparent;
+	}
+
 	#top .navbar .hamburgerMenu .menu ul li {
 		width: 100%;
 		margin: 0;
 		padding: 0;
 		border-bottom: 1px solid #eaeaeb;
+		line-height: 70px;
 	}
 	#top .navbar .hamburgerMenu .menu ul li a {
 		display: inline-block;
@@ -214,7 +237,6 @@ TOP NAV BAR PART
 
 }
 
-
 /*LOGINCONTAINER PART (START)*/
 #top .navbar .login ul .logInbar{
 	text-align: left;
@@ -228,7 +250,7 @@ TOP NAV BAR PART
 	position: absolute;
 	width: 340px;
 	height: 350px;
-	top: 491%;
+	top: 12em;
 	left: 88.2%;
 	margin-top: -140px;
 	margin-left: -170px;
@@ -257,7 +279,7 @@ TOP NAV BAR PART
 	margin: 0.5em auto;
 }
 
-/*TRIANGLE PROPERTIES*/
+/*#loginContainer TRIANGLE PROPERTIES*/
 #top .navbar .login ul .logInbar #loginContainer form:before {	
 	content: "";
 	position: absolute;
@@ -419,7 +441,7 @@ TOP NAV BAR PART
 	background: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed',GradientType=0); /* IE6-9 */;
 	position: absolute;
-	top: 57px;
+	top: 3.3em;
     right: 2.5%;
 	width: 340px;
 	height: 100px;
@@ -489,8 +511,6 @@ TOP NAV BAR PART
 	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
 }
 /*SEARCH-BOX (END)*/
-
-
 
 /*================================
 HEADER PART
@@ -719,11 +739,11 @@ TOPNEWS PART
 /*================================
 TOPTITLE PART
 ==================================*/
-#topTitle {
+.topTitle {
 	padding: 2em 0.5em 0;
 }
 
-#topTitle nav {
+.topTitle nav {
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -743,21 +763,21 @@ TOPTITLE PART
 	letter-spacing: 2px;
 }
 
-#topTitle nav ul li {
+.topTitle nav ul li {
 	display: inline-block;
 	text-decoration: none;
 	text-align: center;
 	padding: 0 0.5em;
 }
 
-#topTitle nav ul li a {
+.topTitle nav ul li a {
 	font-family: 'Rufina', serif;
 	-webkit-font-smoothing: antialiased;
 	color: #111111;
 	letter-spacing: 7px;
 }
 
-#topTitle nav ul li a:hover {
+.topTitle nav ul li a:hover {
 	text-decoration: none;
 	border-bottom: 1px solid currentColor;
 	margin: 0em auto;
@@ -1138,6 +1158,7 @@ HIGHLIGHTS PART
 
 .container .highlights #columnContainer {
 	flex-basis: 25%;
+	padding-bottom: 0.1em;
 }
 
 .container .highlights #columnContainer .dailyArticle {
