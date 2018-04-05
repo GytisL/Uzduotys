@@ -6,7 +6,6 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
 body {
 	/*prevention from user copying site content*/
 	user-select: none;
@@ -15,7 +14,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-weight: 300;
 }
-
 /*================================
 TOP NAV BAR PART
 ==================================*/
@@ -89,6 +87,13 @@ TOP NAV BAR PART
 	margin: 0 0.5em;
 }
 
+#top .navbar .topics ul li a:hover,
+#top .navbar .about ul li a:hover,
+#top .navbar .login ul .logInbar a:hover,
+#top .navbar .login ul .active .fa-search:hover {
+	color: #559e83;
+}
+
 #top .navbar .login {
 	text-align: right;
 }
@@ -97,7 +102,7 @@ TOP NAV BAR PART
 	padding-right: 3.5em;
 }
 
-#top .navbar .login ul .logInbar p {
+#top .navbar .login ul .logInbar a {
 	cursor: pointer;
 }
 
@@ -129,22 +134,6 @@ TOP NAV BAR PART
 	#top .navbar {
 		width: 100%;
 		padding: 0;
-	}
-	
-	#top .navbar ul {
-		padding: 0;
-		margin: 0;
-	}
-	#top .navbar li {
-		display: inline-block;
-	}
-	#top .navbar ul li p,
-	#top .navbar ul li a {
-		color: #111111;
-		text-decoration: none;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		font-weight: bold;
 	}
 	#top .navbar .topics ul li {
 		margin: 0 3em;
@@ -231,7 +220,7 @@ TOP NAV BAR PART
 	#top .navbar .login {
 		display: none;
 	}
-	#navlist nav ul li a{
+	#navlist nav ul li a {
 		display: none;
 	}
 
@@ -242,14 +231,14 @@ TOP NAV BAR PART
 	text-align: left;
 }
 
-#top .navbar .login ul .logInbar #loginContainer {
+#loginContainer {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	color: #444;
 	-webkit-font-smoothing: antialiased;
 	display: none;
-	position: absolute;
+	position: fixed;
 	width: 340px;
-	height: 350px;
+	height: 405px;
 	top: 12em;
 	left: 88.2%;
 	margin-top: -140px;
@@ -275,12 +264,12 @@ TOP NAV BAR PART
 	animation-timing-function: linear;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form {
+#loginContainer form {
 	margin: 0.5em auto;
 }
 
 /*#loginContainer TRIANGLE PROPERTIES*/
-#top .navbar .login ul .logInbar #loginContainer form:before {	
+#loginContainer form:before {	
 	content: "";
 	position: absolute;
 	top: -33px;
@@ -291,7 +280,7 @@ TOP NAV BAR PART
 	border-left: 1em solid transparent;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form label {
+#loginContainer form label {
 	color: #555;
 	display: inline-block;
 	margin: 2em 0 0 1.8em;
@@ -299,12 +288,12 @@ TOP NAV BAR PART
 	font-size: 14px;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form h6 {
+#loginContainer form h6 {
 	margin: 0;
 	padding: 0;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form h6 a {
+#loginContainer form h6 a {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	color: #444;
 	-webkit-font-smoothing: antialiased;
@@ -319,19 +308,19 @@ TOP NAV BAR PART
 	transition: all .4s ease;
 }
  
-#top .navbar .login ul .logInbar #loginContainer form h6 a:hover {
+#loginContainer form h6 a:hover {
 	color: #555;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form #lower input, 
-#top .navbar .login ul .logInbar #loginContainer form input {
+#loginContainer form #lower input, 
+#loginContainer form input {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 12px;
 	outline: none;
 }
  
-#top .navbar .login ul .logInbar #loginContainer form input[type=text],
-#top .navbar .login ul .logInbar #loginContainer form input[type=password] {
+#loginContainer form input[type=text],
+#loginContainer form input[type=password] {
 	color: #777;
 	margin: 0.3em 1em 1em 2em;
 	width: 290px;
@@ -345,19 +334,19 @@ TOP NAV BAR PART
 	padding-left: 1em;
 }
  
-#top .navbar .login ul .logInbar #loginContainer form input[type=text]:hover,
-#top .navbar .login ul .logInbar #loginContainer form input[type=password]:hover {
+#loginContainer form input[type=text]:hover,
+#loginContainer form input[type=password]:hover {
 	border: 1px solid #b6bfc0;
 	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form input[type=text]:focus,
-#top .navbar .login ul .logInbar #loginContainer form input[type=password]:focus {
+#loginContainer form input[type=text]:focus,
+#loginContainer form input[type=password]:focus {
 	border: 1px solid #a8c9e4;
 	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form #lower {
+#loginContainer form #lower {
 	display: flex;
 	justify-content: space-around;
 	background: #ecf2f5;
@@ -370,12 +359,40 @@ TOP NAV BAR PART
 	border-bottom-left-radius: 3px;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form #lower input[type=checkbox] {
+#loginContainer form #lower ul {
+	margin: 1.3em 1.9em 1em 1em;
+	padding-left: 0;
+    width: 220px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #acd6ef; /*IE fallback*/
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	border-radius: 30px;
+	border: 1px solid #66add6;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+
+#loginContainer form #lower ul li {
+	list-style-type: none;
+	margin: 0.3em 1em 0 1em;
+}
+
+#loginContainer form #lower ul li a {
+	text-decoration: none;
+	margin: 0 0 0 1em;
+	color: #fff;
+}
+
+#loginContainer form #lower input[type=checkbox] {
 	margin: 2.3em 0em 1em 1.9em;
 	padding: 1em 1em 1em 0;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form #lower .check {
+#loginContainer form #lower .check {
 	margin: 2.4em 1.2em 1em 1em;
 	padding-right: 7em;
 	font-size: 11px;
@@ -383,7 +400,7 @@ TOP NAV BAR PART
 	text-shadow: 0 1px 0 #fff;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form #lower input[type=submit] {
+#loginContainer form #lower input[type=submit] {
 	margin: 1.3em 1.9em 1em 1em;
 	width: 80px;
 	height: 30px;
@@ -400,14 +417,42 @@ TOP NAV BAR PART
 	cursor: pointer;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form #lower input[type=submitfb] {
-	margin: 1.3em 1.9em 1em 1em;
-	width: 165px;
+#loginContainer form #lowerSoc ul:hover,
+#loginContainer form #lower input[type=submit]:hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+
+#loginContainer form #lowerSoc ul:active,
+#loginContainer form #lower input[type=submit]:active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
+	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+}
+
+#loginContainer form #lowerSoc {
+	display: flex;
+	background: #ecf2f5;
+	width: 100%;
+	height: 125px;
+	margin-top: 0;
+	color: #fff;
+	box-shadow: inset 0 1px 1px #fff;
+	border-top: 1px solid #ccc;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	flex-direction: column;
+}
+
+#loginContainer form #lowerSoc ul {
+	margin: 0.3em 1em 0.3em 1em;
+	padding: 0;
+    width: 220px;
 	height: 30px;
 	font-size: 14px;
 	font-weight: bold;
-	color: #fff;
-	background-color: #acd6ef; /*IE fallback*/
+	background-color: #efacb5; /*IE fallback*/
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
 	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
 	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
@@ -415,26 +460,24 @@ TOP NAV BAR PART
 	border: 1px solid #66add6;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
 	cursor: pointer;
+	align-self: center;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form #lower input[type=submitfb]:hover,
-#top .navbar .login ul .logInbar #loginContainer form #lower input[type=submit]:hover {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
-	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
-	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+#loginContainer form #lowerSoc ul li {
+	list-style-type: none;
+	margin: 0.3em 1em 0 1em;
 }
 
-#top .navbar .login ul .logInbar #loginContainer form #lower input[type=submitfb]:active,
-#top .navbar .login ul .logInbar #loginContainer form #lower input[type=submit]:active {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
-	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
-	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+#loginContainer form #lowerSoc ul li a {
+	text-decoration: none;
+	margin: 0 0 0 1em;
+	color: #fff;
 }
 /*LOGINCONTAINER PART (END)*/
 
 /*SEARCH-BOX (START)*/
 /*STYLING THE search-box AND SET ITS display: none, TO USE JQUERY CAN MAKE IT TOGGLE(show, hide).*/
-#top .navbar .login .active .search-box {
+.search-box {
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
@@ -453,7 +496,7 @@ TOP NAV BAR PART
 }
 
 /*PSEUDO ELEMENT TO CREATE TRIANGLE*/
-#top .navbar .login .active .search-box:before {
+.search-box:before {
 	content: "";
 	position: absolute;
 	top: -33px;
@@ -465,7 +508,7 @@ TOP NAV BAR PART
 }
 
 /*INPUT FIELD STYLE*/
-#top .navbar .login .active .search-box input[type="text"] {
+.search-box input[type="text"] {
 	width: 19em;
 	padding: 0;
 	margin: 0.8em 1em 0 1em;
@@ -478,7 +521,7 @@ TOP NAV BAR PART
 }
 
 /*INPUT BUTTON STYLE*/
-#top .navbar .login .active .search-box input[type="button"] {
+.search-box input[type="button"] {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	outline: none;
 	-webkit-font-smoothing: antialiased;
@@ -499,18 +542,49 @@ TOP NAV BAR PART
 	cursor: pointer;
 }
 
-#top .navbar .login .active .search-box input[type="button"]:hover {
+.search-box input[type="button"]:hover {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
 	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 }
 
-#top .navbar .login .active .search-box input[type="button"]:active {
+.search-box input[type="button"]:active {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
 	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
 	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
 }
 /*SEARCH-BOX (END)*/
+
+/*==============================
+CREATED FOR JQUERY LOGIN START*/
+.open {
+	display: block !important;
+} /*.open isn't on html file. Created just for jQuery effect*/
+.loginContainerOverlay {
+	width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    /*z-index: -9999;*/
+}
+/*FOR JQUERY LOGIN END
+================================*/
+
+/*==============================
+CREATED FOR JQUERY SEAR-BOX START*/
+.openSearchBox {
+	display: block !important;
+} /*.open isn't on html file. Created just for jQuery effect*/
+.searchBoxOverlay {
+	width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    /*z-index: -9999;*/
+}
+/*FOR JQUERY LOGIN END
+================================*/
+
 
 /*================================
 HEADER PART
@@ -1250,12 +1324,12 @@ footer .about {
 	footer .about {
 		display: flex;
 		-webkit-flex-flow: row wrap;
+		justify-content: space-around;
 		padding: 0;
 		margin: 0;
 	}
 	footer .about #footerColumn {
-		width: calc(100% / 3);
-		justify-content: space-between;
+		flex-basis: calc(100% / 3);
 	}
 }
 
@@ -1353,3 +1427,4 @@ footer .about #footerColumn .dailyArticle ul li a {
 footer .about #footerColumn .dailyArticle ul li a:hover {
 	color: limegreen;
 }
+
