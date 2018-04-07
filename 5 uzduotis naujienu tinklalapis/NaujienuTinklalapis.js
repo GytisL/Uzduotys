@@ -5,14 +5,14 @@ $(document).ready(function(){
 		$('.loginContainerOverlay').on('click', function(){
 			if($('.loginContainerOverlay').hasClass('open')){
 				$('.loginContainerOverlay').removeClass('open');
-				$('#loginContainer').css('display','none');
+				$('#recoveryContainer').css('display','none');
 			}
 		});
 		//jeigu nebuvo ijungtas ijungia
 		$('.loginContainerOverlay').addClass('open');/*Use the jQuery addClass() function to give the classes animated and shake to all your elements with the class well.
 */			//TIKRINTI AR LOGINCONTAINER TURI KLASE OPEN, JEIGU NETURI JA UZDETI. 
 			//Tikrinti su if $hasClass , $removeClass, ir po to addClass.
-		$('#loginContainer').slideToggle(function(){
+		$('#recoveryContainer').slideToggle(function(){
 		});
 	});
 });

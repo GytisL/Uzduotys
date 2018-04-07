@@ -285,8 +285,8 @@ TOP NAV BAR PART
 	display: none;
 	position: fixed;
 	width: 340px;
-	height: 405px;
-	top: 13em;
+	height: 426px;
+	top: 12em;
     /* left: 88.2%; */
     right: 2%;
 	margin-top: -140px;
@@ -312,6 +312,7 @@ TOP NAV BAR PART
 	animation-timing-function: linear;
 }
 
+
 #loginContainer form {
 	margin: 0.5em auto;
 }
@@ -321,17 +322,25 @@ TOP NAV BAR PART
 	content: "";
 	position: absolute;
 	top: -33px;
-	right: 35px;
+	right: 98px;
 	border-top: 1em solid transparent;
 	border-right: 1em solid transparent;
 	border-bottom: 1em solid #f5f7f8; /*triangle properties*/
 	border-left: 1em solid transparent;
 }
 
+#loginContainer form h1 {
+	color: #555;
+    margin: 0 0 0 0.8em;
+    padding: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
 #loginContainer form label {
 	color: #555;
 	display: inline-block;
-	margin: 2em 0 0 1.8em;
+	margin: 0.5em 0 0 1.8em;
 	padding: 0;
 	font-size: 14px;
 }
@@ -399,40 +408,12 @@ TOP NAV BAR PART
 	justify-content: space-around;
 	background: #ecf2f5;
 	width: 100%;
-	height: 69px;
+	height: 67px;
 	margin-top: 0;
 	box-shadow: inset 0 1px 1px #fff;
 	border-top: 1px solid #ccc;
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
-}
-
-#loginContainer form #lower ul {
-	margin: 1.3em 1.9em 1em 1em;
-	padding-left: 0;
-    width: 220px;
-	height: 30px;
-	font-size: 14px;
-	font-weight: bold;
-	background-color: #acd6ef; /*IE fallback*/
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
-	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
-	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
-	border-radius: 30px;
-	border: 1px solid #66add6;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
-	cursor: pointer;
-}
-
-#loginContainer form #lower ul li {
-	list-style-type: none;
-	margin: 0.3em 1em 0 1em;
-}
-
-#loginContainer form #lower ul li a {
-	text-decoration: none;
-	margin: 0 0 0 1em;
-	color: #fff;
 }
 
 #loginContainer form #lower input[type=checkbox] {
@@ -483,7 +464,7 @@ TOP NAV BAR PART
 	display: flex;
 	background: #ecf2f5;
 	width: 100%;
-	height: 125px;
+	height: 127px;
 	margin-top: 0;
 	color: #fff;
 	box-shadow: inset 0 1px 1px #fff;
@@ -494,7 +475,7 @@ TOP NAV BAR PART
 }
 
 #loginContainer form #lowerSoc ul {
-	margin: 0.3em 1em 0.3em 1em;
+	margin: 0.4em 1em 0.4em 1em;
 	padding: 0;
     width: 220px;
 	height: 30px;
@@ -521,7 +502,335 @@ TOP NAV BAR PART
 	margin: 0 0 0 1em;
 	color: #fff;
 }
+
+#loginContainer form .changeLink {
+	background: #ecf2f5;
+	box-shadow: inset 0 1px 1px #fff;
+    border-top: 1px solid #ccc;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-size: 1em;
+}
+
+#loginContainer form .changeLink a {
+	text-decoration: none;
+	margin: 0 0.5em;
+	color: #007bff;
+}
 /*LOGINCONTAINER PART (END)*/
+
+/*RECOVERY CONTAINER PART (START)*/
+#recoveryContainer {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	display: none;
+	position: fixed;
+	width: 340px;
+	height: 426px;
+	top: 12em;
+    /* left: 88.2%; */
+    right: 2%;
+	margin-top: -140px;
+	margin-left: -170px;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	-webkit-animation-name: bounceIn;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: bounceIn;
+	-moz-animation-fill-mode: both;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	animation-name: bounceIn;
+	animation-fill-mode: both;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+
+#recoveryContainer form {
+	margin: 0.5em auto;
+}
+
+/*#recoveryContainer TRIANGLE PROPERTIES*/
+#recoveryContainer form:before {	
+	content: "";
+	position: absolute;
+	top: -33px;
+	right: 98px;
+	border-top: 1em solid transparent;
+	border-right: 1em solid transparent;
+	border-bottom: 1em solid #f5f7f8; /*triangle properties*/
+	border-left: 1em solid transparent;
+}
+
+#recoveryContainer form h1 {
+	color: #555;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+#recoveryContainer form label {
+	color: #555;
+	display: inline-block;
+	margin: 7em 0 1.5em 1.8em;
+	padding: 0;
+	font-size: 14px;
+}
+
+#recoveryContainer form #lower input, 
+#recoveryContainer form input {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	outline: none;
+}
+
+#recoveryContainer form input[type=email] {
+	color: #777;
+	margin: 1em 1em 3em 2em;
+	width: 290px;
+	height: 35px;
+	border: 1px solid #c7d0d2;
+	border-radius: 2px;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+	padding-left: 1em;
+}
+
+#recoveryContainer form input[type=email]:hover {
+	border: 1px solid #b6bfc0;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
+}
+
+#recoveryContainer form input[type=email]:focus {
+	border: 1px solid #a8c9e4;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
+}
+
+#recoveryContainer form #lower {
+	display: flex;
+	justify-content: space-around;
+	background: #ecf2f5;
+	width: 100%;
+	height: 131px;
+	margin-top: 0.2em;
+	box-shadow: inset 0 1px 1px #fff;
+	border-top: 1px solid #ccc;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#recoveryContainer form #lower input[type=submit] {
+	text-align: center;
+	margin: 1.3em 1.9em 1em 1em;
+	width: 80px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #acd6ef; /*IE fallback*/
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	border-radius: 30px;
+	border: 1px solid #66add6;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+
+#recoveryContainer form #lower input[type=submit]:hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+
+#recoveryContainer form #lower input[type=submit]:active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
+	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+}
+/*RECOVERY CONTAINER PART (END)*/
+
+
+/*SIGN UP CONTAINER PART (START)*/
+#signUpContainer {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	display: none;
+	position: fixed;
+	width: 340px;
+	height: 426px;
+	top: 12em;
+    /* left: 88.2%; */
+    right: 2%;
+	margin-top: -140px;
+	margin-left: -170px;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	-webkit-animation-name: bounceIn;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: bounceIn;
+	-moz-animation-fill-mode: both;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	animation-name: bounceIn;
+	animation-fill-mode: both;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+#signUpContainer form {
+	margin: 0.5em auto;
+}
+
+/*#signUpContainer TRIANGLE PROPERTIES*/
+#signUpContainer form:before {	
+	content: "";
+	position: absolute;
+	top: -33px;
+	right: 98px;
+	border-top: 1em solid transparent;
+	border-right: 1em solid transparent;
+	border-bottom: 1em solid #f5f7f8; /*triangle properties*/
+	border-left: 1em solid transparent;
+}
+
+#signUpContainer form h1 {
+	color: #555;
+    margin: 0 0 0 0.8em;
+    padding: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+#signUpContainer form label {
+	color: #555;
+	display: inline-block;
+	margin: 0.5em 0 0 1.8em;
+	padding: 0;
+	font-size: 14px;
+}
+
+#signUpContainer form #lower input {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	outline: none;
+}
+ 
+#signUpContainer form input[type=text],
+#signUpContainer form input[type=email],
+#signUpContainer form input[type=password],
+#signUpContainer form input[type=passwordRepeat] {
+	color: #777;
+	margin: 0.3em 1em 0.3em 2em;
+	width: 290px;
+	height: 35px;
+	border: 1px solid #c7d0d2;
+	border-radius: 2px;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+	padding-left: 1em;
+}
+ 
+#signUpContainer form input[type=text]:hover,
+#signUpContainer form input[type=email]:hover,
+#signUpContainer form input[type=password]:hover,
+#signUpContainer form input[type=passwordRepeat]:hover {
+	border: 1px solid #b6bfc0;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
+}
+
+#signUpContainer form input[type=text]:focus,
+#signUpContainer form input[type=email]:focus,
+#signUpContainer form input[type=password]:focus,
+#signUpContainer form input[type=passwordRepeat]:focus {
+	border: 1px solid #a8c9e4;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
+}
+
+#signUpContainer form #lower {
+	display: flex;
+	justify-content: space-around;
+	background: #ecf2f5;
+	width: 100%;
+	height: 67px;
+	margin-top: 0.1em;
+	box-shadow: inset 0 1px 1px #fff;
+	border-top: 1px solid #ccc;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#signUpContainer form #lower input[type=submit] {
+	margin: 1.3em 1.9em 1em 1em;
+	width: 80px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #acd6ef; /*IE fallback*/
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	border-radius: 30px;
+	border: 1px solid #66add6;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+
+#signUpContainer form #lower input[type=submit]:hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+
+#signUpContainer form #lower input[type=submit]:active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
+	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+}
+
+#signUpContainer form .changeLink {
+	background: #ecf2f5;
+	box-shadow: inset 0 1px 1px #fff;
+	border-top: 1px solid #ccc;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+
+#signUpContainer form .changeLink a {
+	text-decoration: none;
+	margin: 0 0.5em;
+	color: #007bff;;
+	
+}
+/*SIGN UP CONTAINER PART (END)*/
+
 
 /*SEARCH-BOX (START)*/
 /*STYLING THE search-box AND SET ITS display: none, TO USE JQUERY CAN MAKE IT TOGGLE(show, hide).*/

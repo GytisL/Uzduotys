@@ -105,10 +105,11 @@
 
         <div id="loginContainer">
             <form>
+                <h1>Prisijungti</h1>
                 <label for="username">Vartotojo vardas:</label>
-                <input type="text" placeholder="Įveskite vartotojo vardą" id="username">
+                <input type="text" placeholder="Įveskite vartotojo vardą arba elektroninį paštą" id="username">
                 <label for="password">Slaptažodis:</label>
-                <h6><a href="#">Pamiršai slaptažodį?</a></h6>
+                <h6><a href="#">Pamiršai slaptažodį ?</a></h6>
                 <input type="password" placeholder="Įveskite slaptažodį" id="password" >
 
                 <div id="lower">
@@ -127,6 +128,52 @@
                         <li><i class="fab fa-google-plus-square fa-lg"></i><a href="#">Prisijungti su Google+</a></li>
                     </ul>
                 </div>
+
+                <p class="changeLink">
+                    Dar ne narys ?
+                    <a href="#toregister" class="to_register">Prisijunk</a>
+                </p>
+            </form>
+        </div>
+
+
+        <div class="recoveryContainerOverlay"></div>
+
+        <div id="recoveryContainer">
+            <form>
+                <h1>Atkurti slaptažodį</h1>
+                <label for="email">Įveskite savo elektroninio pašto adresą ir mes jums atsiųsime laikiną slaptažodį.</label>
+                <input type="email" placeholder="mail@mail.com" id="email">
+
+                <div id="lower">
+                    <input type="submit" value="Atkurti">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="signUpContainerOverlay"></div>
+
+        <div id="signUpContainer">
+            <form>
+                <h1>Užsiregistruoti</h1>
+                <label for="username">Vartotojo vardas:</label>
+                <input type="text" placeholder="vartotojas123" id="username">
+                <label for="email">Elektroninis paštas:</label>
+                <input type="email" placeholder="mail@mail.com" id="email" >
+                <label for="password">Sugalvokite slaptažodį:</label>
+                <input type="password" placeholder="pvz.: QkMdCh/&^" id="password">
+                <label for="passwordRepeat">Patvirtinkite slaptažodį:</label>
+                <input type="passwordRepeat" placeholder="pvz.: QkMdCh/&^" id="passwordRepeat">
+
+                <div id="lower">
+                    <input type="submit" value="Prisijungti">
+                </div>
+
+                <p class="changeLink">
+                    Jau narys ?
+                    <a href="#toregister" class="to_register">Eik ir prisijunk</a>
+                </p>
             </form>
         </div>
 
