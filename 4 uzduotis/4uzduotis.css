@@ -65,9 +65,9 @@ TOP NAV BAR
 /*idedami vertikalus bruksniai | tarp zodziu. :not(:first-child) reiskia,
 kad neuzdedamas | pacioj pradzioj*/
 #top .contacts ul li:not(:first-child){
-  border-left: 1px solid white;
-  line-height: 1em;
-  padding-left: 0.8em;
+	border-left: 1px solid white;
+	line-height: 1em;
+	padding-left: 0.8em;
 }
 
 /*================================
