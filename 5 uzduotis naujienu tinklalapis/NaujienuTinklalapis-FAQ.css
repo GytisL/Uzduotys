@@ -1277,6 +1277,10 @@ NEWSDESK PART
 	margin: 1em 0;
 }
 
+.container .newsDesk #secondColumn .news .videoSection p strong {
+	font-weight: bold;
+}
+
 .container .newsDesk #secondColumn .news .videoSection .borders a:not(:last-child){
 	padding-right: 0.8em;
 }
@@ -1292,6 +1296,7 @@ NEWSDESK PART
 .container .newsDesk #thirdColumn .news .mustRead .read a:hover {
 	color: #111111;
 }
+
 
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;

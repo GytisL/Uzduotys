@@ -25,6 +25,9 @@
 		
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <!-- Location on google maps -->
+        <script async defer src="https://maps.googleapis. com/maps/api/js?key=AIzaSyAvbnVru9DRLoczMR7Ubd6tUr-ruJ3IRE8&callback=initMap"></script>
     </head>
 
     <body>
@@ -46,16 +49,15 @@
                             <label for="toggle">&#9776;</label>
                         </li>
                     </ul>
-                    
-                    
-                        
+                      
                 </div>
 
 	    		<div class="about">
 	    			<ul>
-	    				<li><a href="#">Naujienos</a></li>
-	    				<li><a href="#">Apie mus</a></li>
-	    				<li><a href="#">Rekvizitai</a></li>
+	    				<li><a href="#Naujienos">Naujienos</a></li>
+                        <li><a href="NaujienuTinklalapis-About.html">Apie mus</a></li>
+                        <li><a href="NaujienuTinklalapis-Contacts.html">Rekvizitai</a></li>
+                        <li><a href="NaujienuTinklalapis-FAQ.html">D. U. K.</a></li>
 	    			</ul>
 	    		</div>
 
@@ -211,248 +213,10 @@
 
         <div class="container">
 
-            <div class="topNews">
-                <div id="topColumn">
-                    <div class="popularNews" id="LabiausiaiSkaitomi">
-                        <h4>Labiausiai</h4>
-                        <div class="mostPopular">
-                            <img src="entertainment2-compressed.jpeg">
-                            <div class="read">
-                                <h5><a href="#">Pramogos</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-
-                        <div class="mostPopular">
-                            <img src="sport2-compressed.jpeg">
-                            <div class="read">
-                                <h5><a href="#">Sportas</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-                        
-                        <div class="mostPopular">
-                            <img src="museum1-compressed.jpg">
-                            <div class="read">
-                                <h5><a href="#">Meno galerija</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-                            
-                        <div class="mostPopular">
-                            <img src="technology-compressed.jpeg">
-                            <div class="read">
-                                <h5><a href="#">Technologijos</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="topColumn">
-                    <div class="popularNews">
-                        <h4 class="readable">skaitomi</h4>
-                        <div class="mostPopular2">
-                            <img src="business-compressed.jpeg">
-                            <div class="read">
-                                <h5><a href="#">Verslas</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-
-                        <div class="mostPopular2">
-                            <img src="foodiesfeed-compressed.jpg">
-                            <div class="read">
-                                <h5><a href="#">Maitinimasis</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-                            
-                        <div class="mostPopular2">
-                            <img src="architecture-compressed.jpeg">
-                            <div class="read">
-                                <h5><a href="#">Kas statoma</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-                            
-                        <div class="mostPopular2">
-                            <img src="nature4-compressed.jpg">
-                            <div class="read">
-                                <h5><a href="#">Gamta</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-                            
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="topTitle" id="NaujaiPaskelbti">
+            <div class="topTitle" id="apieMus">
                 <nav>
                     <ul>
-                        <li><h1><a href="#">Naujai paskelbti straipsniai</a></h1></li>
-                    </ul>
-                </nav>
-            </div>
-
-
-            <div class="info">
-                <div id="column">
-                    <div class="article">
-                        <h4 class="paint">Naujienos</h4>
-                        <div class="Section">
-                            <img src="Group-of-people-brainstorming-and-taking-notes-compressed.jpg">
-                            <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a></h2>
-                            <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                        </div>
-                    </div>
-
-                    <div class="article">
-                        <h4>Lietuva</h4>
-                        <div class="Section">
-                            <img src="traveling1-compressed.jpeg">
-                            <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></p>
-                            <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="column">
-                    <div class="article">
-                        <h4>Kultūra</h4>
-                        <div class="Section">
-                            <img src="painting-compressed.jpeg">
-                            <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></p>
-                            <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                        </div>
-                    </div>
-
-                    <div class="article">
-                        <h4>Verslas</h4>
-                        <div class="Section">
-                            <img src="trading-5-compressed.jpg">
-                            <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></p>
-                            <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                        </div>
-                    </div>
-
-                    <div class="article">
-                        <h4>Sportas</h4>
-                        <div class="Section">
-                            <img src="sport-compressed.jpeg">
-                            <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></p>
-                            <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                        </div>
-                    </div>
-
-                    <div class="article">
-                        <h4>Technologijos</h4>
-                        <div class="Section">
-                            <img src="Robots-on-an-exhibition-compressed.jpg">
-                            <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></p>
-                            <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="column">
-                    <div class="article">
-                        <h4>Pramogos</h4>
-                        <div class="Section">
-                            <img src="entertainment-compressed.jpeg">
-                            <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a></p>
-                            <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                        </div>
-                    </div>
-
-                    <div class="article">
-                        <h4>Maistas</h4>
-                        <div class="Section">
-                            <img src="foodiesfeed-compressed.jpg">
-                            <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a></p>
-                            <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="topTitle" id="Aktualijos">
-                <nav>
-                    <ul>
-                        <li><h1><a href="#">Aktualijos</a></h1></li>
-                    </ul>
-                </nav>
-            </div>
-
-
-            <div class="relevantNews">
-                <div id="relevantColumn">
-                    <div class="theNews">
-                        <div class="theMost">
-                            <img src="worldnews-compressed.jpg">
-                            <div class="reading">
-                                <h5><a href="#">Pasaulio naujienos</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-
-                        <div class="theMost">
-                            <img src="nature-compressed.jpeg">
-                            <div class="reading">
-                                <h5><a href="#">Lietuva</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-                        
-                        <div class="theMost">
-                            <img src="nature2-compressed.jpeg">
-                            <div class="reading">
-                                <h5><a href="#">Naktinis dangus</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-                            
-                        <div class="theMost">
-                            <img src="politics-compressed.jpeg">
-                            <div class="reading">
-                                <h5><a href="#">Politika</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
-                                <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="topTitle" id="Naujienos">
-                <nav>
-                    <ul>
-                        <li><h1><a href="#">Naujienos</a></h1></li>
+                        <li><h1><a href="#">Kontaktai</a></h1></li>
                     </ul>
                 </nav>
             </div>
@@ -462,33 +226,36 @@
                 <div id="secondColumn">
                     <div class="news">
                         <div class="videoSection">
-                            <video width="90%" height="100%" controls>
-                                <source src="video-compressed.mp4" type="video/mp4">
-                                Your browser does not support HTML5 video.
-                            </video>
-                            <h4>Video</h4>
-                            <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</a></p>
+                            <p>Atsakymus į dažniausiai užduodamus klausimus galima rasti <a href="#">D. U. K.</a></p>
+
+                            <p><strong>Laiškai redaktoriui: </strong>Užfiksavote ką nors įdomaus? Siųskite laiškus elektroniniu paštu <em>tautoszodis@tautoszodis.lt</em> ir įrašykite savo telefono numerį ir adresą arba anonimiškai, taip pat galite siųsti registruotu laišku. Visi gauti laiškai tampa <em>Tautos Žodis</em> redakcijos nuosavybe.</p>
+
+                            <p><strong>Kultūra: </strong>Norite bublikuoti savo meminę išraišką? Siųskite savo piešinius, poemas, šaržus ar kokią kitą meninę išraišką elektroniniu paštu: <em>kultura@tautoszodis.lt</em>.</p>
+
+                            <p><strong>Darbas laikraštyje: </strong>Siųskite laiškus elektroniniu paštu <em>vyrredaktorius@tautoszodis.lt</em> arba skambinkite telefonu +370 680 00000, Kaunas <em>Tautos Žodis</em>.</p>
+
+
                         </div>
 
-                        <div class="row">
-                            <div class="country">
-                                <img src="entertainment2-compressed.jpeg">
-                                <h4>Pramogos</h4>
-                                <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</a></p>
-                            </div>
-
-                            <div class="country">
-                                <img src="technology2-compressed.jpeg">
-                                <h4>Mokslas</h4>
-                                <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</a></p>
-                            </div>
-                        </div>
+                        <div id="map"></div>
+                        
                     </div>
                 </div>
 
+
+                
+                
+
                 <div id="thirdColumn">
+                    
+                    <div id="edgeAdvertisement">
+                        <div class="image">
+                            <img src="LineageBanneris-compressed.gif" height="200" width="400">
+                        </div>
+                    </div>
+
                     <div class="news">
-                        <h4>Svarbu perskaityti</h4>
+                        <h4>Skaitomiausi</h4>
                         <div class="mustRead">
                             <img src="trading-12-compressed.jpg">
                             <div class="read">
@@ -521,67 +288,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-
-            <div class="topTitle" id="GyvenimoBudas">
-                <nav>
-                    <ul>
-                        <li><h1><a href="#">Gyvenimo būdas</a></h1></li>
-                    </ul>
-                </nav>
-            </div>
-
-
-            <div class="highlights">
-                <div id="columnContainer">
-                    <div class="dailyArticle">
-                        <img src="sport-compressed.jpeg">
-                        <div class="commentsColumn">
-                            <h4><a href="#">Sportas</a></h4>
-                            <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            <h5>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h5>
+                    <div id="edgeAdvertisement">
+                        <div class="image">
+                            <img src="LineageBanneris-compressed.gif" height="200" width="400">
                         </div>
                     </div>
-                </div>
-
-                <div id="columnContainer">
-                    <div class="dailyArticle">
-                        <img src="art-compressed.jpeg">
-                        <div class="commentsColumn">
-                            <h4><a href="#">Kultūra</a></h4>
-                            <h2><a href="#">Lorem ipsum dolor sit.</a></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <h5>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="columnContainer">
-                    <div class="dailyArticle">
-                        <img src="art3-compressed.jpg">
-                        <div class="commentsColumn">
-                            <h4><a href="#">Muziejai</a></h4>
-                            <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</a></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <h5>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="columnContainer">
-                    <div class="dailyArticle">
-                        <img src="food3-compressed.jpg">
-                        <div class="commentsColumn">
-                            <h4><a href="#">Maistas</a></h4>
-                            <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
-                            <h5>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h5>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -716,7 +429,7 @@
             </div>
         </footer>
 
-        <script src="NaujienuTinklalapis.js"></script>
+        <script src="NaujienuTinklalapis-Contacts.js"></script>
 
     </body>
 </html>

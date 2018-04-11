@@ -53,17 +53,3 @@ $(document).ready(function(){
 		});
 	});
 /*SEARCHBOX BAR END*/
-
-
-/*#id map GOOGLE MAPS START*/
-var map;
-	function initMap() {
-		map = new google.maps.Map(document.getElementById('map'), {
-			center: {lat: -54.893331, lng: 23.916591}, 
-			zoom: 8
-		});
-	}
-/*#id map GOOGLE MAPS END*/
-
-
-
