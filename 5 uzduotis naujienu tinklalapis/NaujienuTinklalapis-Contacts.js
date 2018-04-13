@@ -9,8 +9,8 @@ $(document).ready(function(){
 			}
 		});
 		//jeigu nebuvo ijungtas ijungia
-		$('.loginContainerOverlay').addClass('open');/*Use the jQuery addClass() function to give the classes animated and shake to all your elements with the class well.
-*/			//TIKRINTI AR LOGINCONTAINER TURI KLASE OPEN, JEIGU NETURI JA UZDETI. 
+		$('.loginContainerOverlay').addClass('open');/*Use the jQuery addClass() function to give the classes animated and shake to all your elements with the class well.*/
+			//TIKRINTI AR LOGINCONTAINER TURI KLASE OPEN, JEIGU NETURI JA UZDETI. 
 			//Tikrinti su if $hasClass , $removeClass, ir po to addClass.
 		$('#loginContainer').slideToggle(function(){
 		});
@@ -20,11 +20,11 @@ $(document).ready(function(){
 
 
 /*ROTATE FROM loginContainer TO signUpContainer (START)*/
-/*$(document).ready(function(){
+$(document).ready(function(){
 	$('.to_register').on('click', function(){
 		$('.to_signup').addClass('switch');
 	});
-});*/
+});
 /*ROTATE FROM loginContainer TO signUpContainer (END)*/
 
 
@@ -47,23 +47,25 @@ $(document).ready(function(){
 			}
 		});
 		//jeigu nebuvo ijungtas ijungia
-		$('.searchBoxOverlay').addClass('openSearchBox');/*Use the jQuery addClass() function to give the classes animated and shake to all your elements with the class well.
-*/
+		$('.searchBoxOverlay').addClass('openSearchBox');/*Use the jQuery addClass() function to give the classes animated and shake to all your elements with the class well.*/
+
 		$('.search-box').slideToggle(function(){
 		});
 	});
 /*SEARCHBOX BAR END*/
 
-
 /*#id map GOOGLE MAPS START*/
-var map;
-	function initMap() {
-		map = new google.maps.Map(document.getElementById('map'), {
-			center: {lat: -54.893331, lng: 23.916591}, 
-			zoom: 8
-		});
-	}
+function initMap() {
+	var location = {lat: 54.892813, lng: 23.916402};
+	var map = new google.maps.Map(document.getElementById("map"), {
+		zoom: 17,
+		center: location
+	});
+	
+	var marker = new google.maps.Marker({ position: new google.maps.LatLng(54.892813, 23.916402), title: 'Tautos žodis', map:map});
+	/*var marker = new google.maps.Marker();
+		marker.setPosition(new google.maps.LatLng(54.892813, 23.916402));
+		marker.setMap(map);*/
+};
 /*#id map GOOGLE MAPS END*/
-
-
 

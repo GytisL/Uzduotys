@@ -12,6 +12,8 @@ body {
 
 	font-family: 'Amiri', serif;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: geometricPrecision;
 	font-weight: 300;
 }
 /*================================
@@ -282,7 +284,6 @@ TOP NAV BAR PART
 #loginContainer {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	color: #444;
-	-webkit-font-smoothing: antialiased;
 	display: none;
 	position: fixed;
 	width: 340px;
@@ -354,7 +355,6 @@ TOP NAV BAR PART
 #loginContainer form h6 a {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	color: #444;
-	-webkit-font-smoothing: antialiased;
 	font-size: 11px;
 	letter-spacing: 1px;
 	color: #aaa;
@@ -527,7 +527,6 @@ TOP NAV BAR PART
 #recoveryContainer {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	color: #444;
-	-webkit-font-smoothing: antialiased;
 	display: none;
 	position: fixed;
 	width: 340px;
@@ -671,7 +670,6 @@ TOP NAV BAR PART
 #signUpContainer {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	color: #444;
-	-webkit-font-smoothing: antialiased;
 	display: none;
 	position: fixed;
 	width: 340px;
@@ -882,7 +880,6 @@ TOP NAV BAR PART
 .search-box input[type="button"] {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	outline: none;
-	-webkit-font-smoothing: antialiased;
 	margin: 0.8em 1.4em 1em 1em;
 	padding: 0;
 	width: 80px;
@@ -1124,7 +1121,6 @@ TOPNEWS PART
 .container .topNews #topColumn .popularNews .mostPopular .read h5,
 .container .topNews #topColumn .popularNews .mostPopular2 .read h5 {
 	font-family: 'Fredericka the Great', cursive;
-	-webkit-font-smoothing: antialiased;
 }
 
 .container .topNews #topColumn .popularNews .mostPopular .read a,
@@ -1136,7 +1132,6 @@ TOPNEWS PART
 .container .topNews #topColumn .popularNews .mostPopular .read h6 a,
 .container .topNews #topColumn .popularNews .mostPopular2 .read h6 a {
 	font-family: 'Chelsea Market', cursive;
-	-webkit-font-smoothing: antialiased;
 }
 
 .container .topNews #topColumn .popularNews .mostPopular .read a:hover,
@@ -1209,7 +1204,6 @@ TOPTITLE PART
 
 .container .topTitle nav ul li a {
 	font-family: 'Rufina', serif;
-	-webkit-font-smoothing: antialiased;
 	color: #111111;
 	letter-spacing: 7px;
 }
@@ -1254,18 +1248,23 @@ NEWSDESK PART
 }
 
 /*GOOGLE MAPS START*/
-.container .newsDesk #map {
+.newsDesk #secondColumn .news #map {
 	/* Always set the map height explicitly to define the size of the div 
 	* element that contains the map. */
-	height: 100%;
-
+	position: relative;
+	overflow: hidden;
+	height: 28em;
+    width: 38em;
+	top: 1em;
 	/* Optional: Makes the sample page fill the window. */
-	margin: 0;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
 	padding: 0;
 }
-/*GOOGLE MAPS END*/     
+/*GOOGLE MAPS END*/
 
-.container .newsDesk #secondColumn .news .videoSection {
+.container .newsDesk #secondColumn .news .Section {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
@@ -1275,43 +1274,42 @@ NEWSDESK PART
 	border-radius: 5px;
 }
 
-.container .newsDesk #secondColumn .news .videoSection {
+.container .newsDesk #secondColumn .news .Section {
 	padding: 1em;
+	margin-bottom: 1em;
 }
 
-.container .newsDesk #secondColumn .news .videoSection h4 {
+.container .newsDesk #secondColumn .news .Section h4 {
 	font-family: 'Fredericka the Great', cursive;
-	-webkit-font-smoothing: antialiased;
 	margin: 0.5em 0;
 }
 
-.container .newsDesk #secondColumn .news .videoSection p {
+.container .newsDesk #secondColumn .news .Section p {
 	margin: 1em 0;
 }
 
-.container .newsDesk #secondColumn .news .videoSection p strong {
+.container .newsDesk #secondColumn .news .Section p strong {
 	font-weight: bold;
 }
 
-.container .newsDesk #secondColumn .news .videoSection .borders a:not(:last-child){
+.container .newsDesk #secondColumn .news .Section .borders a:not(:last-child){
 	padding-right: 0.8em;
 }
 
-.container .newsDesk #secondColumn .news .videoSection .borders a:not(:first-child){
+.container .newsDesk #secondColumn .news .Section .borders a:not(:first-child){
 	border-left: 1px solid #111111;
     line-height: 1em;
     padding-left: 0.8em;
     display: inline-block;
 } /*Idedamas vertikalus bruksnys*/
 
-.container .newsDesk #secondColumn .news .videoSection a:hover,
+.container .newsDesk #secondColumn .news .Section a:hover,
 .container .newsDesk #thirdColumn .news .mustRead .read a:hover {
 	color: #111111;
 }
 
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;
-	-webkit-font-smoothing: antialiased;
 }
 
 .container .newsDesk #thirdColumn #edgeAdvertisement,
@@ -1341,7 +1339,6 @@ NEWSDESK PART
 
 .container .newsDesk #thirdColumn .news h4 {
 	font-family: 'Princess Sofia', cursive;
-	-webkit-font-smoothing: antialiased;
 	padding: 0.5em 0.5em 0.5em 0.7em;
 }
 
@@ -1366,8 +1363,8 @@ NEWSDESK PART
 	flex-direction: column;
 }
 
-.container .newsDesk #secondColumn .news .videoSection a,
-.container .newsDesk #secondColumn .news .videoSection p a,
+.container .newsDesk #secondColumn .news .Section a,
+.container .newsDesk #secondColumn .news .Section p a,
 .container .newsDesk #thirdColumn .news .mustRead .read a {
 	text-decoration: none;
 	color: #65737e;
@@ -1476,21 +1473,18 @@ footer .about #footerColumn .dailyArticle ul .icon img {
 
 footer .about #footerColumn .dailyArticle ul li h3 {
 	font-family: 'Princess Sofia', cursive;
-	-webkit-font-smoothing: antialiased;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	padding: 0.15em 0.2em;
 }
 
 footer .about #footerColumn .dailyArticle h4 {
 	font-family: 'Fredericka the Great', cursive;
-	-webkit-font-smoothing: antialiased;
 	padding: 0;
 	margin: 0;
 }
 
 footer .about #footerColumn .dailyArticle h5 {
 	font-family: 'Fredericka the Great', cursive;
-	-webkit-font-smoothing: antialiased;
 	padding: 0 1em;
 	margin: 0;
 	text-align: center;
@@ -1498,7 +1492,6 @@ footer .about #footerColumn .dailyArticle h5 {
 
 footer .about #footerColumn .dailyArticle ul li h6 {
 	font-family: 'Chelsea Market', cursive;
-	-webkit-font-smoothing: antialiased;
 	padding: 0.2em 0.3em;
 	margin: 0;
 }
