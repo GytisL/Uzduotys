@@ -447,14 +447,12 @@ TOP NAV BAR PART
 	cursor: pointer;
 }
 
-#loginContainer form #lowerSoc ul:hover,
 #loginContainer form #lower input[type=submit]:hover {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
 	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 }
 
-#loginContainer form #lowerSoc ul:active,
 #loginContainer form #lower input[type=submit]:active {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
 	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
@@ -495,13 +493,23 @@ TOP NAV BAR PART
 
 #loginContainer form #lowerSoc ul li {
 	list-style-type: none;
-	margin: 0.3em 1em 0 1em;
+	margin: 0.2em 1em 0 1em;
 }
 
-#loginContainer form #lowerSoc ul li a {
+#loginContainer form #lowerSoc ul li input[type=submit]{
 	text-decoration: none;
-	margin: 0 0 0 1em;
+	margin: 0;
 	color: #fff;
+	text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #acd6ef;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+    background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    border-radius: 30px;
+    border: 0 solid #66add6;
+    cursor: pointer;
 }
 
 #loginContainer form .changeLink {
