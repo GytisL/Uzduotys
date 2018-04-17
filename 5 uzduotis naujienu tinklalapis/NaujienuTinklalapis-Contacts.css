@@ -10,7 +10,7 @@ body {
 	/*prevention from user copying site content*/
 	user-select: none;
 
-	font-family: 'Amiri', serif;
+	font-family: 'Old Standard TT', serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: geometricPrecision;
@@ -1120,7 +1120,7 @@ TOPNEWS PART
 
 .container .topNews #topColumn .popularNews .mostPopular .read h5,
 .container .topNews #topColumn .popularNews .mostPopular2 .read h5 {
-	font-family: 'Fredericka the Great', cursive;
+	font-family: 'Vollkorn', serif;
 }
 
 .container .topNews #topColumn .popularNews .mostPopular .read a,
@@ -1310,6 +1310,7 @@ NEWSDESK PART
 
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;
+    color: #555555;
 }
 
 .container .newsDesk #thirdColumn #edgeAdvertisement,
@@ -1338,7 +1339,8 @@ NEWSDESK PART
 }
 
 .container .newsDesk #thirdColumn .news h4 {
-	font-family: 'Princess Sofia', cursive;
+	font-family: 'Arvo', serif;
+    color: #555555;
 	padding: 0.5em 0.5em 0.5em 0.7em;
 }
 
@@ -1479,6 +1481,7 @@ footer .about #footerColumn .dailyArticle ul li h3 {
 
 footer .about #footerColumn .dailyArticle h4 {
 	font-family: 'Fredericka the Great', cursive;
+    color: #555555;
 	padding: 0;
 	margin: 0;
 }

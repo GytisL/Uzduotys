@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 
         <!-- Font -->
-        <link href="https://fonts.googleapis.com/css?family=Amiri|Aguafina+Script|Chelsea+Market|Fredericka+the+Great|Princess+Sofia|Rufina" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Aguafina+Script|Chelsea+Market|Vollkorn|Arvo|Rufina" rel="stylesheet">
 
         <link rel="stylesheet" href="NaujienuTinklalapis.css">
 		
@@ -102,11 +102,12 @@
 
         <div class="loginContainerOverlay"></div>
 
+
         <div id="loginContainer">
             <form>
                 <h1>Prisijungti</h1>
                 <label for="username">Vartotojo vardas:</label>
-                <input type="text" placeholder="Įveskite vartotojo vardą arba elektroninį paštą" id="username">
+                <input type="text" placeholder="Įveskite vartotojo vardą arba elektroninį paštą" id="username2">
                 <label for="password">Slaptažodis:</label>
                 <h6><a href="#">Pamiršai slaptažodį ?</a></h6>
                 <input type="password" placeholder="Įveskite slaptažodį" id="password" >
@@ -118,7 +119,12 @@
 
                 <div id="lowerSoc">
                     <ul>
-                        <li id="fb"><i class="fab fa-facebook-square fa-lg"></i><input type="submit" onclick="logInFb()" value="Prisijungti su Facebook"></li>
+                        <li id="fb"><i class="fab fa-facebook-square fa-lg"></i><input type="submit" onlogin="checkLoginState();" value="Prisijungti su Facebook">
+                        </li>
+                        <fb:login-button 
+                          scope="public_profile,email"
+                          onlogin="checkLoginState();">
+                        </fb:login-button>
                     </ul>
                     <ul>
                         <li><i class="fab fa-linkedin fa-lg"></i><input type="submit" onclick="logInLi()" value="Prisijungti su LinkedIn"></li>
@@ -157,11 +163,11 @@
             <form>
                 <h1>Užsiregistruoti</h1>
                 <label for="username">Vartotojo vardas:</label>
-                <input type="text" placeholder="vartotojas123" id="username">
+                <input type="text" placeholder="vartotojas123" id="username3">
                 <label for="email">Elektroninis paštas:</label>
-                <input type="email" placeholder="mail@mail.com" id="email" >
+                <input type="email" placeholder="mail@mail.com" id="email3" >
                 <label for="password">Sugalvokite slaptažodį:</label>
-                <input type="password" placeholder="pvz.: QkMdCh/&^" id="password">
+                <input type="password" placeholder="pvz.: QkMdCh/&^" id="password3">
                 <label for="passwordRepeat">Patvirtinkite slaptažodį:</label>
                 <input type="passwordRepeat" placeholder="pvz.: QkMdCh/&^" id="passwordRepeat">
 
@@ -307,7 +313,7 @@
 
             <div class="info">
                 <div id="column">
-                    <div class="article">
+                    <div class="article" id="Naujienos2">
                         <h4 class="paint">Naujienos</h4>
                         <div class="Section">
                             <img src="Group-of-people-brainstorming-and-taking-notes-compressed.jpg">
@@ -408,7 +414,7 @@
             <div class="relevantNews">
                 <div id="relevantColumn">
                     <div class="theNews">
-                        <div class="theMost">
+                        <div class="theMost" id="Pasaulionaujienos">
                             <img src="worldnews-compressed.jpg">
                             <div class="reading">
                                 <h5><a href="#">Pasaulio naujienos</a></h5>
@@ -417,7 +423,7 @@
                             </div>
                         </div>
 
-                        <div class="theMost">
+                        <div class="theMost" id="Lietuva">
                             <img src="nature-compressed.jpeg">
                             <div class="reading">
                                 <h5><a href="#">Lietuva</a></h5>
@@ -426,16 +432,16 @@
                             </div>
                         </div>
                         
-                        <div class="theMost">
+                        <div class="theMost" id="Fotografijos">
                             <img src="nature2-compressed.jpeg">
                             <div class="reading">
-                                <h5><a href="#">Naktinis dangus</a></h5>
+                                <h5><a href="#">Fotografijos</a></h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
                                 <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
                             </div>
                         </div>
                             
-                        <div class="theMost">
+                        <div class="theMost" id="Politika">
                             <img src="politics-compressed.jpeg">
                             <div class="reading">
                                 <h5><a href="#">Politika</a></h5>
@@ -460,7 +466,7 @@
             <div class="newsDesk">
                 <div id="secondColumn">
                     <div class="news">
-                        <div class="videoSection">
+                        <div class="videoSection" id="Video">
                             <video width="90%" height="100%" controls>
                                 <source src="video-compressed.mp4" type="video/mp4">
                                 Your browser does not support HTML5 video.
@@ -470,13 +476,13 @@
                         </div>
 
                         <div class="row">
-                            <div class="country">
+                            <div class="country" id="Pramogos">
                                 <img src="entertainment2-compressed.jpeg">
                                 <h4>Pramogos</h4>
                                 <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</a></p>
                             </div>
 
-                            <div class="country">
+                            <div class="country" id="Mokslas">
                                 <img src="technology2-compressed.jpeg">
                                 <h4>Mokslas</h4>
                                 <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</a></p>
@@ -486,17 +492,17 @@
                 </div>
 
                 <div id="thirdColumn">
-                    <div class="news">
+                    <div class="news" id="Svarbuperskaityti">
                         <h4>Svarbu perskaityti</h4>
                         <div class="mustRead">
                             <img src="trading-12-compressed.jpg">
-                            <div class="read">
+                            <div class="read" id="Verslas">
                                 <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</a></p>
                             <h5>Verslas</h5>
                             </div>
                         </div>
 
-                        <div class="mustRead">
+                        <div class="mustRead" id="Technologijos">
                             <img src="Workplace-with-laptop-on-table-at-home-compressed.jpg">
                             <div class="read">
                                 <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</a></p>
@@ -504,15 +510,15 @@
                             </div>
                         </div>
                             
-                        <div class="mustRead">
-                            <img src="museum2-compressed.jpeg">
+                        <div class="mustRead" id="Keliones">
+                            <img src="travel.jpeg">
                             <div class="read">
                                 <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</a></p>
-                                <h5>Kultūra</h5>
+                                <h5>Kelionės</h5>
                             </div>
                         </div>
                             
-                        <div class="mustRead">
+                        <div class="mustRead" id="Maistas">
                             <img src="food1-compressed.jpeg">
                             <div class="read">
                                 <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</a></p>
@@ -535,7 +541,7 @@
 
             <div class="highlights">
                 <div id="columnContainer">
-                    <div class="dailyArticle">
+                    <div class="dailyArticle" id="Sportas">
                         <img src="sport-compressed.jpeg">
                         <div class="commentsColumn">
                             <h4><a href="#">Sportas</a></h4>
@@ -547,7 +553,7 @@
                 </div>
 
                 <div id="columnContainer">
-                    <div class="dailyArticle">
+                    <div class="dailyArticle" id="Kultura">
                         <img src="art-compressed.jpeg">
                         <div class="commentsColumn">
                             <h4><a href="#">Kultūra</a></h4>
@@ -560,7 +566,7 @@
                 </div>
 
                 <div id="columnContainer">
-                    <div class="dailyArticle">
+                    <div class="dailyArticle" id="Muziejai">
                         <img src="art3-compressed.jpg">
                         <div class="commentsColumn">
                             <h4><a href="#">Muziejai</a></h4>
@@ -572,7 +578,7 @@
                 </div>
 
                 <div id="columnContainer">
-                    <div class="dailyArticle">
+                    <div class="dailyArticle" id="Maistas2">
                         <img src="food3-compressed.jpg">
                         <div class="commentsColumn">
                             <h4><a href="#">Maistas</a></h4>
@@ -612,28 +618,26 @@
                         <ul>
                             <li><h6><a href="#">Rašyti atsiliepimą</a></h6></li>
                             <li><h6><a href="#">Prisijungimas darbuotojams</a></h6></li>
-                            <li><h6><a href="#">Mobiliosios aplikacijos</a></h6></li>
+                            <li><h6><a href="NaujienuTinklalapis.html">D. U. K.</a></h6></li>
                         </ul>
                     </div>
 
-                    <div class="dailyArticle">
+                    <!--<div class="dailyArticle">
                         <ul class="image">
                             <li><p><a href="#">Visos teisės saugomos Tautos žodis redakcijos &copy; 2018. Kopijuoti bei platinti galima tik gavus raštišką sutikimą.</a></p></li>
                         </ul>
-                    </div>
+                    </div>-->
                 </div>
 
                 <div id="footerColumn">
                     <div class="dailyArticle">
                         <ul>
-                            <li><h3><a href="#">Pagrindinis puslapis</a></h3></li>
+                            <li><h3><a href="NaujienuTinklalapis.html">Pagrindinis puslapis</a></h3></li>
                             
-                            <li><h6><a href="#">Vėliausios naujienos</a></h6></li>
-                            <li><h6><a href="#">Fotografijos</a></h6></li>
-                            <li><h6><a href="#">Video galerija</a></h6></li>
-                            <li><h6><a href="#">Įvykiai gyvai</a></h6></li>
+                            <li><h4><a href="#LabiausiaiSkaitomi">Labiausiai skaitomi</a></h4></li>
+                            <li><h4><a href="#NaujaiPaskelbti">Naujai paskelbti straipsniai</a></h4></li>
+                            <li><h6><a href="#Naujienos2">Naujienos</a></h6></li>
                             <li><h6><a href="https://www.tv24.lt/">TV Programa</a></h6></li>
-                            <li><h6><a href="#">D. U. K.</a></h6></li>
                         </ul>
                     </div>
                 </div>
@@ -641,21 +645,14 @@
                 <div id="footerColumn">
                     <div class="dailyArticle">
                         <ul>
-                            <li><h3><a href="#">Aktualijos</a></h3></li>
-                            
-                            <li><h4>Pasaulis</h4></li>
-                            <li><h6><a href="#">Geopolitinė situacija</a></h6></li>
-                            <li><h6><a href="#">Ekonomika</a></h6></li>
-                            <li><h6><a href="#">Užsienio politika</a></h6></li>
-                            <li><h6><a href="#">Klimato kaita</a></h6></li>
-                            <li><h6><a href="#">Energija ir aplinka</a></h6></li>
+                            <li><h3><a href="#Aktualijos">Aktualijos</a></h3></li>
 
-                            <li><h4>Lietuva</h4></li>
-                            <li><h6><a href="#">Biudžetas</a></h6></li>
-                            <li><h6><a href="#">Žemės ūkis</a></h6></li>
-                            <li><h6><a href="#">Demografija</a></h6></li>
-                            <li><h6><a href="#">Klimato kaita</a></h6></li>
-                            <li><h6><a href="#">Energetika ir aplinka</a></h6></li>
+                            <li><h6><a href="#Pasaulionaujienos">Pasaulio naujienos</a></h6></li>
+                            <li><h6><a href="#Lietuva">Lietuva</a></h6></li>
+                            <li><h6><a href="#Fotografijos">Fotografijos</a></h6></li>
+                            <li><h6><a href="#Politika">Politika</a></h6></li>
+
+                            <!--<li><h4>Lietuva</h4></li>-->
                         </ul>
                     </div>
                 </div>
@@ -663,25 +660,16 @@
                 <div id="footerColumn">
                     <div class="dailyArticle">
                         <ul>
-                            <li><h3><a href="#">Naujienos</a></h3></li>
+                            <li><h3><a href="#Naujienos">Naujienos</a></h3></li>
                             
-                            <li><h4>Verslas</h4></li>
-                            <li><h6><a href="#">Mokesčiai</a></h6></li>
-                            <li><h6><a href="#">Lyderystė</a></h6></li>
-                            <li><h6><a href="#">Rinka</a></h6></li>
-                            
-                            <li><h4>Technologijos</h4></li>
-                            <li><h6><a href="#">Inžinerija</a></h6></li>
-                            <li><h6><a href="#">Superintelektas</a></h6></li>
-                            <li><h6><a href="#">Nanotechnologijos</a></h6></li>
-                            <li><h6><a href="#">Informacinės technologijos</a></h6></li>
-                            <li><h6><a href="#">Auto naujienos</a></h6></li>
-
-                            <li><h4>Pramogos</h4></li>
-                            <li><h6><a href="#">Poilsis</a></h6></li>
-                            <li><h6><a href="#">Renginiai</a></h6></li>
-                            <li><h6><a href="#">Ekskursijos</a></h6></li>
-                            <li><h6><a href="#">Kelionės</a></h6></li>
+                            <li><h6><a href="#Video">Video</a></h6></li>
+                            <li><h6><a href="#Pramogos">Pramogos</a></h6></li>
+                            <li><h6><a href="#Mokslas">Mokslas</a></h6></li>
+                            <li><h4><a href="#Svarbuperskaityti">Svarbu perskaityti</a></h4></li>
+                            <li><h6><a href="#Verslas">Verslas</a></h6></li>
+                            <li><h6><a href="#Technologijos">Technologijos</a></h6></li>
+                            <li><h6><a href="#Keliones">Kelionės</a></h6></li>
+                            <li><h6><a href="#Maistas">Maistas</a></h6></li>
                         </ul>
                     </div>
                 </div>
@@ -689,31 +677,22 @@
                 <div id="footerColumn">
                     <div class="dailyArticle">
                         <ul>
-                            <li><h3><a href="#">Gyvenimo būdas</a></h3></li>
+                            <li><h3><a href="#GyvenimoBudas">Gyvenimo būdas</a></h3></li>
 
-                            <li><h4>Sportas</h4></li>
-                            <li><h6><a href="#">Krepšinis</a></h6></li>
-                            <li><h6><a href="#">Futbolas</a></h6></li>
-                            <li><h6><a href="https://www.f-1.lt/">F-1</a></h6></li>
-                            <li><h6><a href="#">Tenisas</a></h6></li>
-                            <li><h6><a href="#">Kitos sporto šakos</a></h6></li>
-
-                            <li><h4>Kultūra</h4></li>
-                            <li><h6><a href="#">Muzika</a></h6></li>
-                            <li><h6><a href="#">Menas</a></h6></li>
-                            <li><h6><a href="#">Muziejai</a></h6></li>
-                            <li><h6><a href="#">Kinas</a></h6></li>
-                            <li><h6><a href="#">Istorija</a></h6></li>
-                            <li><h6><a href="#">Stilius</a></h6></li>
-
-                            <li><h4>Maistas</h4></li>
-                            <li><h6><a href="#">Sveikata</a></h6></li>
-                            <li><h6><a href="#">Mityba</a></h6></li>
-                            <li><h6><a href="#">Skonis</a></h6></li>
+                            <li><h6><a href="#Sportas">Sportas</a></h6></li>
+                            <li><h6><a href="#Kultura">Kultūra</a></h6></li>
+                            <li><h6><a href="#Muziejai">Muziejai</a></h6></li>
+                            <li><h6><a href="#Maistas2">Maistas</a></h6></li>
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <div class="dailyArticle">
+                        <ul class="image">
+                            <li><p><a href="NaujienuTinklalapis-About">Visos teisės saugomos Tautos žodis redakcijos &copy; 2018. Kopijuoti bei platinti galima tik gavus raštišką sutikimą.</a></p></li>
+                        </ul>
+                    </div>
         </footer>
 
         <script src="NaujienuTinklalapis.js"></script>

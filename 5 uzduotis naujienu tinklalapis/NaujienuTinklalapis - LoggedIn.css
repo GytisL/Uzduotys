@@ -7,10 +7,10 @@ body {
 	padding: 0;
 }
 body {
-	/*prevention from user copying site content*/
-	user-select: none;
+	/*prevention from user copying site content
+	user-select: none;*/
 
-	font-family: 'Amiri', serif;
+	font-family: 'Old Standard TT', serif;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 300;
 }
@@ -447,14 +447,12 @@ TOP NAV BAR PART
 	cursor: pointer;
 }
 
-#loginContainer form #lowerSoc ul:hover,
 #loginContainer form #lower input[type=submit]:hover {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
 	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
 }
 
-#loginContainer form #lowerSoc ul:active,
 #loginContainer form #lower input[type=submit]:active {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
 	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
@@ -495,13 +493,23 @@ TOP NAV BAR PART
 
 #loginContainer form #lowerSoc ul li {
 	list-style-type: none;
-	margin: 0.3em 1em 0 1em;
+	margin: 0.2em 1em 0 1em;
 }
 
-#loginContainer form #lowerSoc ul li a {
+#loginContainer form #lowerSoc ul li input[type=submit] {
 	text-decoration: none;
-	margin: 0 0 0 1em;
+	margin: 0;
 	color: #fff;
+	text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #acd6ef;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+    background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    border-radius: 30px;
+    border: 0 solid #66add6;
+    cursor: pointer;
 }
 
 #loginContainer form .changeLink {
@@ -1076,7 +1084,8 @@ TOPNEWS PART
 }
 
 .container .topNews #topColumn .popularNews h4 {
-	font-family: 'Princess Sofia', cursive;
+	font-family: 'Arvo', serif;
+	color: #555555;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
@@ -1123,7 +1132,7 @@ TOPNEWS PART
 
 .container .topNews #topColumn .popularNews .mostPopular .read h5,
 .container .topNews #topColumn .popularNews .mostPopular2 .read h5 {
-	font-family: 'Fredericka the Great', cursive;
+	font-family: 'Vollkorn', serif;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -1255,6 +1264,7 @@ INFO PART
 
 .container .info #column .article .paint {
 	background-color: #ffcf40;
+	color: #555555;
 	text-align: left;
 }
 
@@ -1262,6 +1272,7 @@ INFO PART
 	text-align: left;
 	margin: 0 2.5em;
 	font-family: 'Fredericka the Great', cursive;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -1460,6 +1471,7 @@ NEWSDESK PART
 
 .container .newsDesk #secondColumn .news .videoSection h4 {
 	font-family: 'Fredericka the Great', cursive;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 	margin: 0.5em 0;
 }
@@ -1505,6 +1517,7 @@ NEWSDESK PART
 .container .newsDesk #secondColumn .news .row .country h4,
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -1540,7 +1553,8 @@ NEWSDESK PART
 }
 
 .container .newsDesk #thirdColumn .news h4 {
-	font-family: 'Princess Sofia', cursive;
+	font-family: 'Arvo', serif;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 	padding: 0.5em 0.5em 0.5em 0.7em;
 }
@@ -1762,6 +1776,7 @@ footer .about #footerColumn .dailyArticle ul li h3 {
 
 footer .about #footerColumn .dailyArticle h4 {
 	font-family: 'Fredericka the Great', cursive;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 	padding: 0;
 	margin: 0;
@@ -1769,6 +1784,7 @@ footer .about #footerColumn .dailyArticle h4 {
 
 footer .about #footerColumn .dailyArticle h5 {
 	font-family: 'Fredericka the Great', cursive;
+    color: #555555;
 	-webkit-font-smoothing: antialiased;
 	padding: 0 1em;
 	margin: 0;

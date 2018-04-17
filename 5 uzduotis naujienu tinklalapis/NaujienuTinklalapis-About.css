@@ -10,7 +10,7 @@ body {
 	/*prevention from user copying site content*/
 	user-select: none;
 
-	font-family: 'Amiri', serif;
+	font-family: 'Old Standard TT', serif;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 300;
 }
@@ -1123,7 +1123,7 @@ TOPNEWS PART
 
 .container .topNews #topColumn .popularNews .mostPopular .read h5,
 .container .topNews #topColumn .popularNews .mostPopular2 .read h5 {
-	font-family: 'Fredericka the Great', cursive;
+	font-family: 'Vollkorn', serif;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -1269,6 +1269,7 @@ NEWSDESK PART
 
 .container .newsDesk #secondColumn .news .videoSection h4 {
 	font-family: 'Fredericka the Great', cursive;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 	margin: 0.5em 0;
 }
@@ -1295,6 +1296,7 @@ NEWSDESK PART
 
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -1324,7 +1326,8 @@ NEWSDESK PART
 }
 
 .container .newsDesk #thirdColumn .news h4 {
-	font-family: 'Princess Sofia', cursive;
+	font-family: 'Arvo', serif;
+    color: #555555;
 	-webkit-font-smoothing: antialiased;
 	padding: 0.5em 0.5em 0.5em 0.7em;
 }
@@ -1467,6 +1470,7 @@ footer .about #footerColumn .dailyArticle ul li h3 {
 
 footer .about #footerColumn .dailyArticle h4 {
 	font-family: 'Fredericka the Great', cursive;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 	padding: 0;
 	margin: 0;

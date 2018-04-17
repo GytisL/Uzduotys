@@ -10,7 +10,7 @@ body {
 	/*prevention from user copying site content*/
 	user-select: none;
 
-	font-family: 'Amiri', serif;
+	font-family: 'Old Standard TT', serif;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 300;
 }
@@ -496,7 +496,7 @@ TOP NAV BAR PART
 	margin: 0.2em 1em 0 1em;
 }
 
-#loginContainer form #lowerSoc ul li input[type=submit]{
+#loginContainer form #lowerSoc ul li input[type=submit] {
 	text-decoration: none;
 	margin: 0;
 	color: #fff;
@@ -1084,7 +1084,8 @@ TOPNEWS PART
 }
 
 .container .topNews #topColumn .popularNews h4 {
-	font-family: 'Princess Sofia', cursive;
+	font-family: 'Arvo', serif;
+	color: #555555;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
@@ -1131,7 +1132,7 @@ TOPNEWS PART
 
 .container .topNews #topColumn .popularNews .mostPopular .read h5,
 .container .topNews #topColumn .popularNews .mostPopular2 .read h5 {
-	font-family: 'Fredericka the Great', cursive;
+	font-family: 'Vollkorn', serif;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -1263,6 +1264,7 @@ INFO PART
 
 .container .info #column .article .paint {
 	background-color: #ffcf40;
+	color: #555555;
 	text-align: left;
 }
 
@@ -1270,6 +1272,7 @@ INFO PART
 	text-align: left;
 	margin: 0 2.5em;
 	font-family: 'Fredericka the Great', cursive;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -1468,6 +1471,7 @@ NEWSDESK PART
 
 .container .newsDesk #secondColumn .news .videoSection h4 {
 	font-family: 'Fredericka the Great', cursive;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 	margin: 0.5em 0;
 }
@@ -1484,7 +1488,8 @@ NEWSDESK PART
 	background: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
 	border-radius: 5px;
-	margin: auto 0;
+	margin: 0;
+	padding-bottom: 1em;
 }
 
 @media screen and (max-width: 700px) {
@@ -1513,6 +1518,7 @@ NEWSDESK PART
 .container .newsDesk #secondColumn .news .row .country h4,
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -1548,9 +1554,11 @@ NEWSDESK PART
 }
 
 .container .newsDesk #thirdColumn .news h4 {
-	font-family: 'Princess Sofia', cursive;
+	font-family: 'Arvo', serif;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 	padding: 0.5em 0.5em 0.5em 0.7em;
+	border-bottom: 1px solid #eaeaeb;
 }
 
 .container .newsDesk #thirdColumn .news .mustRead {
@@ -1561,6 +1569,7 @@ NEWSDESK PART
 	display: flex;
 	flex-direction: row-reverse;
 	padding: 0.5em 1em 2em;
+	border-bottom: 1px solid #eaeaeb;
 }
 
 .container .newsDesk #thirdColumn .news .mustRead img {
@@ -1688,7 +1697,7 @@ footer .about {
 	background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
-	padding: 2em 0.5em;
+	padding: 0.5em;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1770,6 +1779,7 @@ footer .about #footerColumn .dailyArticle ul li h3 {
 
 footer .about #footerColumn .dailyArticle h4 {
 	font-family: 'Fredericka the Great', cursive;
+	color: #555555;
 	-webkit-font-smoothing: antialiased;
 	padding: 0;
 	margin: 0;
@@ -1777,6 +1787,7 @@ footer .about #footerColumn .dailyArticle h4 {
 
 footer .about #footerColumn .dailyArticle h5 {
 	font-family: 'Fredericka the Great', cursive;
+    color: #555555;
 	-webkit-font-smoothing: antialiased;
 	padding: 0 1em;
 	margin: 0;
@@ -1790,12 +1801,27 @@ footer .about #footerColumn .dailyArticle ul li h6 {
 	margin: 0;
 }
 
+footer .dailyArticle .image li p a,
 footer .about #footerColumn .dailyArticle ul li a {
 	text-decoration: none;
 	color: #65737e;
 }
 
+footer .dailyArticle .image li p a:hover,
 footer .about #footerColumn .dailyArticle ul li a:hover {
 	color: #32cd32;
 }
 
+footer .dailyArticle .image {
+	margin: 0;
+	padding: 0;
+}
+
+footer .dailyArticle .image li p  {
+	text-align: center;
+	align-items: center;
+	font-family: 'Chelsea Market', cursive;
+	-webkit-font-smoothing: antialiased;
+	padding: 0.2em 0.3em;
+	margin: 0;
+}

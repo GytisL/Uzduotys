@@ -10,9 +10,9 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 
         <!-- Font -->
-        <link href="https://fonts.googleapis.com/css?family=Amiri|Aguafina+Script|Chelsea+Market|Fredericka+the+Great|Princess+Sofia|Rufina" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Aguafina+Script|Chelsea+Market|Vollkorn|Arvo|Rufina" rel="stylesheet">
 
-        <link rel="stylesheet" href="NaujienuTinklalapis-LoggedIn.css">
+        <link rel="stylesheet" href="NaujienuTinklalapis.css">
 		
         <!-- Font awesome vector icons -->
 		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -47,15 +47,13 @@
                         </li>
                     </ul>
                     
-                    
-                        
                 </div>
 
 	    		<div class="about">
 	    			<ul>
 	    				<li><a href="#Naujienos">Naujienos</a></li>
-                        <li><a href="NaujienuTinklalapis-About.html">Apie mus</a></li>
-                        <li><a href="NaujienuTinklalapis-Contacts.html">Rekvizitai</a></li>
+	    				<li><a href="NaujienuTinklalapis-About.html">Apie mus</a></li>
+	    				<li><a href="NaujienuTinklalapis-Contacts.html">Rekvizitai</a></li>
                         <li><a href="NaujienuTinklalapis-FAQ.html">D. U. K.</a></li>
 	    			</ul>
 	    		</div>
@@ -104,11 +102,12 @@
 
         <div class="loginContainerOverlay"></div>
 
+
         <div id="loginContainer">
             <form>
                 <h1>Prisijungti</h1>
                 <label for="username">Vartotojo vardas:</label>
-                <input type="text" placeholder="Įveskite vartotojo vardą arba elektroninį paštą" id="username">
+                <input type="text" placeholder="Įveskite vartotojo vardą arba elektroninį paštą" id="username2">
                 <label for="password">Slaptažodis:</label>
                 <h6><a href="#">Pamiršai slaptažodį ?</a></h6>
                 <input type="password" placeholder="Įveskite slaptažodį" id="password" >
@@ -120,13 +119,18 @@
 
                 <div id="lowerSoc">
                     <ul>
-                        <li><i class="fab fa-facebook-square fa-lg"></i><a href="#">Prisijungti su Facebook</a></li>
+                        <li id="fb"><i class="fab fa-facebook-square fa-lg"></i><input type="submit" onlogin="checkLoginState();" value="Prisijungti su Facebook">
+                        </li>
+                        <fb:login-button 
+                          scope="public_profile,email"
+                          onlogin="checkLoginState();">
+                        </fb:login-button>
                     </ul>
                     <ul>
-                        <li><i class="fab fa-linkedin fa-lg"></i><a href="#">Prisijungti su Linkedin</a></li>
+                        <li><i class="fab fa-linkedin fa-lg"></i><input type="submit" onclick="logInLi()" value="Prisijungti su LinkedIn"></li>
                     </ul>
                     <ul>
-                        <li><i class="fab fa-google-plus-square fa-lg"></i><a href="#">Prisijungti su Google+</a></li>
+                        <li><i class="fab fa-google-plus-square fa-lg"></i><input type="submit" onclick="logInGo()" value="Prisijungti su Google +"></li>
                     </ul>
                 </div>
 
@@ -159,11 +163,11 @@
             <form>
                 <h1>Užsiregistruoti</h1>
                 <label for="username">Vartotojo vardas:</label>
-                <input type="text" placeholder="vartotojas123" id="username">
+                <input type="text" placeholder="vartotojas123" id="username3">
                 <label for="email">Elektroninis paštas:</label>
-                <input type="email" placeholder="mail@mail.com" id="email" >
+                <input type="email" placeholder="mail@mail.com" id="email3" >
                 <label for="password">Sugalvokite slaptažodį:</label>
-                <input type="password" placeholder="pvz.: QkMdCh/&^" id="password">
+                <input type="password" placeholder="pvz.: QkMdCh/&^" id="password3">
                 <label for="passwordRepeat">Patvirtinkite slaptažodį:</label>
                 <input type="passwordRepeat" placeholder="pvz.: QkMdCh/&^" id="passwordRepeat">
 
@@ -431,7 +435,7 @@
                         <div class="theMost">
                             <img src="nature2-compressed.jpeg">
                             <div class="reading">
-                                <h5><a href="#">Naktinis dangus</a></h5>
+                                <h5><a href="#">Fotografijos</a></h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
                                 <h6>Straipsnis parašytas: <a href="#">Lorem ipsum</a></h6>
                             </div>
@@ -635,6 +639,7 @@
                             <li><h6><a href="#">Video galerija</a></h6></li>
                             <li><h6><a href="#">Įvykiai gyvai</a></h6></li>
                             <li><h6><a href="https://www.tv24.lt/">TV Programa</a></h6></li>
+                            <li><h6><a href="#">D. U. K.</a></h6></li>
                         </ul>
                     </div>
                 </div>
