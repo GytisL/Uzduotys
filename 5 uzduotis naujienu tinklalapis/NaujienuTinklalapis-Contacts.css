@@ -33,6 +33,7 @@ TOP NAV BAR PART
 	top: 0;
 	right: 0;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	z-index: 1; /*Makes item on top*/
 	opacity: 0.6;
 	filter: alpha(opacity=60); /* For IE8 and earlier */
 }
@@ -1225,7 +1226,7 @@ NEWSDESK PART
 	display: -webkit-flex;
 	display: flex;
 	justify-content: space-between;
-	padding: 0.55em 0;
+	padding: 0.55em 0 0;
 	flex-wrap: wrap;
 }
 
@@ -1248,7 +1249,7 @@ NEWSDESK PART
 }
 
 /*GOOGLE MAPS START*/
-.newsDesk #secondColumn .news #map {
+.newsDesk #secondColumn .news .Section #map {
 	/* Always set the map height explicitly to define the size of the div 
 	* element that contains the map. */
 	position: relative;
