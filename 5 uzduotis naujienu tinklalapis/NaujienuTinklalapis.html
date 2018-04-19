@@ -114,24 +114,21 @@
 
                 <div id="lower">
                     <input type="checkbox"><label class="check" for="checkbox">Prisiminti mane</label>
-                    <input type="submit" value="Prisijungti">
+                    <input type="submit" onclick="login()" value="Prisijungti">
                 </div>
 
                 <div id="lowerSoc">
                     <ul>
-                        <li id="fb"><i class="fab fa-facebook-square fa-lg"></i><input type="submit" onlogin="checkLoginState();" value="Prisijungti su Facebook">
+                        <li id="fb"><i class="fab fa-facebook-square fa-lg"></i><input type="button" value="Prisijungti su Facebook">
                         </li>
-                        <fb:login-button 
-                          scope="public_profile,email"
-                          onlogin="checkLoginState();">
-                        </fb:login-button>
+                        
+                    </ul>
+                    <!--<ul>
+                        <li><i class="fab fa-linkedin fa-lg"></i><input type="button" onclick="logInLi()" value="Prisijungti su LinkedIn"></li>
                     </ul>
                     <ul>
-                        <li><i class="fab fa-linkedin fa-lg"></i><input type="submit" onclick="logInLi()" value="Prisijungti su LinkedIn"></li>
-                    </ul>
-                    <ul>
-                        <li><i class="fab fa-google-plus-square fa-lg"></i><input type="submit" onclick="logInGo()" value="Prisijungti su Google +"></li>
-                    </ul>
+                        <li><i class="fab fa-google-plus-square fa-lg"></i><input type="button" onclick="logInGo()" value="Prisijungti su Google +"></li>
+                    </ul>-->
                 </div>
 
                 <p class="changeLink">
@@ -518,11 +515,11 @@
                             </div>
                         </div>
                             
-                        <div class="mustRead" id="Maistas">
-                            <img src="food1-compressed.jpeg">
+                        <div class="mustRead" id="Knygos">
+                            <img src="books.jpeg">
                             <div class="read">
                                 <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</a></p>
-                                <h5>Maistas</h5>
+                                <h5>Knygos</h5>
                             </div>
                         </div>
                     </div>
@@ -669,7 +666,7 @@
                             <li><h6><a href="#Verslas">Verslas</a></h6></li>
                             <li><h6><a href="#Technologijos">Technologijos</a></h6></li>
                             <li><h6><a href="#Keliones">Kelionės</a></h6></li>
-                            <li><h6><a href="#Maistas">Maistas</a></h6></li>
+                            <li><h6><a href="#Knygos">Knygos</a></h6></li>
                         </ul>
                     </div>
                 </div>

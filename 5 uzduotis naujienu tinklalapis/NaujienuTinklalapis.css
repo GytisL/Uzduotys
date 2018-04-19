@@ -496,7 +496,7 @@ TOP NAV BAR PART
 	margin: 0.2em 1em 0 1em;
 }
 
-#loginContainer form #lowerSoc ul li input[type=submit] {
+#loginContainer form #lowerSoc ul li input[type=button] {
 	text-decoration: none;
 	margin: 0;
 	color: #fff;
