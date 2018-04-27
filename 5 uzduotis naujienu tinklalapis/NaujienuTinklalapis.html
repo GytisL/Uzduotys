@@ -3,8 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Naujienų tinklalapis</title>
-        <!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
 
         <!-- Simple line icons link -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
@@ -12,19 +15,9 @@
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Aguafina+Script|Chelsea+Market|Vollkorn|Arvo|Rufina" rel="stylesheet">
 
-        <!-- Font awesome vector icons -->
-        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome.min.css">
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-        <!-- Popper JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-        <link rel="stylesheet" href="NaujienuTinklalapis.css">
+        <link rel="stylesheet" type="text/css" href="NaujienuTinklalapis.css" />
 		
     </head>
 
@@ -121,8 +114,13 @@
                 <div id="lowerSoc">
                     <ul>
                         <!--<li id="fb"><i class="fab fa-facebook-square fa-lg"></i><input type="button" value="Prisijungti su Facebook">
-                        </li>-->
-                        <li><a href="javascript:void(0);" onclick="fbLogin()" id="fbLink"><img src="fblogin.png"/></a></li>
+                        </li>
+                        <li><a href="javascript:void(0);" onclick="fbLogin()" id="fbLink"><img src="fblogin.png"/></a></li>-->
+                        <li class="btn-group">
+                            <a class="btn btn-block btn-social btn-twitter">
+                            <span class="fab fa-facebook" onclick="fbLogin();"></span> Prisijungti su facebook
+                            </a>
+                        </li>
                     </ul>
                     <!--<ul>
                         <li><i class="fab fa-linkedin fa-lg"></i><input type="button" onclick="logInLi()" value="Prisijungti su LinkedIn"></li>
@@ -471,7 +469,8 @@
                         <div class="videoSection" id="Video">
                             <video width="90%" height="100%" controls>
                                 <source src="video-compressed.mp4" type="video/mp4">
-                                Your browser does not support HTML5 video.
+                                <!--Your browser does not support HTML5 video.-->
+                                Jūsų naršyklė nepalaiko HTML5 video.
                             </video>
                             <h4>Video</h4>
                             <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</a></p>
@@ -691,13 +690,23 @@
             </div>
 
             <div class="dailyArticle">
-                        <ul class="image">
-                            <li><p><a href="NaujienuTinklalapis-About">Visos teisės saugomos Tautos žodis redakcijos &copy; 2018. Kopijuoti bei platinti galima tik gavus raštišką sutikimą.</a></p></li>
-                        </ul>
-                    </div>
+                <ul class="image">
+                    <li><p><a href="NaujienuTinklalapis-About">Visos teisės saugomos Tautos žodis redakcijos &copy; 2018. Kopijuoti bei platinti galima tik gavus raštišką sutikimą.</a></p></li>
+                </ul>
+            </div>
         </footer>
 
-        
+        <!-- Font awesome vector icons -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  
+        <!-- Latest compiled JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
 
         <script src="NaujienuTinklalapis.js"></script>
 
