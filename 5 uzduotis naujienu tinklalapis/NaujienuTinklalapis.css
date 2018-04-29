@@ -289,9 +289,9 @@ TOP NAV BAR PART
 	display: none;
 	position: fixed;
 	width: 340px;
-	height: 426px;
+	height: 431px;
 	top: 12em;
-    /* left: 88.2%; */
+    /*left: 88.2%;*/
     right: 2%;
 	margin-top: -140px;
 	margin-left: -170px;
@@ -417,10 +417,11 @@ TOP NAV BAR PART
 	border-top: 1px solid #ccc;
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
+	display: inline-block;
 }
 
 #loginContainer form #lower input[type=checkbox] {
-	margin: 2.3em 0em 1em 1.9em;
+	margin: 14px 0 12px 16px;
 	padding: 1em 1em 1em 0;
 }
 
@@ -465,7 +466,7 @@ TOP NAV BAR PART
 	display: flex;
 	background: #ecf2f5;
 	width: 100%;
-	height: 127px;
+	height: 132px;
 	margin-top: 0;
 	color: #fff;
 	box-shadow: inset 0 1px 1px #fff;
@@ -499,13 +500,62 @@ TOP NAV BAR PART
 }*/
 
 /*facebook button*/
+#loginContainer form #lowerSoc ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
 #loginContainer form #lowerSoc ul .btn-group .btn {
     color: #fff;
     background-color: #3b5998;
-    border-color: rgba(0,0,0,0.2);
+    border-color: rgba(0, 0, 0, .2); 
 }
 
-.btn-social {
+#loginContainer form #lowerSoc ul .btn-group .fa-facebook {
+	font-size: 1.5em;
+	margin: 0 4px -3px 0;
+}
+
+#loginContainer form #lowerSoc ul .btn-group .btn-social {
+    position: relative;
+    padding-left: 44px;
+    text-align: left;
+    white-space: nowrap;
+    /*overflow: hidden;
+    text-overflow: ellipsis;*/
+}
+
+#loginContainer form #lowerSoc ul .btn-group .btn-social:hover {
+    color: #eee;
+}
+
+#loginContainer form #lowerSoc ul .btn-group .btn-social:first-child {
+    /*position: absolute;*/
+    left: 65px;
+    top: 5px;
+    bottom: 0;
+    width: 210px;
+    padding: 5px;
+    font-size: 1em;
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, .2);
+}
+/*facebook button*/
+
+/*google+ button*/
+#loginContainer form #lowerSoc ul .btn-google .btn {
+    color: #fff;
+    background-color: #DD4B39;
+    border-color: rgba(0, 0, 0, .2); 
+}
+
+#loginContainer form #lowerSoc ul .btn-google .fa-google {
+	font-size: 1.5em;
+	margin: 0 4px -3px -8px;
+}
+
+#loginContainer form #lowerSoc ul .btn-google .btn-social {
     position: relative;
     padding-left: 44px;
     text-align: left;
@@ -514,26 +564,60 @@ TOP NAV BAR PART
     text-overflow: ellipsis;
 }
 
-.btn-social:hover {
+#loginContainer form #lowerSoc ul .btn-google .btn-social:hover {
     color: #eee;
 }
 
-.btn-social:first-child {
+#loginContainer form #lowerSoc ul .btn-google .btn-social:first-child {
     /*position: absolute;*/
-    left: 28px;
-    top: 19px;
+    left: 65px;
+    top: 10px;
     bottom: 0;
     width: 210px;
-    padding: 7px;
+    padding: 5px;
     font-size: 1em;
     text-align: center;
-    border-right: 1px solid rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0, 0, 0, .2);
 }
-/*facebook button*/
+/*google+ button*/
 
+/*LinkedIn button*/
+#loginContainer form #lowerSoc ul .btn-linkedin .btn {
+    color: #fff;
+    background-color: #007BB6;
+    border-color: rgba(0, 0, 0, .2); 
+}
 
+#loginContainer form #lowerSoc ul .btn-linkedin .fa-linkedin {
+	font-size: 1.5em;
+	margin: 0 4px -3px -8px;
+}
 
+#loginContainer form #lowerSoc ul .btn-linkedin .btn-social {
+    position: relative;
+    padding-left: 44px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
+#loginContainer form #lowerSoc ul .btn-linkedin .btn-social:hover {
+    color: #eee;
+}
+
+#loginContainer form #lowerSoc ul .btn-linkedin .btn-social:first-child {
+    /*position: absolute;*/
+    left: 65px;
+    top: 15px;
+    bottom: 0;
+    width: 210px;
+    padding: 5px;
+    font-size: 1em;
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, .2);
+}
+/*LinkedIn button*/
 
 
 
