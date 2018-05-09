@@ -1,0 +1,890 @@
+/*================================
+GLOBAL STYLES
+==================================*/
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	/*prevention from user copying site content*/
+	user-select: none;
+
+	font-family: 'Old Standard TT', serif;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 300;
+}
+/*================================
+TOP NAV BAR PART
+==================================*/
+#top {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	background: #fff5ee;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 1; /*Makes item on top*/
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	opacity: 0.6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+#top .navbar {
+	width: 100%;
+	padding: 0.2em 0;
+}
+
+#top .navbar > * {
+	flex: 1;
+}
+
+#top .navbar ul {
+	padding: 0;
+	margin: 0;
+}
+
+#top .navbar li {
+	display: inline-block;
+}
+
+#top .navbar ul li a {
+	color: #111111;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	transition: 0.3s all;
+}
+
+#top .navbar .topics ul li {
+	margin: 0 3em;
+	font-size: 20px;
+}
+
+.menu,
+#top .navbar .hamburgerMenu {
+	display: none;
+}
+
+#top .navbar .about {
+	flex: 2;
+	text-align: center;
+}
+
+#top .navbar .about ul {
+	align-items: center;
+}
+
+#top .navbar ul li p,
+#top .navbar .about ul li a {
+	text-align: center;
+	margin: 0 0.5em;
+}
+
+#top .navbar .topics ul li a:hover,
+#top .navbar .about ul li a:hover,
+#top .navbar .login ul .logInbar a:hover,
+#top .navbar .login ul .active .fa-search:hover {
+	color: #559e83;
+}
+
+#top .navbar .login {
+	text-align: right;
+}
+
+#top .navbar .login ul {
+	padding-right: 3.5em;
+}
+
+#top .navbar .login ul .logInbar a {
+	cursor: pointer;
+}
+
+#top .navbar .login ul .active {
+	margin-left: 1em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#toggle {
+	display:none;
+}
+/*MENU RESPONSIVE*/
+@media screen and (max-width: 1000px) {
+	#top {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		background: #fff5ee;
+		align-items: center;
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: 0;
+		right: 0;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+		opacity: 0.6;
+		filter: alpha(opacity=60); /* For IE8 and earlier */
+		
+	}
+	#top .navbar {
+		width: 100%;
+		padding: 0;
+	}
+	#top .navbar .topics ul li {
+		margin: 0 3em;
+	}
+	
+	/*#top .navbar .topics,
+	#top .navbar .login,
+	#top .navbar .about,
+	#loginContainer
+	 {
+		display: none;
+	}*/
+	#top .navbar .hamburgerMenu {
+		display: inline-block;
+		line-height: 30px;
+		margin: 0;
+		padding: 0;
+	}
+	#top .navbar .hamburgerMenu .home {
+		display: inline-block;
+		margin: 0 0 0 0.5em;
+		padding: 0.2em 1em;
+		width: 50%;
+		flex: 1;
+		text-align: left;
+		font-size: 30px;
+	}
+
+	#top .navbar .hamburgerMenu .menuToggle li label,
+	#top .navbar .hamburgerMenu .home li {
+		cursor: pointer;
+	}
+
+	#top .navbar .hamburgerMenu .menuToggle {
+		display: inline-block;
+		margin: 0;
+		padding: 0 1em;
+		width: 45%;
+		text-align: right;
+		flex: 1;
+		font-size: 30px;
+	}
+
+	#toggle:checked + .menu {
+		display: inline-block;
+	} /* + MEANING TURNS ON/OFF WHEN TOGGLED*/
+
+
+	/*.menu INPUT FIELD STYLE START*/
+	.menu ul li a input[type=text] {
+		box-sizing: border-box;
+		width: 12em;
+		height: 2.5em;
+		border: 2px solid #ccc;
+		border-radius: 4px;
+		font-size: 16px;
+		background-color: #ffffff;
+		color: #ccc;
+		background-image: url('searchicon.png');
+		background-position: 9px 5px; 
+		background-repeat: no-repeat;
+		padding: 12px 20px 12px 40px;
+		-webkit-transition: width 0.4s ease-in-out;
+		transition: width 0.4s ease-in-out;
+		outline: none; /*prevents the outter line whenever user clicks*/
+	}
+
+	.menu ul li a input[type=text]:focus {
+		width: 85%;
+	}/*ANIMATION THAT MAKES INPUT WINDOW BIGGER*/
+	/*.menu INPUT FIELD STYLE END*/
+
+	.menu {
+		text-align: center;
+		font-size: fit-height;
+		display: none;
+		position: fixed;
+    	width: 310px;
+    	height: 497px;
+    	top: 0%;
+    	/*left: 62.3%;*/
+    	right: 5%;
+    	margin-top: 4.2em;
+		margin-left: 0px;
+		background: #fff;
+		border-radius: 3px;
+		border: 1px solid #ccc;
+		/*overflow-y: scroll;*/
+		z-index: 100;
+	}
+
+	/*INPUT FIELD STYLE END*/
+
+	/*.hamburgerMenu TRIANGLE PROPERTIES*/
+	.menu ul:before {
+		content: "";
+		position: absolute;
+		top: -33px;
+		right: 9px;
+		border-top: 1em solid transparent;
+		border-right: 1em solid transparent;
+		border-bottom: 1em solid #f5f7f8; /*triangle properties*/
+		border-left: 1em solid transparent;
+	}
+	.menu ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	.menu ul li {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border-bottom: 1px solid #eaeaeb;
+		line-height: 70px;
+	}
+	.menu ul li a {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		color: #111111;
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	.menu ul li a:hover {
+		text-decoration: none;
+	}
+	#top .navbar .login,
+	#navlist nav ul li a {
+		display: none;
+	}
+}
+
+/*LOGINCONTAINER PART (START)*/
+#top .navbar .login ul .logInbar{
+	text-align: left;
+}
+
+#logContainer #loginContainer {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	/*display: none;*/
+	position: fixed;
+	width: 340px;
+	height: 426px;
+	top: 12em;
+    /* left: 88.2%; */
+    right: 2%;
+	margin-top: -140px;
+	margin-left: -170px;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	-webkit-animation-name: bounceIn;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: bounceIn;
+	-moz-animation-fill-mode: both;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	animation-name: bounceIn;
+	animation-fill-mode: both;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+#loginContainer{
+	margin: 0.5em auto;
+}
+
+/*#loginContainer TRIANGLE PROPERTIES*/
+#logContainer #loginContainer:before {	
+	content: "";
+	position: absolute;
+	top: -33px;
+	right: 98px;
+	border-top: 1em solid transparent;
+	border-right: 1em solid transparent;
+	border-bottom: 1em solid #f5f7f8; /*triangle properties*/
+	border-left: 1em solid transparent;
+}
+
+#logContainer #loginContainer h1 {
+	color: #555;
+    margin: 0 0 0 0.8em;
+    padding: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+#logContainer #loginContainer label {
+	color: #555;
+	display: inline-block;
+	margin: 0.5em 0 0 1.8em;
+	padding: 0;
+	font-size: 14px;
+}
+
+#logContainer #loginContainer h6 {
+	margin: 0;
+	padding: 0;
+}
+
+#logContainer #loginContainer h6 a {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: #aaa;
+	float: right;
+	margin-top: -1.6em;
+	margin-right: 2.6em;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+}
+ 
+#logContainer #loginContainer h6 a:hover {
+	color: #555;
+}
+
+#logContainer #loginContainer #lower input, 
+#logContainer #loginContainer input {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	outline: none;
+}
+ 
+#logContainer #loginContainer input[type=text],
+#logContainer #loginContainer input[type=password] {
+	color: #777;
+	margin: 0.3em 1em 1em 2em;
+	width: 290px;
+	height: 35px;
+	border: 1px solid #c7d0d2;
+	border-radius: 2px;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+	padding-left: 1em;
+}
+ 
+#logContainer #loginContainer input[type=text]:hover,
+#logContainer #loginContainer input[type=password]:hover {
+	border: 1px solid #b6bfc0;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
+}
+
+#logContainer #loginContainer input[type=text]:focus,
+#logContainer #loginContainer input[type=password]:focus {
+	border: 1px solid #a8c9e4;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
+}
+
+#logContainer #loginContainer #lower {
+	display: flex;
+	justify-content: space-around;
+	background: #ecf2f5;
+	width: 100%;
+	height: 67px;
+	margin-top: 0;
+	box-shadow: inset 0 1px 1px #fff;
+	border-top: 1px solid #ccc;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#logContainer #loginContainer #lower input[type=checkbox] {
+	margin: 2.3em 0em 1em 1.9em;
+	padding: 1em 1em 1em 0;
+}
+
+#logContainer #loginContainer #lower .check {
+	margin: 2.4em 1.2em 1em 1em;
+	padding-right: 7em;
+	font-size: 11px;
+	color: #444;
+	text-shadow: 0 1px 0 #fff;
+}
+
+#logContainer #loginContainer #lower input[type=submit] {
+	margin: 1.3em 1.9em 1em 1em;
+	width: 80px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #acd6ef; /*IE fallback*/
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	border-radius: 30px;
+	border: 1px solid #66add6;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+
+#logContainer #loginContainer #lower input[type=submit]:hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+
+#logContainer #loginContainer #lower input[type=submit]:active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
+	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+}
+
+#logContainer #loginContainer #lowerSoc {
+	display: flex;
+	background: #ecf2f5;
+	width: 100%;
+	height: 127px;
+	margin-top: 0;
+	color: #fff;
+	box-shadow: inset 0 1px 1px #fff;
+	border-top: 1px solid #ccc;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	flex-direction: column;
+}
+
+
+
+
+
+
+/*#logContainer #loginContainer #customBtn {
+    display: inline-block;
+    background: white;
+    color: #444;
+    width: 190px;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+    margin: 1em auto;
+}
+  }
+  #logContainer #loginContainer #customBtn:hover {
+    cursor: pointer;
+  }
+  /*#logContainer #loginContainer #lowerSoc .label {
+    font-family: serif;
+    font-weight: normal;
+  }
+  #logContainer #loginContainer #lowerSoc .icon {
+    background: url('f-normal.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+  }
+  #logContainer #loginContainer #lowerSoc .buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 42px;
+    padding-right: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> 
+    font-family: 'Roboto', sans-serif;
+  }
+
+*/
+
+
+
+
+
+
+#logContainer #loginContainer #lowerSoc ul {
+	margin: 0.4em 1em 0.4em 1em;
+	padding: 0;
+    width: 220px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #efacb5; /*IE fallback*/
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	border-radius: 30px;
+	border: 1px solid #66add6;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+	align-self: center;
+}
+
+#logContainer #loginContainer #lowerSoc ul li {
+	list-style-type: none;
+	margin: 0.2em 1em 0 1em;
+}
+
+#logContainer #loginContainer #lowerSoc ul li input[type=button] {
+	text-decoration: none;
+	margin: 0;
+	color: #fff;
+	text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #acd6ef;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+    background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    border-radius: 30px;
+    border: 0 solid #66add6;
+    cursor: pointer;
+}
+
+#logContainer #loginContainer .changeLink {
+	background: #ecf2f5;
+	box-shadow: inset 0 1px 1px #fff;
+    border-top: 1px solid #ccc;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-size: 1em;
+}
+
+#logContainer #loginContainer .changeLink a {
+	text-decoration: none;
+	margin: 0 0.5em;
+	color: #007bff;
+}
+/*LOGINCONTAINER PART (END)*/
+
+/*RECOVERY CONTAINER PART (START)*/
+#logContainer #recoveryContainer {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	display: none;
+	position: fixed;
+	width: 340px;
+	height: 426px;
+	top: 12em;
+    /* left: 88.2%; */
+    right: 2%;
+	margin-top: -140px;
+	margin-left: -170px;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	-webkit-animation-name: bounceIn;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: bounceIn;
+	-moz-animation-fill-mode: both;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	animation-name: bounceIn;
+	animation-fill-mode: both;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+
+#logContainer #recoveryContainer{
+	margin: 0.5em auto;
+}
+
+/*#recoveryContainer TRIANGLE PROPERTIES*/
+#logContainer #recoveryContainer form:before {	
+	content: "";
+	position: absolute;
+	top: -33px;
+	right: 98px;
+	border-top: 1em solid transparent;
+	border-right: 1em solid transparent;
+	border-bottom: 1em solid #f5f7f8; /*triangle properties*/
+	border-left: 1em solid transparent;
+}
+
+#logContainer #recoveryContainer h1 {
+	color: #555;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+#logContainer #recoveryContainer label {
+	color: #555;
+	display: inline-block;
+	margin: 7em 0 1.5em 1.8em;
+	padding: 0;
+	font-size: 14px;
+}
+
+#logContainer #recoveryContainer #lower input, 
+#logContainer #recoveryContainer input {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	outline: none;
+}
+
+#logContainer #recoveryContainer input[type=email] {
+	color: #777;
+	margin: 1em 1em 3em 2em;
+	width: 290px;
+	height: 35px;
+	border: 1px solid #c7d0d2;
+	border-radius: 2px;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+	padding-left: 1em;
+}
+
+#logContainer #recoveryContainer input[type=email]:hover {
+	border: 1px solid #b6bfc0;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
+}
+
+#logContainer #recoveryContainer form input[type=email]:focus {
+	border: 1px solid #a8c9e4;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
+}
+
+#logContainer #recoveryContainer #lower {
+	display: flex;
+	justify-content: space-around;
+	background: #ecf2f5;
+	width: 100%;
+	height: 131px;
+	margin-top: 0.2em;
+	box-shadow: inset 0 1px 1px #fff;
+	border-top: 1px solid #ccc;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#logContainer #recoveryContainer #lower input[type=submit] {
+	text-align: center;
+	margin: 1.3em 1.9em 1em 1em;
+	width: 80px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #acd6ef; /*IE fallback*/
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	border-radius: 30px;
+	border: 1px solid #66add6;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+
+#logContainer #recoveryContainer #lower input[type=submit]:hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+
+#logContainer #recoveryContainer #lower input[type=submit]:active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
+	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+}
+/*RECOVERY CONTAINER PART (END)*/
+
+
+/*SIGN UP CONTAINER PART (START)*/
+#logContainer #signUpContainer {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	display: none;
+	position: fixed;
+	width: 340px;
+	height: 426px;
+	top: 12em;
+    /* left: 88.2%; */
+    right: 2%;
+	margin-top: -140px;
+	margin-left: -170px;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	-webkit-animation-name: bounceIn;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: bounceIn;
+	-moz-animation-fill-mode: both;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	animation-name: bounceIn;
+	animation-fill-mode: both;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+#logContainer #signUpContainer{
+	margin: 0.5em auto;
+}
+
+/*#signUpContainer TRIANGLE PROPERTIES*/
+#logContainer #signUpContainer:before {	
+	content: "";
+	position: absolute;
+	top: -33px;
+	right: 98px;
+	border-top: 1em solid transparent;
+	border-right: 1em solid transparent;
+	border-bottom: 1em solid #f5f7f8; /*triangle properties*/
+	border-left: 1em solid transparent;
+}
+
+#logContainer #signUpContainer h1 {
+	color: #555;
+    margin: 0 0 0 0.8em;
+    padding: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+#logContainer #signUpContainer label {
+	color: #555;
+	display: inline-block;
+	margin: 0.5em 0 0 1.8em;
+	padding: 0;
+	font-size: 14px;
+}
+
+#logContainer #signUpContainer #lower input {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	outline: none;
+}
+ 
+#logContainer #signUpContainer input[type=text],
+#logContainer #signUpContainer input[type=email],
+#logContainer #signUpContainer input[type=password],
+#logContainer #signUpContainer input[type=passwordRepeat] {
+	color: #777;
+	margin: 0.3em 1em 0.3em 2em;
+	width: 290px;
+	height: 35px;
+	border: 1px solid #c7d0d2;
+	border-radius: 2px;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+	padding-left: 1em;
+}
+ 
+#logContainer #signUpContainer input[type=text]:hover,
+#logContainer #signUpContainer input[type=email]:hover,
+#logContainer #signUpContainer input[type=password]:hover,
+#logContainer #signUpContainer input[type=passwordRepeat]:hover {
+	border: 1px solid #b6bfc0;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
+}
+
+#logContainer #signUpContainer input[type=text]:focus,
+#logContainer #signUpContainer input[type=email]:focus,
+#logContainer #signUpContainer input[type=password]:focus,
+#logContainer #signUpContainer input[type=passwordRepeat]:focus {
+	border: 1px solid #a8c9e4;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
+}
+
+#logContainer #signUpContainer #lower {
+	display: flex;
+	justify-content: space-around;
+	background: #ecf2f5;
+	width: 100%;
+	height: 67px;
+	margin-top: 0.1em;
+	box-shadow: inset 0 1px 1px #fff;
+	border-top: 1px solid #ccc;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#logContainer #signUpContainer #lower input[type=submit] {
+	margin: 1.3em 1.9em 1em 1em;
+	width: 80px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #acd6ef; /*IE fallback*/
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	border-radius: 30px;
+	border: 1px solid #66add6;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+
+#logContainer #signUpContainer #lower input[type=submit]:hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+
+#logContainer #signUpContainer #lower input[type=submit]:active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
+	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+}
+
+#logContainer #signUpContainer .changeLink {
+	background: #ecf2f5;
+	box-shadow: inset 0 1px 1px #fff;
+	border-top: 1px solid #ccc;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+
+#logContainer #signUpContainer .changeLink a {
+	text-decoration: none;
+	margin: 0 0.5em;
+	color: #007bff;;
+	
+}
+/*SIGN UP CONTAINER PART (END)*/

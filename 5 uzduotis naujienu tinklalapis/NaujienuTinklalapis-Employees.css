@@ -133,6 +133,7 @@ TOP NAV BAR PART
 		box-shadow: 0 0 10px rgba(0, 0, 0, .15);
 		opacity: .6;
 		filter: alpha(opacity=60); /* For IE8 and earlier */
+		
 	}
 	#top .navbar {
 		width: 100%;
@@ -145,7 +146,8 @@ TOP NAV BAR PART
 	#top .navbar .topics,
 	#top .navbar .login,
 	#top .navbar .about,
-	#loginContainer {
+	#loginContainer
+	 {
 		display: none;
 	}
 	#top .navbar .hamburgerMenu {
@@ -219,7 +221,7 @@ TOP NAV BAR PART
     	/*left: 62.3%;*/
     	right: 5%;
     	margin-top: 4.2em;
-		margin-left: 0;
+		margin-left: 0px;
 		background: #fff;
 		border-radius: 3px;
 		border: 1px solid #ccc;
@@ -473,7 +475,7 @@ TOP NAV BAR PART
 }
 
 #loginContainer form #lowerSoc ul {
-	margin: .4em 1em .4em 1em;
+	margin: .4em 1em;
 	padding: 0;
     width: 220px;
 	height: 30px;
@@ -492,7 +494,7 @@ TOP NAV BAR PART
 
 #loginContainer form #lowerSoc ul li {
 	list-style-type: none;
-	margin: .3em 1em 0 1em;
+	margin: .3em 1em 0;
 }
 
 #loginContainer form #lowerSoc ul li a {
@@ -554,7 +556,6 @@ TOP NAV BAR PART
 	animation-iteration-count: 1;
 	animation-timing-function: linear;
 }
-
 
 #recoveryContainer form {
 	margin: .5em auto;
@@ -1014,7 +1015,6 @@ ADVERTISEMENT PART
 	justify-content: center;
 	width: calc(100%);
 	height: calc(100%);
-
 }
 
 #advertisement .image img {
@@ -1247,6 +1247,23 @@ NEWSDESK PART
 	padding: .5em;
 }
 
+.container .newsDesk #secondColumn .news,
+.container .newsDesk #secondColumn .news h6 {
+	text-align: center;
+}
+
+.container .newsDesk #secondColumn .news img {
+	border-radius: 14em;
+    margin: 1em;
+}
+
+.container .newsDesk #secondColumn .news .allwork {
+	text-align: left;
+	border-top: 1px solid #eaeaeb;
+	border-bottom: 1px solid #eaeaeb;
+	padding: 1em 0;
+}
+
 .container .newsDesk #secondColumn .news .videoSection {
 	box-shadow: 0 0 10px rgba(0, 0, 0, .15);
 	background: #ffffff; /* Old browsers */
@@ -1256,6 +1273,8 @@ NEWSDESK PART
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
 	border-radius: 5px;
 	padding: 1em;
+	margin-top: 1em;
+	text-align: left;
 }
 
 .container .newsDesk #secondColumn .news .videoSection h4 {
@@ -1287,7 +1306,6 @@ NEWSDESK PART
 .container .newsDesk #thirdColumn .news .mustRead .read a:hover {
 	color: #111111;
 }
-
 
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;
@@ -1363,7 +1381,7 @@ BOTTOM ADVERTISEMENT PART
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	padding: 1em 1em 1em 0;
+	padding: 1em;
 	justify-content: center;
 	width: calc(100%);
 	height: calc(100%);

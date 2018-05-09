@@ -219,7 +219,7 @@ TOP NAV BAR PART
     	/*left: 62.3%;*/
     	right: 5%;
     	margin-top: 4.2em;
-		margin-left: 0;
+		margin-left: 0px;
 		background: #fff;
 		border-radius: 3px;
 		border: 1px solid #ccc;
@@ -1010,7 +1010,7 @@ ADVERTISEMENT PART
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	padding: 1em 1em;
+	padding: 1em;
 	justify-content: center;
 	width: calc(100%);
 	height: calc(100%);
@@ -1214,6 +1214,17 @@ TOPTITLE PART
 	margin: 0 auto;
 }
 
+.container .topTitle .author {
+	display: flex;
+}
+
+.container .topTitle .author .name p {
+	display: inline-block;
+	flex-direction: row;
+	padding-left: .3em;
+	margin: 0;
+}
+
 /*================================
 CONTAINER PART
 NEWSDESK PART
@@ -1288,7 +1299,6 @@ NEWSDESK PART
 	color: #111111;
 }
 
-
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;
 	-webkit-font-smoothing: antialiased;
@@ -1323,7 +1333,7 @@ NEWSDESK PART
 	font-family: 'Arvo', serif;
     color: #555555;
 	-webkit-font-smoothing: antialiased;
-	padding: .5em .5em .5em .7em;
+	padding: .5em .5em .7em;
 }
 
 .container .newsDesk #thirdColumn .news .mustRead {
@@ -1369,6 +1379,7 @@ BOTTOM ADVERTISEMENT PART
 	height: calc(100%);
 	border-top: 1px solid #eaeaeb;
 }
+
 /*================================
 FOOTER PART
 ABOUT PART

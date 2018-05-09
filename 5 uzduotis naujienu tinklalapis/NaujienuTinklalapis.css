@@ -133,7 +133,7 @@ TOP NAV BAR PART
 		top: 0;
 		right: 0;
 		box-shadow: 0 0 10px rgba(0, 0, 0, .15);
-		opacity: 0.6;
+		opacity: .6;
 		filter: alpha(opacity=60); /* For IE8 and earlier */
 		
 	}
@@ -1005,7 +1005,7 @@ TOP NAV BAR PART
 .search-box input[type="text"] {
 	width: 19em;
 	padding: 0;
-	margin: 0.8em 1em 0 1em;
+	margin: .8em 1em 0 1em;
 	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
 	-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease;
@@ -1138,7 +1138,7 @@ NAVLIST PART
 #navlist nav ul li a:hover {
 	text-decoration: none;
 	border-bottom: 1px solid currentColor;
-	margin: 0em auto;
+	margin: 0 auto;
 }
 /*================================
 ADVERTISEMENT PART
@@ -1153,7 +1153,6 @@ ADVERTISEMENT PART
 	justify-content: center;
 	width: calc(100%);
 	height: calc(100%);
-
 }
 
 #advertisement .image img {
@@ -1357,7 +1356,7 @@ TOPTITLE PART
 .container .topTitle nav ul li a:hover {
 	text-decoration: none;
 	border-bottom: 1px solid currentColor;
-	margin: 0em auto;
+	margin: 0 auto;
 }
 /*================================
 CONTAINER PART
@@ -1518,7 +1517,7 @@ RELEVANTNEWS PART
 .container .relevantNews #relevantColumn .theNews .theMost .reading {
 	text-align: left;
 	flex-direction: column;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .15);
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */

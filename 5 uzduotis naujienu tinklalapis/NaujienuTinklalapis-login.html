@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Naujienų tinklalapis</title>
+        <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+        <!-- Simple line icons link -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Aguafina+Script|Chelsea+Market|Vollkorn|Arvo|Rufina" rel="stylesheet">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+     
+        <!-- font awesome css -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="NaujienuTinklalapis-login.css">
+		
+    </head>
+
+    <body>
+        <div id="top">
+            <div class="navbar">
+    			<div class="topics">
+        			<ul>
+        				<li><a href="NaujienuTinklalapis.html"><i class="fas fa-home"></i></a></li>
+        			</ul>
+    			</div>
+
+                <div class="hamburgerMenu">
+                    <ul class="home">
+                        <li><a href="NaujienuTinklalapis.html"><i class="fas fa-home"></i></a></li>
+                    </ul>
+                    
+                    <ul class="menuToggle">
+                        <li>
+                            <label for="toggle">&#9776;</label>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+	    		<div class="about">
+	    			<ul>
+	    				<li><a href="#Naujienos">Naujienos</a></li>
+	    				<li><a href="NaujienuTinklalapis-About.html">Apie mus</a></li>
+	    				<li><a href="NaujienuTinklalapis-Contacts.html">Kontaktai</a></li>
+                        <li><a href="NaujienuTinklalapis-FAQ.html">D. U. K.</a></li>
+	    			</ul>
+	    		</div>
+
+	    		<div class="login">
+	    			<ul>
+	    				<li class="logInbar">
+                            <a href="#">Prisijungti</a>
+
+                        </li>
+
+                        <li class="active">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                            
+                        </li>
+	    			</ul>
+	    		</div>
+    		</div>
+    	</div>
+
+
+        <input type="checkbox" id="toggle">
+        <div class="menu">
+            <ul>
+                <li><a href="#"><input type="text" id="myInput" name="myInput"></a></li>
+            </ul>
+            
+            <ul>
+                <li><a href="#LabiausiaiSkaitomi">Labiausiai skaitomi</a></li>
+                <li><a href="#NaujaiPaskelbti">Naujai paskelbti straipsniai</a></li>
+                <li><a href="#Aktualijos">Aktualijos</a></li>
+                <li><a href="#Naujienos">Naujienos</a></li>
+                <li><a href="#GyvenimoBudas">Gyvenimo būdas</a></li>
+                <li><a href="#">Prisijungti</a></li>
+            </ul>
+        </div>
+
+
+        <div class="loginContainerOverlay"></div>
+
+
+        <div id="logContainer">
+            <form id="loginContainer">
+                <h1>Prisijungti</h1>
+                <label for="username">Vartotojo vardas:</label>
+                <input type="text" placeholder="Įveskite vartotojo vardą arba elektroninį paštą" id="username2">
+                <label for="password">Slaptažodis:</label>
+                <h6><a href="#" class="flipLink">Pamiršai slaptažodį ?</a></h6>
+                <input type="password" placeholder="Įveskite slaptažodį" id="password" >
+
+                <div id="lower">
+                    <input type="checkbox"><label class="check" for="checkbox">Prisiminti mane</label>
+                    <input type="submit" onclick="login();" value="Prisijungti">
+                </div>
+
+                <div id="lowerSoc">
+                    <div class="btn-group">
+                        <a class='btn btn-danger disabled'><i class="fa fa-google-plus" style="width:16px; height:20px"></i></a>
+                        <a class='btn btn-danger' href='' style="width:12em;"> Sign in with Google</a>
+                    </div>
+                    <br />
+                    <div class="btn-group">
+                        <a class='btn btn-primary disabled'><i class="fa fa-facebook" style="width:16px; height:20px"></i></a>
+                        <a class='btn btn-primary ' href='' style="width:12em"> Sign in with Facebook</a>
+                    </div>  
+    
+                        <!--<li id="fb"><i class="fab fa-facebook-square fa-lg"></i><input type="button" value="Prisijungti su Facebook">
+                        </li>
+                        <li><a href="javascript:void(0);" onclick="fbLogin()" id="fbLink"><img src="fblogin.png"/></a></li>
+                        <button id="customBtn" (click)="checkLoginState();">
+                          <span class="icon"></span>
+                          <span class="buttonText">Facebook</span>
+                        </button>
+                    -->
+                    <!--<ul>
+                        <li><i class="fab fa-linkedin fa-lg"></i><input type="button" onclick="logInLi()" value="Prisijungti su LinkedIn"></li>
+                    </ul>
+                    <ul>
+                        <li><i class="fab fa-google-plus-square fa-lg"></i><input type="button" onclick="logInGo()" value="Prisijungti su Google +"></li>
+                    </ul>-->
+                </div>
+
+                <p class="changeLink">
+                    Dar ne narys ?
+                    <a href="#toregister" class="to_register">Prisijunk</a>
+                </p>
+            </form>
+
+            <form id="recoveryContainer">
+                
+                <a href="#" class="flipLink"><h1>Atkurti slaptažodį</h1></a>
+                <label for="email">Įveskite savo elektroninio pašto adresą ir mes jums atsiųsime laikiną slaptažodį.</label>
+                <input type="email" placeholder="mail@mail.com" id="email">
+
+                <div id="lower">
+                    <input type="submit" value="Atkurti">
+                </div>
+            </form>
+
+            <form id="signUpContainer">
+                <h1>Užsiregistruoti</h1>
+                <label for="username">Vartotojo vardas:</label>
+                <input type="text" placeholder="vartotojas123" id="username3">
+                <label for="email">Elektroninis paštas:</label>
+                <input type="email" placeholder="mail@mail.com" id="email3" >
+                <label for="password">Sugalvokite slaptažodį:</label>
+                <input type="password" placeholder="pvz.: QkMdCh/&^" id="password3">
+                <label for="passwordRepeat">Patvirtinkite slaptažodį:</label>
+                <input type="passwordRepeat" placeholder="pvz.: QkMdCh/&^" id="passwordRepeat">
+
+                <div id="lower">
+                    <input type="submit" value="Prisijungti">
+                </div>
+
+                <p class="changeLink">
+                    Jau narys ?
+                    <a href="#toregister" class="to_signup">Eik ir prisijunk</a>
+                </p>
+            </form>
+        </div>
+
+
+        
+
+
+        <div class="recoveryContainerOverlay"></div>
+
+        
+
+
+        <div class="signUpContainerOverlay"></div>
+
+    
+        <!-- Font awesome vector icons -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <script src="NaujienuTinklalapis-login.js"></script>
+
+    </body>
+</html>
