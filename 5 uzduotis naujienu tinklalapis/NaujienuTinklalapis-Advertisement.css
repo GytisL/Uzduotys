@@ -1191,6 +1191,7 @@ TOPTITLE PART
 	border-radius: 5px;
 	width: 100%;
 	padding: 1em 0 0;
+	margin-bottom: 1em;
 	letter-spacing: 2px;
 }
 
@@ -1216,6 +1217,9 @@ TOPTITLE PART
 
 .container .topTitle .author {
 	display: flex;
+	padding: 1em 0;
+	border-bottom: 1px solid #eaeaeb;
+	border-top: 1px solid #eaeaeb;
 }
 
 .container .topTitle .author .name p {
@@ -1224,6 +1228,11 @@ TOPTITLE PART
 	padding-left: .3em;
 	margin: 0;
 }
+
+.container .topTitle .author .name a {
+	margin-left: 0.3em;
+}
+
 
 /*================================
 CONTAINER PART
@@ -1302,6 +1311,7 @@ NEWSDESK PART
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;
 	-webkit-font-smoothing: antialiased;
+	color: #555555;
 }
 
 .container .newsDesk #thirdColumn #edgeAdvertisement,
@@ -1334,6 +1344,7 @@ NEWSDESK PART
     color: #555555;
 	-webkit-font-smoothing: antialiased;
 	padding: .5em .5em .7em;
+	border-bottom: 1px solid #eaeaeb;
 }
 
 .container .newsDesk #thirdColumn .news .mustRead {
@@ -1344,6 +1355,10 @@ NEWSDESK PART
 	display: flex;
 	flex-direction: row-reverse;
 	padding: .5em 1em 2em;
+}
+
+.container .newsDesk #thirdColumn .news .mustRead:not(:last-child) {
+	border-bottom: 1px solid #eaeaeb;
 }
 
 .container .newsDesk #thirdColumn .news .mustRead img {

@@ -1262,6 +1262,7 @@ NEWSDESK PART
 	font-family: 'Fredericka the Great', cursive;
 	-webkit-font-smoothing: antialiased;
 	margin: .5em 0;
+	color: #555555;
 }
 
 .container .newsDesk #secondColumn .news .videoSection p {
@@ -1288,10 +1289,10 @@ NEWSDESK PART
 	color: #111111;
 }
 
-
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;
 	-webkit-font-smoothing: antialiased;
+	color: #555555;
 }
 
 .container .newsDesk #thirdColumn #edgeAdvertisement,
@@ -1324,6 +1325,7 @@ NEWSDESK PART
     color: #555555;
 	-webkit-font-smoothing: antialiased;
 	padding: .5em .5em .5em .7em;
+	border-bottom: 1px solid #eaeaeb;
 }
 
 .container .newsDesk #thirdColumn .news .mustRead {
@@ -1334,6 +1336,10 @@ NEWSDESK PART
 	display: flex;
 	flex-direction: row-reverse;
 	padding: .5em 1em 2em;
+}
+
+.container .newsDesk #thirdColumn .news .mustRead:not(:last-child) {
+	border-bottom: 1px solid #eaeaeb;
 }
 
 .container .newsDesk #thirdColumn .news .mustRead img {
