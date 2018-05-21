@@ -1381,13 +1381,14 @@ NEWSDESK PART
 	display: inline-block;
 	text-decoration: none;
 	margin-right: 1em;
-}
-
-.container .newsDesk #secondColumn .buttons ul li a {
 	color: #65737e;
 }
 
-.container .newsDesk #secondColumn .buttons ul li a:hover {
+.container .newsDesk #secondColumn .buttons ul li .number {
+	
+}
+
+.container .newsDesk #secondColumn .buttons ul li:hover {
 	color: #555555;
 	cursor: pointer;
 	box-shadow: 0 0 10px rgba(0, 0, 0, .15);

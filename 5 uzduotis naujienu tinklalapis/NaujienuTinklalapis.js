@@ -34,7 +34,21 @@ $(document).ready(function(){
 /*===ROTATE FROM loginContainer TO recoveryContainer (END)===*/
 
 
-
+/*BANNER (START)*/
+/*var links = ["http://www.abc.com","http://www.def.com","http://www.ghi.com"];*/ //banner link from websites
+var images = ["l2baneris-compressed.gif","l2-baneris-2.gif","l2-baneris-3.gif"];
+var i = 0;
+var renew = setInterval(function(){
+  if(images.length == i){
+    i = 0;
+  }
+  else {
+  document.getElementById("bannerImage").src = images[i];
+  /*document.getElementById("bannerLink").href = links[i];*/ //banner link from websites
+    i++;
+  }
+},10000); //banners changes every 10 seconds
+/*BANNER (END)*/
 
 
 /*===SMOOTH SCROLL ONCLICK (START)===*/
@@ -286,3 +300,16 @@ $(".hover").hover3d({
 
 
 /*PARALLAX HOVER TILT EFFECT (END)*/
+
+
+
+/*COOKIE CONSET PART (START)*/
+$(document).ready(function(){   
+    setTimeout(function () {
+        $("#cookieConsent").fadeIn(200);
+     }, 4000);
+    $("#closeCookieConsent, .cookieConsentOK").click(function() {
+        $("#cookieConsent").fadeOut(200);
+    }); 
+});
+/*COOKIE CONSET PART (END)*/
