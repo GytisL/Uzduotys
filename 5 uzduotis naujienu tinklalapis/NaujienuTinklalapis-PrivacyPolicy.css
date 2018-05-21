@@ -219,7 +219,7 @@ TOP NAV BAR PART
     	/*left: 62.3%;*/
     	right: 5%;
     	margin-top: 4.2em;
-		margin-left: 0px;
+		margin-left: 0;
 		background: #fff;
 		border-radius: 3px;
 		border: 1px solid #ccc;
@@ -1010,7 +1010,7 @@ ADVERTISEMENT PART
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	padding: 1em;
+	padding: 1em 1em;
 	justify-content: center;
 	width: calc(100%);
 	height: calc(100%);
@@ -1191,7 +1191,6 @@ TOPTITLE PART
 	border-radius: 5px;
 	width: 100%;
 	padding: 1em 0 0;
-	margin-bottom: 1em;
 	letter-spacing: 2px;
 }
 
@@ -1215,23 +1214,6 @@ TOPTITLE PART
 	margin: 0 auto;
 }
 
-.container .topTitle .author {
-	display: flex;
-	padding: 1em 0;
-	border-bottom: 1px solid #eaeaeb;
-	border-top: 1px solid #eaeaeb;
-}
-
-.container .topTitle .author .name p {
-	display: inline-block;
-	flex-direction: row;
-	padding-left: .3em;
-	margin: 0;
-}
-
-.container .topTitle .author .name a {
-	margin-left: 0.3em;
-}
 /*================================
 CONTAINER PART
 NEWSDESK PART
@@ -1243,7 +1225,7 @@ NEWSDESK PART
 	display: -webkit-flex;
 	display: flex;
 	justify-content: space-between;
-	padding: .55em 0 0;
+	padding: .55em 0;
 	flex-wrap: wrap;
 }
 
@@ -1265,11 +1247,6 @@ NEWSDESK PART
 	padding: .5em;
 }
 
-.container .newsDesk #secondColumn .news img {
-	width: 100%;
-	padding: 0 0 .5em;
-}
-
 .container .newsDesk #secondColumn .news .videoSection {
 	box-shadow: 0 0 10px rgba(0, 0, 0, .15);
 	background: #ffffff; /* Old browsers */
@@ -1285,6 +1262,7 @@ NEWSDESK PART
 	font-family: 'Fredericka the Great', cursive;
 	-webkit-font-smoothing: antialiased;
 	margin: .5em 0;
+	color: #555555;
 }
 
 .container .newsDesk #secondColumn .news .videoSection p {
@@ -1311,100 +1289,16 @@ NEWSDESK PART
 	color: #111111;
 }
 
-.container .newsDesk #secondColumn .news .video p,
-.container .newsDesk #secondColumn .news .name {
-	border-bottom: 1px solid #eaeaeb;
-	border-top: 1px solid #eaeaeb;
-	margin: 1em 0;
-}
-
-.container .newsDesk #secondColumn .news .name p {
-	display: inline-block;
-	flex-direction: row;
-	margin: 0;
-	padding: .5em;
-}
-
-.container .newsDesk #secondColumn .news .video {
-	text-align: center;
-}
-
-.container .newsDesk #secondColumn .news .video p {
-	margin: 0;
-	padding: .5em;
-}
-
-.container .newsDesk #secondColumn .news .video video {
-	margin-top: 1em;
-}
-
-/*
-.container .newsDesk .row {
-	justify-content: space-between;
-	margin: 1em .5em;
-}
-
-.container .newsDesk .row > * {
-	flex-basis: 49.1%;
-}
-
-.container .newsDesk .row .country {
-	box-shadow: 0 0 10px rgba(0, 0, 0, .15);
-	background: #ffffff; /* Old browsers 
-	background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 
-	background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10-25,Safari5.1-6 
-	background: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 
-	border-radius: 5px;
-	margin: 0;
-	padding: 0;
-}
-
-.container .newsDesk .row .country {
-	text-align: center;
-}
-
-.container .newsDesk .row .country img {
-	width: 60%;
-	height: 60%;
-	padding: 1em;
-}
-
-.container .newsDesk .row .country a {
-	text-decoration: none;
-	color: #65737e;
-}
-
-.container .newsDesk .row .country a:hover {
-	color: #111111;
-}
-
-.container .newsDesk .row .country h4 {
-	padding: .2em 1em;
-	margin: 0;
-	color: #555555;
-}
-
-.container .newsDesk .row .country p {
-    margin-left: 1em;
-}
-*/
-
 .container .newsDesk #thirdColumn .news .mustRead .read h5 {
 	font-family: 'Fredericka the Great', cursive;
 	-webkit-font-smoothing: antialiased;
 	color: #555555;
 }
 
-.container .newsDesk #thirdColumn #edgeAdvertisement {
-	visibility: hidden;
-}
-
 .container .newsDesk #thirdColumn #edgeAdvertisement,
 .container .newsDesk #thirdColumn {
 	flex: 1;
 	padding: .5em;
-	/*visibility: hidden;*/
 }
 
 .container .newsDesk #thirdColumn #edgeAdvertisement:not(:last-child) {
@@ -1430,7 +1324,7 @@ NEWSDESK PART
 	font-family: 'Arvo', serif;
     color: #555555;
 	-webkit-font-smoothing: antialiased;
-	padding: .5em .5em .7em;
+	padding: .5em .5em .5em .7em;
 	border-bottom: 1px solid #eaeaeb;
 }
 
@@ -1481,7 +1375,6 @@ BOTTOM ADVERTISEMENT PART
 	height: calc(100%);
 	border-top: 1px solid #eaeaeb;
 }
-
 /*================================
 FOOTER PART
 ABOUT PART

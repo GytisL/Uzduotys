@@ -310,6 +310,52 @@ $(document).ready(function(){
      }, 4000);
     $("#closeCookieConsent, .cookieConsentOK").click(function() {
         $("#cookieConsent").fadeOut(200);
-    }); 
+    });
 });
 /*COOKIE CONSET PART (END)*/
+
+/*WRITING A COOKIE (START)
+cookie_name = "Basic_Cookie";
+  function write_cookie() {
+    if(document.cookie) {
+      index = document.cookie.indexOf(cookie_name);
+    } else {
+      index = -1;
+    }
+    if (index == -1) {
+        document.cookie=cookie_name+"=1; expires=Wednesday, 01-Aug-2040 08:00:00 GMT";
+    } else {
+        countbegin = (document.cookie.indexOf("=", index) + 1);
+        countend = document.cookie.indexOf(";", index);
+        if (countend == -1) {
+          countend = document.cookie.length;
+        }
+        count = eval(document.cookie.substring(countbegin, countend)) + 1;
+        document.cookie=cookie_name+"="+count+"; expires=Wednesday, 01-Aug-2040 08:00:00 GMT";
+    }
+}
+WRITING A COOKIE (END)*/
+
+/*READING A COOKIE (START)
+function gettimes() {
+  if(document.cookie) {
+    index = document.cookie.indexOf(cookie_name);
+    if (index != -1) {
+      countbegin = (document.cookie.indexOf("=", index) + 1);
+      countend = document.cookie.indexOf(";", index);
+    if (countend == -1) {
+      
+    }
+      count = document.cookie.substring(countbegin, countend);
+    if (count == 1) {
+      return (count+" time");
+    } else {
+      return (count+" times");
+    }
+    }
+  }
+    return ("0 times");
+}
+READING A COOKIE (END)*/
+
+
