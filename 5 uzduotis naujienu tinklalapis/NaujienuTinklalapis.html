@@ -94,21 +94,29 @@
         </div>
 
 
-        <div class="loginContainerOverlay"></div>
+        <div class="loginContainerOverlay" id="tologin"></div>
 
 
-        <div id="loginContainer">
+        <div id="loginContainer" class="animate">
             <form>
                 <h1>Prisijungti</h1>
                 <label for="username">Vartotojo vardas:</label>
-                <input type="text" placeholder="Įveskite vartotojo vardą arba elektroninį paštą" id="username2">
+
+                <!--<input type="text" placeholder="Įveskite vartotojo vardą arba elektroninį paštą" id="username2">-->
+                <input id="username" name="username" type="text" placeholder="Įveskite vartotojo vardą arba elektroninį paštą"/>
+
                 <label for="password">Slaptažodis:</label>
                 <h6><a href="#">Pamiršai slaptažodį ?</a></h6>
-                <input type="password" placeholder="Įveskite slaptažodį" id="password" >
+                
+                <!--<input type="password" placeholder="Įveskite slaptažodį" id="password" >-->
+                <input id="password" name="password" type="password" placeholder="pvz.: X8df!90EO" />
 
                 <div id="lower">
-                    <input type="checkbox"><label class="check" for="checkbox">Prisiminti mane</label>
-                    <input type="submit" onclick="login()" value="Prisijungti">
+                    <!--<input type="checkbox"><label class="check" for="checkbox">Prisiminti mane</label>-->
+                    <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /><label class="check" for="checkbox">Prisiminti mane</label>
+
+                    <button type="submit" value="Submit" onclick="login();">Prisijungti</button>
+                    <!--mygtukams geriausia naudoti <button type=... <input type="submit" onclick="login()" value="Prisijungti">-->
                 </div>
 
                 <div id="lowerSoc">
@@ -117,8 +125,8 @@
                         </li>
                         <li><a href="javascript:void(0);" onclick="fbLogin()" id="fbLink"><img src="fblogin.png"/></a></li>-->
                         <li class="btn-group">
-                            <a class="btn btn-block btn-social btn-facebook">
-                            <span class="fab fa-facebook" onclick="fbLogin();"></span> Prisijungti su Facebook
+                            <a class="btn btn-block btn-social btn-facebook"  onclick="login()">
+                            <span class="fab fa-facebook"></span> Prisijungti su Facebook
                             </a>
                         </li>
 
@@ -144,7 +152,7 @@
         </div>
 
 
-        <div class="recoveryContainerOverlay"></div>
+        <div class="recoveryContainerOverlay" id="torecover"></div>
 
         <div id="recoveryContainer">
             <form>
@@ -153,19 +161,22 @@
                 <input type="email" placeholder="mail@mail.com" id="email">
 
                 <div id="lower">
-                    <input type="submit" value="Atkurti">
+                    <!--<input type="submit" value="Atkurti">-->
+                    <!-- visus mygtukus rasyti su button -->
+                    <button type="submit" value="Submit">Atkurti</button>
                 </div>
             </form>
         </div>
 
 
-        <div class="signUpContainerOverlay"></div>
+        <div class="signUpContainerOverlay" id="toregister"></div>
 
-        <div id="signUpContainer">
+        <div id="signUpContainer" class="animate">
             <form>
                 <h1>Užsiregistruoti</h1>
                 <label for="username">Vartotojo vardas:</label>
                 <input type="text" placeholder="vartotojas123" id="username3">
+                
                 <label for="email">Elektroninis paštas:</label>
                 <input type="email" placeholder="mail@mail.com" id="email3" >
                 <label for="password">Sugalvokite slaptažodį:</label>
@@ -174,7 +185,8 @@
                 <input type="passwordRepeat" placeholder="pvz.: QkMdCh/&^" id="passwordRepeat">
 
                 <div id="lower">
-                    <input type="submit" value="Prisijungti">
+                    <!--<input type="submit" value="Prisijungti">-->
+                    <button type="submit" value="Submit">Prisijungti</button>
                 </div>
 
                 <p class="changeLink">

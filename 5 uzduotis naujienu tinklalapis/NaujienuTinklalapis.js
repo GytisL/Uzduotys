@@ -9,8 +9,8 @@ $(document).ready(function(){
 			}
 		});
 		//jeigu nebuvo ijungtas ijungia
-		$('.loginContainerOverlay').addClass('open');/*Use the jQuery addClass() function to give the classes animated and shake to all your elements with the class well.
-*/			//TIKRINTI AR LOGINCONTAINER TURI KLASE OPEN, JEIGU NETURI JA UZDETI. 
+		$('.loginContainerOverlay').addClass('open');/*Use the jQuery addClass() function to give the classes animated and shake to all your elements with the class well.*/
+			//TIKRINTI AR LOGINCONTAINER TURI KLASE OPEN, JEIGU NETURI JA UZDETI. 
 			//Tikrinti su if $hasClass , $removeClass, ir po to addClass.
 		$('#loginContainer').slideToggle(function(){
 		});
@@ -34,7 +34,7 @@ $(document).ready(function(){
 /*===ROTATE FROM loginContainer TO recoveryContainer (END)===*/
 
 
-/*BANNER (START)*/
+/*BANNER CHANGER (START)*/
 /*var links = ["http://www.abc.com","http://www.def.com","http://www.ghi.com"];*/ //banner link from websites
 var images = ["l2baneris-compressed.gif","l2-baneris-2.gif","l2-baneris-3.gif"];
 var i = 0;
@@ -48,7 +48,7 @@ var renew = setInterval(function(){
     i++;
   }
 },10000); //banners changes every 10 seconds
-/*BANNER (END)*/
+/*BANNER CHANGER (END)*/
 
 
 /*===SMOOTH SCROLL ONCLICK (START)===*/
@@ -102,7 +102,7 @@ $(document).ready(function(){
 /*===LOGIN WITH SOCIAL MEDIA SITES (FACEBOOK START)===*/
 
 
-/* 1#
+
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '{227999751083929}',
@@ -142,7 +142,7 @@ function login() {
   });
 }
 
-1*/
+
 
 
   /*2
